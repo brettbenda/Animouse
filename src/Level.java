@@ -2,23 +2,37 @@ import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 
 public class Level {
+    public BufferedImage imageLayer;
+    public BufferedImage bitmap;           // a.k.a. effectLayer
+
+    public Point2D.Float[] hookablePoints;
+    public Point2D.Float posTim;
+    public Point2D.Float posJack;
+    public Point2D.Float posCamera;
+
+    public Cutscene[] startCutscenes;
+    public Cutscene[] endCutscenes;
 
     // constructor
-    BufferedImage imageLayer;
-    BufferedImage bitmap;           // a.k.a. effectLayer
-
-    Point2D.Float[] hookablePoints;
-    Point2D.Float posTim;
-    Point2D.Float posJack;
-    Point2D.Float posCamera;
-
-    boolean playTim;
-    boolean playJack;               // is this necessary?
-
-    Cutscene[] startCutscenes;
-    Cutscene[] endCutscenes;
-
-    public Level() {
+    public Level(String imageLayerPath, String bitmapPath, String miscDataPath, Cutscene[] startCutscenes, Cutscene[] endCutscenes) {
+        // load imageLayer from image file
         // ...
+
+        // load bitmap from image file
+        // ...
+
+        // load other data from text file
+        // ...
+
+        // store cutscenes
+        this.startCutscenes = startCutscenes;
+        this.endCutscenes = endCutscenes;
+
+        // --- TEST VALUES ---
+        this.hookablePoints = new Point2D.Float[1];
+        this.posTim = new Point2D.Float(0, 0);
+        this.posJack = new Point2D.Float(0, 0);
+        this.posCamera = new Point2D.Float(0, 0);
+        // --- TEST VALUES ---
     }
 }

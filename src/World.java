@@ -2,18 +2,25 @@ import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 
 public class World {
-    // application objects
     private Display display;
+
     private Level[] levels;
     private int levelIndex;
+
     private Camera camera;
 
-    // state objects
-
-
     // constructor
-    public World() {
-        // ...
+    public World(Display display) {
+        // store reference to display
+        this.display = display;
+
+        // load all the levels
+        this.levels = new Level[1];
+        this.levels[0] = new Level("path1", "path2", "path3", new Cutscene[1], new Cutscene[1]);
+        this.levelIndex = 0;
+
+        // create camera
+        this.camera = new Camera(display.getWidth()/display.getHeight(), display.getWidth(), display.getHeight());
     }
 
     void handleKeyInput(KeyEvent event){
