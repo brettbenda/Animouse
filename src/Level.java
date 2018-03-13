@@ -9,6 +9,14 @@ public class Level {
 
     Point2D.Float[] hookablePoints;
     Point2D.Float posTim;
+    Point2D.Float posJack;
+    Point2D.Float posCamera;
+
+    boolean playTim;
+    boolean playJack;               // is this necessary?
+
+    Cutscene[] startCutscenes;
+    Cutscene[] endCutscenes;
 
     public Level() {
         // ...
