@@ -90,7 +90,11 @@ public class World {
 
     public void tick(){
         if (!intersects(gameState.tim.getNextPosition(), gameState.tim.getCollider())) {
-            gameState.tim.position = new Point2D.Float(gameState.tim.position.x + gameState.tim.velocity.x, gameState.tim.position.y + gameState.tim.velocity.y);
+            gameState.tim.updatePosition();
+            gameState.tim.incrementYVelocity(1);
+            System.out.println(gameState.tim.velocity.y);
+        }else if(intersects(gameState.tim.getNextPosition(), gameState.tim.getCollider())){
+            gameState.tim.resetYVelocity();
         }
     }
 
