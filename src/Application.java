@@ -6,7 +6,7 @@ import java.awt.image.ImageObserver;
 public class Application extends JFrame implements KeyListener {
     // Application Variables
     private boolean inGame;
-    private static final int TICKS_PER_SECOND = 30;
+    private static final int TICKS_PER_SECOND = 60;
     private static final int SKIP_TICKS = 1000 / TICKS_PER_SECOND;
 
     // Display Objects
@@ -52,9 +52,6 @@ public class Application extends JFrame implements KeyListener {
                 display.tick();
                 display.render();
                 next_game_tick += SKIP_TICKS;
-
-                // display framerate
-                // System.out.println(next_game_tick - System.currentTimeMillis());
             }
         }
     }
