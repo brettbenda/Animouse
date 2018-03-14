@@ -8,15 +8,18 @@ public class GameState {
     private int selectedPlayer;
 
     // Tim and Jack
-    private Tim tim;
-    private Jack jack;
+    public Tim tim;
+    public Jack jack;
 
     // constructor
     public GameState(Level level) {
         this.level = level;
+
+        // --- TEST VALUES ---
         this.selectedPlayer = 0;
-        this.tim = new Tim();
+        this.tim = new Tim(960, 540);
         this.jack = new Jack();
+        // --- TEST VALUES ---
     }
 
     public void loadLevel(Level level) {
