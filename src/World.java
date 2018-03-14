@@ -45,9 +45,11 @@ public class World {
                 gameState.tim.velocity.y = 7;
                 break;
             case KeyEvent.VK_LEFT:
+                System.out.println(gameState.tim.velocity.y);
                 gameState.tim.velocity.x = -7;
                 break;
-            case KeyEvent.VK_RIGHT :
+            case KeyEvent.VK_RIGHT:
+                System.out.println(gameState.tim.velocity.y);
                 gameState.tim.velocity.x = 7;
                 break;
         }
@@ -97,11 +99,10 @@ public class World {
         int xx = (int) gameState.tim.getNextPosition().x;
         int yy = (int) gameState.tim.getNextPosition().y;
 
-        if (!getCollisionStatus((int) xx, (int) yy, gameState.tim.width, gameState.tim.height)) {
+        if (!getCollisionStatus(xx, yy, gameState.tim.width, gameState.tim.height)) {
             gameState.tim.updatePosition();
             gameState.tim.incrementYVelocity(1);
-            System.out.println(gameState.tim.velocity.y);
-        } else if(getCollisionStatus((int) getTimX(), (int) getTimY(), gameState.tim.width, gameState.tim.height)){
+        } else if(getCollisionStatus(xx, yy, gameState.tim.width, gameState.tim.height)){
             gameState.tim.resetYVelocity();
         }
     }
