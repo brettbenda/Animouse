@@ -16,13 +16,13 @@ public class Level {
     // constructor
     public Level(String imageLayerPath, String bitmapPath, String miscDataPath, Cutscene[] startCutscenes, Cutscene[] endCutscenes) {
         // load imageLayer from image file
-        // ...
+        this.imageLayer = ImageLoader.loadImage(imageLayerPath);
 
         // load bitmap from image file
-        // ...
+        this.bitmap = ImageLoader.loadImage(bitmapPath);
 
         // load other data from text file
-        // ...
+        // this.miscDataPath = ...
 
         // store cutscenes
         this.startCutscenes = startCutscenes;

@@ -19,14 +19,14 @@ public class World {
 
         // load all the levels
         this.levels = new Level[1];
-        this.levels[0] = new Level("path1", "path2", "path3", new Cutscene[1], new Cutscene[1]);
+        this.levels[0] = new Level("/test_images/test_effect_layer01.png", "/test_images/test_effect_layer01.png", "path", new Cutscene[1], new Cutscene[1]);
         this.levelIndex = 0;
 
         // initialize game state
         this.gameState = new GameState(levels[levelIndex]);
 
         // create camera
-        this.camera = new Camera(display.getWidth()/display.getHeight(), display.getWidth(), display.getHeight());
+        // this.camera = new Camera(display.getWidth()/display.getHeight(), display.getWidth(), display.getHeight());
     }
 
     public void handleKeyInput(KeyEvent event){
