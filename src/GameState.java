@@ -1,3 +1,5 @@
+import java.awt.image.BufferedImage;
+
 public class GameState {
     // current level data
     private Level level;
@@ -19,5 +21,9 @@ public class GameState {
 
     public void loadLevel(Level level) {
         this.level = level;
+    }
+
+    public BufferedImage getBackground() {
+        return level.imageLayer;
     }
 }

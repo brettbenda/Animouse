@@ -1,8 +1,11 @@
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
 
 public class World {
     private Display display;
+
+    private GameState gameState;
 
     private Level[] levels;
     private int levelIndex;
@@ -19,33 +22,43 @@ public class World {
         this.levels[0] = new Level("path1", "path2", "path3", new Cutscene[1], new Cutscene[1]);
         this.levelIndex = 0;
 
+        // initialize game state
+        this.gameState = new GameState(levels[levelIndex]);
+
         // create camera
         this.camera = new Camera(display.getWidth()/display.getHeight(), display.getWidth(), display.getHeight());
     }
 
-    void handleKeyInput(KeyEvent event){
+    public void handleKeyInput(KeyEvent event){
 
     }
 
-    void handleMouseInput(MouseEvent event){
+    public void handleMouseInput(MouseEvent event){
 
     }
 
-    void tick(){
+    public void tick(){
 
     }
 
-    void render(){
-
-    }
-
-    boolean intersects(){
-
+    public boolean intersects(){
         return true;
     }
 
-    void loadNextLevel(){
+    public void loadNextLevel(){
+        // play end cutscenes
+        // ...
 
+        // go to next level
+        levelIndex++;
+        gameState.loadLevel(levels[levelIndex]);
+
+        // play start cutscenes
+        // ...
+    }
+
+    public BufferedImage getBackground() {
+        return gameState.getBackground();
     }
 
 }

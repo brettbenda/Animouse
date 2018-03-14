@@ -26,7 +26,7 @@ public class Display extends JPanel{
         super(true);
 
         // load world data
-        this.world = new World();
+        this.world = new World(this);
 
         // save a reference to Application object
         this.application = application;
@@ -51,11 +51,6 @@ public class Display extends JPanel{
     // handles key input or passes it to the world
     public void handleKeyInput(KeyEvent event) {
         System.out.println("key event handled by display");
-        // --- TEST ---
-        if (event.getKeyChar() == 'c') {
-            COLOR += 10 % 255;
-        }
-        // --- TEST ---
     }
 
     // handles mouse input or passes it to the world
@@ -70,9 +65,12 @@ public class Display extends JPanel{
 
     // renders the world data
     public void render() {
-        // render world
-        g2d.setColor(new Color(COLOR));
-        g2d.fillRect(0, 0, WIDTH, HEIGHT);
+        // draw background
+        g2d.drawImage(world.getBackground(), 0, 0, null);
+
+        // draw players
+        // ...
+
         repaint();
     }
 
