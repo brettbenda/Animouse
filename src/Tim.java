@@ -28,4 +28,8 @@ public class Tim extends Player {
     public void resetYVelocity(){
         this.velocity = new Point2D.Float(this.velocity.x , 0);
     }
+
+    public void resetXVelocity(){
+        this.velocity = new Point2D.Float(0 , this.velocity.y);
+    }
 }

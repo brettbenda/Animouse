@@ -52,16 +52,16 @@ public class World {
         int keyCode = event.getKeyCode();
         switch( keyCode ) {
             case KeyEvent.VK_UP:
-                gameState.tim.velocity.y = 0;
+                gameState.tim.resetYVelocity();
                 break;
             case KeyEvent.VK_DOWN:
-                gameState.tim.velocity.y = 0;
+                gameState.tim.resetYVelocity();
                 break;
             case KeyEvent.VK_LEFT:
-                gameState.tim.velocity.x = 0;
+                gameState.tim.resetXVelocity();
                 break;
             case KeyEvent.VK_RIGHT :
-                gameState.tim.velocity.x = 0;
+                gameState.tim.resetXVelocity();
                 break;
         }
     }
