@@ -20,7 +20,7 @@ public class World {
 
         // load all the levels
         this.levels = new Level[1];
-        this.levels[0] = new Level("/test_images/test_effect_layer02.png", "/test_images/test_effect_layer02.png", "path", new Cutscene[1], new Cutscene[1]);
+        this.levels[0] = new Level("/test_images/test_effect_layer03.png", "/test_images/test_effect_layer03.png", "path", new Cutscene[1], new Cutscene[1]);
         this.levelIndex = 0;
 
         // initialize game state
