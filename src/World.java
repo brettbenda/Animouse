@@ -89,11 +89,22 @@ public class World {
     }
 
     public void tick(){
-        gameState.tim.position = new Point2D.Float(gameState.tim.position.x + gameState.tim.velocity.x, gameState.tim.position.y + gameState.tim.velocity.y);
+        if (!intersects(gameState.tim.getNextPosition())) {
+            gameState.tim.position = new Point2D.Float(gameState.tim.position.x + gameState.tim.velocity.x, gameState.tim.position.y + gameState.tim.velocity.y);
+        }
     }
 
-    public boolean intersects(){
-        return true;
+    public boolean intersects(Point2D.Float pos){
+        int color = gameState.getBitmap().getRGB((int) pos.x, (int) pos.y);
+        int r = (color >>> 16) & 0x000000FF;
+        int g = (color >>> 8) & 0x000000FF;
+        int b = color & 0x000000FF;
+
+        if (r == 10) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public void loadNextLevel(){
