@@ -54,7 +54,7 @@ public class Application extends JFrame implements KeyListener {
                 next_game_tick += SKIP_TICKS;
 
                 // display framerate
-                System.out.println(next_game_tick - System.currentTimeMillis());
+                // System.out.println(next_game_tick - System.currentTimeMillis());
             }
         }
     }

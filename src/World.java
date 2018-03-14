@@ -34,7 +34,25 @@ public class World {
     }
 
     public void handleMouseInput(MouseEvent event){
+        // get mouse position
+        int xx = event.getX();
+        int yy = event.getY();
 
+        // get bitmap
+        BufferedImage bitmap = gameState.getBitmap();
+
+        // get pixel color
+        int color = bitmap.getRGB(xx, yy);
+        int r = (color >>> 16) & 0x000000FF;
+        int g = (color >>> 8) & 0x000000FF;
+        int b = color & 0x000000FF;
+
+        System.out.println(r + " " + b + " " + g);
+
+        // check the region at the mouse position
+        if ( (r == 10) && (g == 0) && (b == 0) ) {
+            System.out.println("inside region");
+        }
     }
 
     public void tick(){

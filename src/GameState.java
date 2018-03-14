@@ -26,4 +26,8 @@ public class GameState {
     public BufferedImage getBackground() {
         return level.imageLayer;
     }
+
+    public BufferedImage getBitmap() {
+        return level.bitmap;
+    }
 }

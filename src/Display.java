@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.security.Key;
@@ -46,6 +47,14 @@ public class Display extends JPanel{
         setMinimumSize(size);
         setMaximumSize(size);
         setPreferredSize(size);
+
+        // add mouselistener
+        addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                world.handleMouseInput(e);
+            }
+        });
     }
 
     // handles key input or passes it to the world
@@ -55,7 +64,7 @@ public class Display extends JPanel{
 
     // handles mouse input or passes it to the world
     public void handleMouseInput(MouseEvent event) {
-        System.out.println("mouse event handled by display");
+        world.handleMouseInput(event);
     }
 
     // updates the world data
