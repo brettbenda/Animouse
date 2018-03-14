@@ -2,6 +2,8 @@ import java.awt.image.BufferedImage;
 
 public class VisualAssets {
 
+    final int numOfLevels = 9;
+
     BufferedImage TIM;
     BufferedImage[] TIM_JUMPING_ANIM;
     BufferedImage[] TIM_WALKING_ANIM;
@@ -21,12 +23,43 @@ public class VisualAssets {
     public VisualAssets(){
         // load all assets
        loadTimArt();
+       loadJackArt();
+       loadLevelBackgrounds();
+       loadLevelBitmaps();
+      // loadLevelCutscenes();
+        // loadIntermissionCutscenes();
     }
 
     private void loadTimArt(){
         TIM = ImageLoader.loadImage("/VisualAssets/Tim/Tim.png");
+        // add for loops for Tim's animations
 
     }
 
+    private void loadJackArt(){
+  //      JACK = ImageLoader.loadImage("/VisualAssets/Jack/Jack.png");
+        // add for loops for Tim's animations
+    }
+
+    private void loadLevelBackgrounds(){
+        LEVELX_BACKGROUND = new BufferedImage[numOfLevels];
+        for (int i = 0; i < numOfLevels; ++i){
+      //      LEVELX_BACKGROUND[i] = ImageLoader.loadImage("/VisualAssets/Background/levelBackground_" + i);
+        }
+    }
+
+    private void loadLevelBitmaps(){
+        LEVELX_BITMAP = new BufferedImage[numOfLevels];
+        for (int i = 0; i < numOfLevels; ++i){
+            //      LEVELX_BITMAP[i] = ImageLoader.loadImage("/VisualAssets/Bitmap/levelBitmap_" + i);
+        }
+    }
+
+    public BufferedImage getTim(){
+        return this.TIM;
+    }
+    public BufferedImage getJack(){
+        return this.JACK;
+    }
 }
 
