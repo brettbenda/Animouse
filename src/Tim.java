@@ -8,8 +8,9 @@ public class Tim extends Player {
         this.velocity = new Point2D.Float(0, 0);
 
         // --- TEST VALUES ---
-        this.collider = ImageLoader.loadImage("/test_images/tim_test.png");
         this.currentImage = ImageLoader.loadImage("/test_images/tim_test.png");
+        this.width = currentImage.getWidth();
+        this.height = currentImage.getHeight();
         // --- TEST VALUES ---
     }
 

@@ -34,7 +34,10 @@ public class World {
         int keyCode = event.getKeyCode();
         switch( keyCode ) {
             case KeyEvent.VK_UP:
-                if (intersects(new Point2D.Float(gameState.tim.getPosition().x, gameState.tim.getPosition().y + gameState.tim.collider.getHeight()), new BufferedImage(gameState.tim.collider.getWidth(), 15, BufferedImage.TYPE_INT_ARGB))) {
+                int xx = (int) gameState.tim.position.x;
+                int yy = (int) gameState.tim.position.y + gameState.tim.height;
+
+                if (getCollisionStatus(xx, yy, gameState.tim.width, 15)) {
                     gameState.tim.velocity.y = -35;
                 }
                 break;
@@ -91,27 +94,27 @@ public class World {
     }
 
     public void tick(){
-        if (!intersects(gameState.tim.getNextPosition(), gameState.tim.getCollider())) {
+        int xx = (int) gameState.tim.getNextPosition().x;
+        int yy = (int) gameState.tim.getNextPosition().y;
+
+        if (!getCollisionStatus((int) xx, (int) yy, gameState.tim.width, gameState.tim.height)) {
             gameState.tim.updatePosition();
             gameState.tim.incrementYVelocity(1);
             System.out.println(gameState.tim.velocity.y);
-        }else if(intersects(gameState.tim.getNextPosition(), gameState.tim.getCollider())){
+        } else if(getCollisionStatus((int) getTimX(), (int) getTimY(), gameState.tim.width, gameState.tim.height)){
             gameState.tim.resetYVelocity();
         }
     }
 
     // in progress
-    public boolean intersects(Point2D.Float pos, BufferedImage collider){
-        int col, r;
-        for (int i = (int) pos.x; i < pos.x + collider.getWidth(); ++i) {
-            for (int j = (int) pos.y; j < pos.y + collider.getHeight(); ++j) {
-                col = gameState.getBitmap().getRGB(i, j);
-                r = (col >>> 16) & 0x000000FF;
+    public boolean getCollisionStatus(int posX, int posY, int width, int height) {
+        int colorA = (gameState.getBitmap().getRGB(posX, posY) >>> 16) & 0x000000FF;
+        int colorB = (gameState.getBitmap().getRGB(posX + width, posY) >>> 16) & 0x000000FF;
+        int colorC = (gameState.getBitmap().getRGB(posX, posY + height) >>> 16) & 0x000000FF;
+        int colorD = (gameState.getBitmap().getRGB(posX + width, posY + height) >>> 16) & 0x000000FF;
 
-                if (r == 10) {
-                    return true;
-                }
-            }
+        if (colorA == 10 || colorB == 10 || colorC == 10 || colorD == 10) {
+            return true;
         }
         return false;
     }
