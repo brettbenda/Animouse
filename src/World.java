@@ -34,7 +34,9 @@ public class World {
         int keyCode = event.getKeyCode();
         switch( keyCode ) {
             case KeyEvent.VK_UP:
-                gameState.tim.velocity.y = -7;
+                if (intersects(new Point2D.Float(gameState.tim.getPosition().x, gameState.tim.getPosition().y + gameState.tim.collider.getHeight()), new BufferedImage(gameState.tim.collider.getWidth(), 15, BufferedImage.TYPE_INT_ARGB))) {
+                    gameState.tim.velocity.y = -35;
+                }
                 break;
             case KeyEvent.VK_DOWN:
                 gameState.tim.velocity.y = 7;
@@ -48,12 +50,12 @@ public class World {
         }
     }
 
-    public void handleKeyRelease(KeyEvent event){
+    public void handleKeyRelease(KeyEvent event) {
         int keyCode = event.getKeyCode();
         switch( keyCode ) {
-            case KeyEvent.VK_UP:
-                gameState.tim.resetYVelocity();
-                break;
+//            case KeyEvent.VK_UP:
+//                gameState.tim.resetYVelocity();
+//                break;
             case KeyEvent.VK_DOWN:
                 gameState.tim.resetYVelocity();
                 break;

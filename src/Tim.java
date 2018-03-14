@@ -22,7 +22,11 @@ public class Tim extends Player {
     }
 
     public void incrementYVelocity(float value){
-        this.velocity = new Point2D.Float(this.velocity.x , this.velocity.y + value);
+        if (this.velocity.y + value > 10) {
+            this.velocity.y = 10;
+        } else {
+            this.velocity = new Point2D.Float(this.velocity.x, this.velocity.y + value);
+        }
     }
 
     public void resetYVelocity(){
