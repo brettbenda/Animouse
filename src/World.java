@@ -34,16 +34,16 @@ public class World {
         int keyCode = event.getKeyCode();
         switch( keyCode ) {
             case KeyEvent.VK_UP:
-                gameState.tim.velocity.y = -5;
+                gameState.tim.velocity.y = -7;
                 break;
             case KeyEvent.VK_DOWN:
-                gameState.tim.velocity.y = 5;
+                gameState.tim.velocity.y = 7;
                 break;
             case KeyEvent.VK_LEFT:
-                gameState.tim.velocity.x = -5;
+                gameState.tim.velocity.x = -7;
                 break;
             case KeyEvent.VK_RIGHT :
-                gameState.tim.velocity.x = 5;
+                gameState.tim.velocity.x = 7;
                 break;
         }
     }
@@ -89,22 +89,25 @@ public class World {
     }
 
     public void tick(){
-        if (!intersects(gameState.tim.getNextPosition())) {
+        if (!intersects(gameState.tim.getNextPosition(), gameState.tim.getCollider())) {
             gameState.tim.position = new Point2D.Float(gameState.tim.position.x + gameState.tim.velocity.x, gameState.tim.position.y + gameState.tim.velocity.y);
         }
     }
 
-    public boolean intersects(Point2D.Float pos){
-        int color = gameState.getBitmap().getRGB((int) pos.x, (int) pos.y);
-        int r = (color >>> 16) & 0x000000FF;
-        int g = (color >>> 8) & 0x000000FF;
-        int b = color & 0x000000FF;
+    // in progress
+    public boolean intersects(Point2D.Float pos, BufferedImage collider){
+        int col, r;
+        for (int i = (int) pos.x; i < pos.x + collider.getWidth(); ++i) {
+            for (int j = (int) pos.y; j < pos.y + collider.getHeight(); ++j) {
+                col = gameState.getBitmap().getRGB(i, j);
+                r = (col >>> 16) & 0x000000FF;
 
-        if (r == 10) {
-            return true;
-        } else {
-            return false;
+                if (r == 10) {
+                    return true;
+                }
+            }
         }
+        return false;
     }
 
     public void loadNextLevel(){
