@@ -2,7 +2,8 @@ import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 
 public abstract class Player {
-    protected BufferedImage collider;
+    protected int width;
+    protected int height;
 
     protected Point2D.Float position;
     protected Point2D.Float velocity;
@@ -17,10 +18,6 @@ public abstract class Player {
 
     public void setPosition(Point2D.Float pos) {
         this.position = pos;
-    }
-
-    public BufferedImage getCollider() {
-        return this.collider;
     }
 
     public void tick() {
