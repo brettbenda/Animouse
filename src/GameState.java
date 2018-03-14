@@ -7,6 +7,7 @@ public class GameState {
     // currently selected player: T = 0, J = 1
     private int selectedPlayer;
 
+
     // Tim and Jack
     public Tim tim;
     public Jack jack;

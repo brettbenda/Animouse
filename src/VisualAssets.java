@@ -51,7 +51,7 @@ public class VisualAssets {
     private void loadLevelBitmaps(){
         LEVELX_BITMAP = new BufferedImage[numOfLevels];
         for (int i = 0; i < numOfLevels; ++i){
-            //      LEVELX_BITMAP[i] = ImageLoader.loadImage("/VisualAssets/Bitmap/levelBitmap_" + i);
+                  LEVELX_BITMAP[i] = ImageLoader.loadImage("/VisualAssets/Bitmap/levelBitmap_" + i);
         }
     }
 
