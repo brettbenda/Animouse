@@ -57,9 +57,12 @@ public class Display extends JPanel{
         });
     }
 
-    // handles key input or passes it to the world
-    public void handleKeyInput(KeyEvent event) {
-        System.out.println("key event handled by display");
+    public void handleKeyPress(KeyEvent event) {
+        world.handleKeyPress(event);
+    }
+
+    public void handleKeyRelease(KeyEvent event) {
+        world.handleKeyRelease(event);
     }
 
     // handles mouse input or passes it to the world
@@ -69,7 +72,7 @@ public class Display extends JPanel{
 
     // updates the world data
     public void tick() {
-        // update world
+        world.tick();
     }
 
     // renders the world data

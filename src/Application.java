@@ -70,16 +70,16 @@ public class Application extends JFrame implements KeyListener {
 
     @Override
     public void keyTyped(KeyEvent e) {
-        display.handleKeyInput(e);
+        // ...
     }
 
     @Override
     public void keyPressed(KeyEvent e) {
-        display.handleKeyInput(e);
+        display.handleKeyPress(e);
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-        display.handleKeyInput(e);
+        display.handleKeyRelease(e);
     }
 }

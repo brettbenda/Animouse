@@ -1,5 +1,6 @@
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
+import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 
 public class World {
@@ -29,8 +30,40 @@ public class World {
         // this.camera = new Camera(display.getWidth()/display.getHeight(), display.getWidth(), display.getHeight());
     }
 
-    public void handleKeyInput(KeyEvent event){
+    public void handleKeyPress(KeyEvent event){
+        int keyCode = event.getKeyCode();
+        switch( keyCode ) {
+            case KeyEvent.VK_UP:
+                gameState.tim.velocity.y = -5;
+                break;
+            case KeyEvent.VK_DOWN:
+                gameState.tim.velocity.y = 5;
+                break;
+            case KeyEvent.VK_LEFT:
+                gameState.tim.velocity.x = -5;
+                break;
+            case KeyEvent.VK_RIGHT :
+                gameState.tim.velocity.x = 5;
+                break;
+        }
+    }
 
+    public void handleKeyRelease(KeyEvent event){
+        int keyCode = event.getKeyCode();
+        switch( keyCode ) {
+            case KeyEvent.VK_UP:
+                gameState.tim.velocity.y = 0;
+                break;
+            case KeyEvent.VK_DOWN:
+                gameState.tim.velocity.y = 0;
+                break;
+            case KeyEvent.VK_LEFT:
+                gameState.tim.velocity.x = 0;
+                break;
+            case KeyEvent.VK_RIGHT :
+                gameState.tim.velocity.x = 0;
+                break;
+        }
     }
 
     public void handleMouseInput(MouseEvent event){
@@ -56,7 +89,7 @@ public class World {
     }
 
     public void tick(){
-
+        gameState.tim.position = new Point2D.Float(gameState.tim.position.x + gameState.tim.velocity.x, gameState.tim.position.y + gameState.tim.velocity.y);
     }
 
     public boolean intersects(){
