@@ -27,7 +27,7 @@ public class Level {
 
         // load bitmap from image file
 //        this.bitmap = ImageLoader.loadImage(bitmapPath);
-        this.bitmap = visualAssets.getBackground(0);
+        this.bitmap = visualAssets.getBitmap(0);
 
         // load other data from text file
         // this.miscDataPath = ...
