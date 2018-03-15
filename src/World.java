@@ -99,10 +99,10 @@ public class World {
         int xx = (int) gameState.tim.getNextPosition().x;
         int yy = (int) gameState.tim.getNextPosition().y;
 
-        if (!getCollisionStatus(xx, yy, gameState.tim.width, gameState.tim.height)) {
+        if (!getRightCollisionStatus() && !getLeftCollisionStatus() && !getTopCollisionStatus() && !getBottomCollisionStatus()) {
             gameState.tim.updatePosition();
             gameState.tim.incrementYVelocity(1);
-        } else if(getCollisionStatus(xx, yy, gameState.tim.width, gameState.tim.height)){
+        } else if (getTopCollisionStatus() || getBottomCollisionStatus()){
             gameState.tim.resetYVelocity();
         }
     }
@@ -116,6 +116,66 @@ public class World {
 
         if (colorA == 10 || colorB == 10 || colorC == 10 || colorD == 10) {
             return true;
+        }
+        return false;
+    }
+
+    public boolean getRightCollisionStatus() {
+        int posX = (int) gameState.tim.getNextPosition().x + gameState.tim.width;
+        int posY = (int) gameState.tim.getNextPosition().y;
+        int height = gameState.tim.height;
+        int color;
+
+        for (int j = posY; j < posY + height; ++j) {
+            color = (gameState.getBitmap().getRGB(posX, j) >>> 16) & 0x000000FF;
+            if (color == 10) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean getLeftCollisionStatus() {
+        int posX = (int) gameState.tim.getNextPosition().x;
+        int posY = (int) gameState.tim.getNextPosition().y;
+        int height = gameState.tim.height;
+        int color;
+
+        for (int j = posY; j < posY + height; ++j) {
+            color = (gameState.getBitmap().getRGB(posX, j) >>> 16) & 0x000000FF;
+            if (color == 10) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean getTopCollisionStatus() {
+        int posX = (int) gameState.tim.getNextPosition().x;
+        int posY = (int) gameState.tim.getNextPosition().y;
+        int width = gameState.tim.width;
+        int color;
+
+        for (int i = posX; i < posX + width; ++i) {
+            color = (gameState.getBitmap().getRGB(i, posY) >>> 16) & 0x000000FF;
+            if (color == 10) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean getBottomCollisionStatus() {
+        int posX = (int) gameState.tim.getNextPosition().x;
+        int posY = (int) gameState.tim.getNextPosition().y + gameState.tim.height;
+        int height = gameState.tim.height;
+        int color;
+
+        for (int i = posX; i < posX + height; ++i) {
+            color = (gameState.getBitmap().getRGB(i, posY) >>> 16) & 0x000000FF;
+            if (color == 10) {
+                return true;
+            }
         }
         return false;
     }
