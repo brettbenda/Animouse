@@ -26,6 +26,14 @@ public abstract class Player {
 
     public abstract Point2D.Float getNextPosition();
 
+    public abstract void updatePosition();
+
+    public abstract void incrementYVelocity(float value);
+
+    public abstract void resetYVelocity();
+
+    public abstract void resetXVelocity();
+
     public BufferedImage getSprite() {
         return this.currentImage;
     }

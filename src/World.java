@@ -1,6 +1,5 @@
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
-import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 
 public class World {
@@ -33,27 +32,45 @@ public class World {
     }
 
     public void handleKeyPress(KeyEvent event){
+        Player currentPlayer;
+        if (gameState.currentPlayer() == 0)
+            currentPlayer = gameState.tim;
+        else
+            currentPlayer = gameState.jack;
+
         int keyCode = event.getKeyCode();
         switch( keyCode ) {
             case KeyEvent.VK_UP:
-                int xx = (int) gameState.tim.position.x;
-                int yy = (int) gameState.tim.position.y + gameState.tim.height;
+                if (currentPlayer == gameState.tim) {
+                    int xx = (int) gameState.tim.position.x;
+                    int yy = (int) gameState.tim.position.y + gameState.tim.height;
 
-                if (getCollisionStatus(xx, yy, gameState.tim.width, 15)) {
-                    gameState.tim.velocity.y = -35;
+                    if (getCollisionStatus(xx, yy, gameState.tim.width, 15)) {
+                        gameState.tim.velocity.y = -35;
+                    }
                 }
                 break;
             case KeyEvent.VK_DOWN:
-                gameState.tim.velocity.y = 7;
+                currentPlayer.velocity.y = 7;
                 break;
             case KeyEvent.VK_LEFT:
-                System.out.println(gameState.tim.velocity.y);
-                gameState.tim.velocity.x = -7;
+                if (currentPlayer == gameState.tim) {
+                    System.out.println("Tim's y velocity " + gameState.tim.velocity.y);
+                    gameState.tim.velocity.x = -7;
+                } else{
+                    gameState.jack.decrementXVelocity();
+                }
                 break;
             case KeyEvent.VK_RIGHT:
-                System.out.println(gameState.tim.velocity.y);
-                gameState.tim.velocity.x = 7;
+                if (currentPlayer == gameState.tim) {
+                    System.out.println("Tim's y velocity " + gameState.tim.velocity.y);
+                    gameState.tim.velocity.x = 7;
+                } else{
+                    gameState.jack.incrementXVelocity();
+                }
                 break;
+            case KeyEvent.VK_E:
+                gameState.switchPlayer();
             case 49: // 1
                 System.out.println("Loading Level 1...");
                 levelIndex = 0;
@@ -103,16 +120,22 @@ public class World {
     }
 
     public void handleKeyRelease(KeyEvent event) {
+        Player currentPlayer;
+        if (gameState.currentPlayer() == 0)
+            currentPlayer = gameState.tim;
+        else
+            currentPlayer = gameState.jack;
+
         int keyCode = event.getKeyCode();
         switch( keyCode ) {
             case KeyEvent.VK_DOWN:
-                gameState.tim.resetYVelocity();
+                currentPlayer.resetYVelocity();
                 break;
             case KeyEvent.VK_LEFT:
-                gameState.tim.resetXVelocity();
+                currentPlayer.resetXVelocity();
                 break;
             case KeyEvent.VK_RIGHT :
-                gameState.tim.resetXVelocity();
+                currentPlayer.resetXVelocity();
                 break;
         }
     }
@@ -140,14 +163,20 @@ public class World {
     }
 
     public void tick(){
-        int xx = (int) gameState.tim.getNextPosition().x;
-        int yy = (int) gameState.tim.getNextPosition().y;
+        Player currentPlayer;
+        if (gameState.currentPlayer() == 0)
+            currentPlayer = gameState.tim;
+        else
+            currentPlayer = gameState.jack;
 
-        if (!getRightCollisionStatus() && !getLeftCollisionStatus() && !getTopCollisionStatus() && !getBottomCollisionStatus()) {
-            gameState.tim.updatePosition();
-            gameState.tim.incrementYVelocity(1);
-        } else if (getTopCollisionStatus() || getBottomCollisionStatus()){
-            gameState.tim.resetYVelocity();
+        int xx = (int) currentPlayer.getNextPosition().x;
+        int yy = (int) currentPlayer.getNextPosition().y;
+
+        if (!rightCollision(currentPlayer) && !leftCollision(currentPlayer) && !topCollision(currentPlayer) && !bottomCollision(currentPlayer)) {
+            currentPlayer.updatePosition();
+            currentPlayer.incrementYVelocity(1);
+        } else if (topCollision(currentPlayer) || bottomCollision(currentPlayer)){
+            currentPlayer.resetYVelocity();
         }
     }
 
@@ -164,10 +193,10 @@ public class World {
         return false;
     }
 
-    public boolean getRightCollisionStatus() {
-        int posX = (int) gameState.tim.getNextPosition().x + gameState.tim.width;
-        int posY = (int) gameState.tim.getNextPosition().y;
-        int height = gameState.tim.height;
+    public boolean rightCollision(Player player) {
+        int posX = (int) player.getNextPosition().x + player.width;
+        int posY = (int) player.getNextPosition().y;
+        int height = player.height;
         int color;
 
         for (int j = posY; j < posY + height; ++j) {
@@ -179,10 +208,10 @@ public class World {
         return false;
     }
 
-    public boolean getLeftCollisionStatus() {
-        int posX = (int) gameState.tim.getNextPosition().x;
-        int posY = (int) gameState.tim.getNextPosition().y;
-        int height = gameState.tim.height;
+    public boolean leftCollision(Player player) {
+        int posX = (int) player.getNextPosition().x;
+        int posY = (int) player.getNextPosition().y;
+        int height = player.height;
         int color;
 
         for (int j = posY; j < posY + height; ++j) {
@@ -194,10 +223,10 @@ public class World {
         return false;
     }
 
-    public boolean getTopCollisionStatus() {
-        int posX = (int) gameState.tim.getNextPosition().x;
-        int posY = (int) gameState.tim.getNextPosition().y;
-        int width = gameState.tim.width;
+    public boolean topCollision(Player player) {
+        int posX = (int) player.getNextPosition().x;
+        int posY = (int) player.getNextPosition().y;
+        int width = player.width;
         int color;
 
         for (int i = posX; i < posX + width; ++i) {
@@ -209,10 +238,10 @@ public class World {
         return false;
     }
 
-    public boolean getBottomCollisionStatus() {
-        int posX = (int) gameState.tim.getNextPosition().x;
-        int posY = (int) gameState.tim.getNextPosition().y + gameState.tim.height;
-        int height = gameState.tim.height;
+    public boolean bottomCollision(Player player) {
+        int posX = (int) player.getNextPosition().x;
+        int posY = (int) player.getNextPosition().y + gameState.tim.height;
+        int height = player.height;
         int color;
 
         for (int i = posX; i < posX + height; ++i) {
@@ -250,5 +279,17 @@ public class World {
 
     public float getTimY() {
         return gameState.tim.getPosition().y;
+    }
+
+    public BufferedImage getJackImage() {
+        return gameState.jack.getSprite();
+    }
+
+    public float getJackX() {
+        return gameState.jack.getPosition().x;
+    }
+
+    public float getJackY() {
+        return gameState.jack.getPosition().y;
     }
 }

@@ -19,7 +19,7 @@ public class GameState {
         // --- TEST VALUES ---
         this.selectedPlayer = 0;
         this.tim = new Tim(960, 540);
-        this.jack = new Jack();
+        this.jack = new Jack(400, 540);
         // --- TEST VALUES ---
     }
 
@@ -33,5 +33,16 @@ public class GameState {
 
     public BufferedImage getBitmap() {
         return level.bitmap;
+    }
+
+    public int currentPlayer(){
+        return this.selectedPlayer;
+    }
+
+    public void switchPlayer(){
+        if (selectedPlayer == 0)
+            selectedPlayer = 1;
+        else
+            selectedPlayer = 0;
     }
 }

@@ -82,6 +82,7 @@ public class Display extends JPanel{
 
         // draw players
         g2d.drawImage(world.getTimImage(), (int) world.getTimX(), (int) world.getTimY(), null);
+        g2d.drawImage(world.getJackImage(), (int) world.getJackX(), (int) world.getJackY(), null);
 
         repaint();
     }
