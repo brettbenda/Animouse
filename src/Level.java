@@ -2,9 +2,11 @@ import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 
 public class Level {
+    private VisualAssets visualAssets;
+
     public BufferedImage imageLayer;
     public BufferedImage bitmap;           // a.k.a. effectLayer
-    private VisualAssets visualAssets;
+
     public Point2D.Float[] hookablePoints;
     public Point2D.Float posTim;
     public Point2D.Float posJack;
@@ -20,10 +22,12 @@ public class Level {
         this.visualAssets = new VisualAssets();
 
         // load imageLayer from image file
-        this.imageLayer = ImageLoader.loadImage(imageLayerPath);
+ //       this.imageLayer = ImageLoader.loadImage(imageLayerPath);
+        this.imageLayer = visualAssets.getBackground(0);
 
         // load bitmap from image file
 //        this.bitmap = ImageLoader.loadImage(bitmapPath);
+        this.bitmap = visualAssets.getBackground(0);
 
         // load other data from text file
         // this.miscDataPath = ...

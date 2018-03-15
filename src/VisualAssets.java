@@ -1,4 +1,5 @@
 import java.awt.image.BufferedImage;
+import java.io.BufferedReader;
 
 public class VisualAssets {
 
@@ -44,7 +45,7 @@ public class VisualAssets {
     private void loadLevelBackgrounds(){
         LEVELX_BACKGROUND = new BufferedImage[numOfLevels];
         for (int i = 0; i < numOfLevels; ++i){
-      //      LEVELX_BACKGROUND[i] = ImageLoader.loadImage("/VisualAssets/Background/levelBackground_" + i);
+            LEVELX_BACKGROUND[i] = ImageLoader.loadImage("/VisualAssets/Background/levelBackground_" + i);
         }
     }
 
@@ -60,6 +61,12 @@ public class VisualAssets {
     }
     public BufferedImage getJack(){
         return this.JACK;
+    }
+    public BufferedImage getBackground(int level){
+        return this.LEVELX_BACKGROUND[level];
+    }
+    public BufferedImage getBitmap(int level){
+        return this.LEVELX_BITMAP[level];
     }
 }
 
