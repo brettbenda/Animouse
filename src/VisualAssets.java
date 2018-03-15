@@ -45,14 +45,14 @@ public class VisualAssets {
     private void loadLevelBackgrounds(){
         LEVELX_BACKGROUND = new BufferedImage[numOfLevels];
         for (int i = 0; i < numOfLevels; ++i){
-            LEVELX_BACKGROUND[i] = ImageLoader.loadImage("/VisualAssets/Background/levelBackground_" + i);
+            LEVELX_BACKGROUND[i] = ImageLoader.loadImage("/VisualAssets/Background/levelBackground_" + i + ".jpg");
         }
     }
 
     private void loadLevelBitmaps(){
         LEVELX_BITMAP = new BufferedImage[numOfLevels];
         for (int i = 0; i < numOfLevels; ++i){
-                  LEVELX_BITMAP[i] = ImageLoader.loadImage("/VisualAssets/Bitmap/levelBitmap_" + i);
+                  LEVELX_BITMAP[i] = ImageLoader.loadImage("/VisualAssets/Bitmap/levelBitmap_" + i + ".png");
         }
     }
 
