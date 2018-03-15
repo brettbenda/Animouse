@@ -4,10 +4,10 @@ import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 
 public class World {
+    private static final int NUM_LEVELS = 9;
+
     private Display display;
-
     private GameState gameState;
-
     private Level[] levels;
     private int levelIndex;
 
@@ -19,9 +19,11 @@ public class World {
         this.display = display;
 
         // load all the levels
-        this.levels = new Level[1];
-        this.levels[0] = new Level("/test_images/test_effect_layer03.png", "/test_images/test_effect_layer03.png", "path", new Cutscene[1], new Cutscene[1]);
+        this.levels = new Level[NUM_LEVELS];
         this.levelIndex = 0;
+        for (int i = 0; i < NUM_LEVELS; ++i) {
+            this.levels[i] = new Level(i);
+        }
 
         // initialize game state
         this.gameState = new GameState(levels[levelIndex]);
@@ -52,15 +54,57 @@ public class World {
                 System.out.println(gameState.tim.velocity.y);
                 gameState.tim.velocity.x = 7;
                 break;
+            case 49: // 1
+                System.out.println("Loading Level 1...");
+                levelIndex = 0;
+                gameState.loadLevel(levels[levelIndex]);
+                break;
+            case 50: // 2
+                System.out.println("Loading Level 2...");
+                levelIndex = 1;
+                gameState.loadLevel(levels[levelIndex]);
+                break;
+            case 51: // 3
+                System.out.println("Loading Level 3...");
+                levelIndex = 2;
+                gameState.loadLevel(levels[levelIndex]);
+                break;
+            case 52: // 4
+                System.out.println("Loading Level 4...");
+                levelIndex = 3;
+                gameState.loadLevel(levels[levelIndex]);
+                break;
+            case 53: // 5
+                System.out.println("Loading Level 5...");
+                levelIndex = 4;
+                gameState.loadLevel(levels[levelIndex]);
+                break;
+            case 54: // 6
+                System.out.println("Loading Level 6...");
+                levelIndex = 5;
+                gameState.loadLevel(levels[levelIndex]);
+                break;
+            case 55: // 7
+                System.out.println("Loading Level 7...");
+                levelIndex = 6;
+                gameState.loadLevel(levels[levelIndex]);
+                break;
+            case 56: // 8
+                System.out.println("Loading Level 8...");
+                levelIndex = 7;
+                gameState.loadLevel(levels[levelIndex]);
+                break;
+            case 57: // 9
+                System.out.println("Loading Level 9...");
+                levelIndex = 8;
+                gameState.loadLevel(levels[levelIndex]);
+                break;
         }
     }
 
     public void handleKeyRelease(KeyEvent event) {
         int keyCode = event.getKeyCode();
         switch( keyCode ) {
-//            case KeyEvent.VK_UP:
-//                gameState.tim.resetYVelocity();
-//                break;
             case KeyEvent.VK_DOWN:
                 gameState.tim.resetYVelocity();
                 break;

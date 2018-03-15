@@ -23,11 +23,11 @@ public class VisualAssets {
 
     public VisualAssets(){
         // load all assets
-       loadTimArt();
-       loadJackArt();
-       loadLevelBackgrounds();
-       loadLevelBitmaps();
-      // loadLevelCutscenes();
+        loadTimArt();
+        loadJackArt();
+        loadLevelBackgrounds();
+        loadLevelBitmaps();
+        // loadLevelCutscenes();
         // loadIntermissionCutscenes();
     }
 
@@ -38,21 +38,21 @@ public class VisualAssets {
     }
 
     private void loadJackArt(){
-  //      JACK = ImageLoader.loadImage("/VisualAssets/Jack/Jack.png");
+        //      JACK = ImageLoader.loadImage("/VisualAssets/Jack/Jack.png");
         // add for loops for Tim's animations
     }
 
     private void loadLevelBackgrounds(){
         LEVELX_BACKGROUND = new BufferedImage[numOfLevels];
         for (int i = 0; i < numOfLevels; ++i){
-            LEVELX_BACKGROUND[i] = ImageLoader.loadImage("/VisualAssets/Background/levelBackground_" + i + ".jpg");
+            LEVELX_BACKGROUND[i] = ImageLoader.loadImage("/VisualAssets/Background/levelBackground_" + i + ".png");
         }
     }
 
     private void loadLevelBitmaps(){
         LEVELX_BITMAP = new BufferedImage[numOfLevels];
         for (int i = 0; i < numOfLevels; ++i){
-                  LEVELX_BITMAP[i] = ImageLoader.loadImage("/VisualAssets/Bitmap/levelBitmap_" + i + ".png");
+            LEVELX_BITMAP[i] = ImageLoader.loadImage("/VisualAssets/Bitmap/levelBitmap_" + i + ".png");
         }
     }
 
