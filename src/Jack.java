@@ -32,26 +32,20 @@ public class Jack extends Player {
         }
     }
 
-    public void incrementXVelocity(){
-        if (this.velocity.x > maxXVelocity){
-            this.velocity.x = maxXVelocity;
-            nextVelocity = 0.5f;
-        } else if (this.velocity.x < maxXVelocity){
-            nextVelocity += 0.5f;
-            this.velocity = new Point2D.Float(nextVelocity, this.velocity.y);
+    public void incrementXVelocity(float value){
+        if (this.velocity.x + value > 10) {
+            this.velocity.x = 10;
+        } else {
+            this.velocity = new Point2D.Float(this.velocity.x+value, this.velocity.y );
         }
-        System.out.println(this.velocity.x);
     }
 
-    public void decrementXVelocity(){
-        if (this.velocity.x < -maxXVelocity){
-            this.velocity.x = -maxXVelocity;
-            nextVelocity = -0.5f;
-        } else if (this.velocity.x > -maxXVelocity){
-            nextVelocity -= 0.5f;
-            this.velocity = new Point2D.Float(nextVelocity, this.velocity.y);
+    public void decrementXVelocity(float value){
+        if (this.velocity.x - value < -10) {
+            this.velocity.x = -10;
+        } else {
+            this.velocity = new Point2D.Float(this.velocity.x-value, this.velocity.y );
         }
-        System.out.println(this.velocity.x);
     }
 
     public void resetYVelocity(){

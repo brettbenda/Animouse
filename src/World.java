@@ -46,7 +46,7 @@ public class World {
                     gameState.tim.velocity.x = -7;
                 } else{
                     System.out.println("left");
-                    gameState.jack.decrementXVelocity();
+                    gameState.jack.decrementXVelocity(0.5f);
                 }
                 break;
             case KeyEvent.VK_RIGHT:
@@ -55,7 +55,7 @@ public class World {
                     gameState.tim.velocity.x = 7;
                 } else{
                     System.out.println("right");
-                    gameState.jack.incrementXVelocity();
+                    gameState.jack.incrementXVelocity(0.5f);
                 }
                 break;
             case KeyEvent.VK_E:
