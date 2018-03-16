@@ -35,8 +35,11 @@ public class GameState {
         return level.bitmap;
     }
 
-    public int currentPlayer(){
-        return this.selectedPlayer;
+    public Player currentPlayer(){
+        if (this.selectedPlayer == 0)
+            return this.tim;
+        else
+            return this.jack;
     }
 
     public void switchPlayer(){

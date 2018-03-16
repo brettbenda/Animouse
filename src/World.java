@@ -21,15 +21,12 @@ public class World {
     }
 
     public void handleKeyPress(KeyEvent event){
-        Player currentPlayer;
-        if (gameState.currentPlayer() == 0)
-            currentPlayer = gameState.tim;
-        else
-            currentPlayer = gameState.jack;
+        Player currentPlayer = gameState.currentPlayer();
 
         int keyCode = event.getKeyCode();
         switch( keyCode ) {
             case KeyEvent.VK_UP:
+                System.out.println("up");
                 if (currentPlayer == gameState.tim) {
                     int xx = (int) gameState.tim.position.x;
                     int yy = (int) gameState.tim.position.y + gameState.tim.height;
@@ -40,6 +37,7 @@ public class World {
                 }
                 break;
             case KeyEvent.VK_DOWN:
+                System.out.println("down");
                 currentPlayer.velocity.y = 7;
                 break;
             case KeyEvent.VK_LEFT:
@@ -47,6 +45,7 @@ public class World {
                     System.out.println("Tim's y velocity " + gameState.tim.velocity.y);
                     gameState.tim.velocity.x = -7;
                 } else{
+                    System.out.println("left");
                     gameState.jack.decrementXVelocity();
                 }
                 break;
@@ -55,11 +54,14 @@ public class World {
                     System.out.println("Tim's y velocity " + gameState.tim.velocity.y);
                     gameState.tim.velocity.x = 7;
                 } else{
+                    System.out.println("right");
                     gameState.jack.incrementXVelocity();
                 }
                 break;
             case KeyEvent.VK_E:
                 gameState.switchPlayer();
+                System.out.println("swap");
+                break;
             case 49: // 1
                 System.out.println("Loading Level 1...");
                 gameState.loadLevel(new Level(0));
@@ -100,11 +102,7 @@ public class World {
     }
 
     public void handleKeyRelease(KeyEvent event) {
-        Player currentPlayer;
-        if (gameState.currentPlayer() == 0)
-            currentPlayer = gameState.tim;
-        else
-            currentPlayer = gameState.jack;
+        Player currentPlayer = gameState.currentPlayer();
 
         int keyCode = event.getKeyCode();
         switch( keyCode ) {
@@ -143,12 +141,7 @@ public class World {
     }
 
     public void tick(){
-        Player currentPlayer;
-        if (gameState.currentPlayer() == 0)
-            currentPlayer = gameState.tim;
-        else
-            currentPlayer = gameState.jack;
-
+        Player currentPlayer = gameState.currentPlayer();
         int xx = (int) currentPlayer.getNextPosition().x;
         int yy = (int) currentPlayer.getNextPosition().y;
 
@@ -182,6 +175,10 @@ public class World {
         for (int j = posY; j < posY + height; ++j) {
             color = (gameState.getBitmap().getRGB(posX, j) >>> 16) & 0x000000FF;
             if (color == 10) {
+                if (player == gameState.tim)
+                    System.out.println("TIM right");
+                else
+                    System.out.println("JACK right");
                 return true;
             }
         }
@@ -197,6 +194,10 @@ public class World {
         for (int j = posY; j < posY + height; ++j) {
             color = (gameState.getBitmap().getRGB(posX, j) >>> 16) & 0x000000FF;
             if (color == 10) {
+                if (player == gameState.tim)
+                    System.out.println("TIM left");
+                else
+                    System.out.println("JACK left");
                 return true;
             }
         }
