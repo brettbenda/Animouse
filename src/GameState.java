@@ -17,7 +17,7 @@ public class GameState {
         this.level = level;
 
         // --- TEST VALUES ---
-        this.selectedPlayer = 0;
+        this.selectedPlayer = 0; //0 for Tim, 1 for Jack
         this.tim = new Tim(960, 540);
         this.jack = new Jack(400, 540);
         // --- TEST VALUES ---
