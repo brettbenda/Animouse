@@ -3,7 +3,6 @@ import java.awt.geom.Point2D;
 public class Jack extends Player {
 
     private final float maxXVelocity = 15;
-    private float nextVelocity = 0.5f;
 
     public Jack(float x, float y) {
         this.position = new Point2D.Float(x, y);
@@ -33,16 +32,16 @@ public class Jack extends Player {
     }
 
     public void incrementXVelocity(float value){
-        if (this.velocity.x + value > 10) {
-            this.velocity.x = 10;
+        if (this.velocity.x + value > maxXVelocity) {
+            this.velocity.x = maxXVelocity;
         } else {
             this.velocity = new Point2D.Float(this.velocity.x+value, this.velocity.y );
         }
     }
 
     public void decrementXVelocity(float value){
-        if (this.velocity.x - value < -10) {
-            this.velocity.x = -10;
+        if (this.velocity.x - value < -maxXVelocity) {
+            this.velocity.x = -maxXVelocity;
         } else {
             this.velocity = new Point2D.Float(this.velocity.x-value, this.velocity.y );
         }
@@ -54,6 +53,5 @@ public class Jack extends Player {
 
     public void resetXVelocity(){
         this.velocity = new Point2D.Float(0 , this.velocity.y);
-        nextVelocity = 0.0f;
     }
 }
