@@ -42,6 +42,13 @@ public class GameState {
             return this.jack;
     }
 
+    public Player inactivePlayer(){
+        if (this.selectedPlayer == 1)
+            return this.tim;
+        else
+            return this.jack;
+    }
+
     public void switchPlayer(){
         if (selectedPlayer == 0)
             selectedPlayer = 1;

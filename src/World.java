@@ -142,9 +142,9 @@ public class World {
 
     public void tick(){
         Player currentPlayer = gameState.currentPlayer();
-        int xx = (int) currentPlayer.getNextPosition().x;
-        int yy = (int) currentPlayer.getNextPosition().y;
+        Player inactivePlayer = gameState.inactivePlayer();
 
+        //update Tim
         if (!rightCollision(gameState.tim) && !leftCollision(gameState.tim) && !topCollision(gameState.tim) && !bottomCollision(gameState.tim)) {
             gameState.tim.updatePosition();
             gameState.tim.incrementYVelocity(1);
@@ -153,14 +153,16 @@ public class World {
             gameState.tim.resetYVelocity();
         }
 
-
-
+        //update Jack
         if (!rightCollision(gameState.jack) && !leftCollision(gameState.jack) && !topCollision(gameState.jack) && !bottomCollision(gameState.jack)) {
             gameState.jack.updatePosition();
             gameState.jack.incrementYVelocity(1);
         } else if (topCollision(gameState.jack) || bottomCollision(gameState.jack)){
             gameState.jack.resetYVelocity();
         }
+
+        //update inactive player
+        inactivePlayer.resetXVelocity();
     }
 
     // in progress
