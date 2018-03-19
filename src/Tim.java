@@ -2,10 +2,12 @@ import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 
 public class Tim extends Player {
+    public boolean isClimbing;
 
     public Tim(float x, float y) {
         this.position = new Point2D.Float(x, y);
         this.velocity = new Point2D.Float(0, 0);
+        this.isClimbing = false;
 
         // --- TEST VALUES ---
         this.currentImage = ImageLoader.loadImage("/test_images/tim_test.png");
