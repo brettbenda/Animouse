@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.awt.geom.Point2D;
 
 public class Jack extends Player {
@@ -21,6 +22,10 @@ public class Jack extends Player {
 
     public void updatePosition(){
         this.position = new Point2D.Float(this.position.x + this.velocity.x, this.position.y + this.velocity.y);
+    }
+
+    public void setPosition(Point2D.Float pos){
+        this.position = pos;
     }
 
     public void incrementYVelocity(float value){

@@ -1,10 +1,12 @@
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
+import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 
 public class World {
     private Display display;
     private GameState gameState;
+    private Level currentLevel;
 
     private Camera camera;
 
@@ -83,6 +85,12 @@ public class World {
                     gameState.tim.setClimbing(false);
                 }
                 break;
+            case KeyEvent.VK_Q:
+                if (gameState.currentPlayer() == gameState.jack && getRegion(gameState.jack) == 50) {
+                    int regionIndex = getHookIndex(gameState.jack);
+                    gameState.jack.setPosition(currentLevel.getHookablePoint(regionIndex));
+                }
+                break;
             case 49: // 1
                 System.out.println("Loading Level 1...");
                 gameState.loadLevel(new Level(0));
@@ -93,7 +101,15 @@ public class World {
                 break;
             case 51: // 3
                 System.out.println("Loading Level 3...");
-                gameState.loadLevel(new Level(2));
+                //create new level
+                Level nextLevel = new Level(2);
+                //assign points
+                nextLevel.addHookPoint(new Point2D.Float(1250,100));
+                nextLevel.addHookPoint(new Point2D.Float(200,100));
+                //load level
+                gameState.loadLevel(nextLevel);
+                //make current level
+                this.currentLevel = nextLevel;
                 break;
             case 52: // 4
                 System.out.println("Loading Level 4...");
@@ -285,6 +301,14 @@ public class World {
         return (gameState.getBitmap().getRGB(xx + width/2, yy + height/2) >>> 16) & 0x000000FF;
     }
 
+    private int getHookIndex(Player player){
+        int xx = (int) player.position.x;
+        int yy = (int) player.position.y;
+        int width = player.width;
+        int height = player.height;
+
+        return ((gameState.getBitmap().getRGB(xx + width/2, yy + height/2) >>> 8) & 0x000000FF)/10 ;
+    }
     public void loadNextLevel(){
         // play end cutscenes
         // ...
