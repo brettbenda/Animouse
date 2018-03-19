@@ -26,8 +26,7 @@ public class Jack extends Player {
     }
 
     public void setPosition(Point2D.Float pos){
-        this.position = pos;
-      //  this.position.setLocation(pos.x, pos.y);
+        this.position.setLocation(pos.x, pos.y);
     }
 
     public void incrementYVelocity(float value){
