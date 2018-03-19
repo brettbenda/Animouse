@@ -261,6 +261,30 @@ public class World {
         return gameState.getBackground();
     }
 
+    public BufferedImage getActivePlayerImage(){
+        return gameState.currentPlayer().getSprite();
+    }
+
+    public float getActivePlayerX(){
+        return gameState.currentPlayer().getPosition().x;
+    }
+
+    public float getActivePlayerY(){
+        return gameState.currentPlayer().getPosition().y;
+    }
+
+    public BufferedImage getInactivePlayerImage(){
+        return gameState.inactivePlayer().getSprite();
+    }
+
+    public float getInactivePlayerX(){
+        return gameState.inactivePlayer().getPosition().x;
+    }
+
+    public float getInactivePlayerY(){
+        return gameState.inactivePlayer().getPosition().y;
+    }
+
     public BufferedImage getTimImage() {
         return gameState.tim.getSprite();
     }
