@@ -27,7 +27,7 @@ public class World {
         switch( keyCode ) {
             case KeyEvent.VK_UP:
                 if (currentPlayer == gameState.tim) {
-                    if (gameState.tim.isClimbing) {
+                    if (gameState.tim.isClimbing()) {
                         gameState.tim.velocity.y = -5;
                     } else {
                         int xx = (int) gameState.tim.position.x;
@@ -40,13 +40,13 @@ public class World {
                 }
                 break;
             case KeyEvent.VK_DOWN:
-                if (currentPlayer == gameState.tim && gameState.tim.isClimbing) {
+                if (currentPlayer == gameState.tim && gameState.tim.isClimbing()) {
                     gameState.tim.velocity.y = 5;
                 }
                 break;
             case KeyEvent.VK_LEFT:
                 if (currentPlayer == gameState.tim) {
-                    if (gameState.tim.isClimbing) {
+                    if (gameState.tim.isClimbing()) {
                         gameState.tim.velocity.x = -5;
                     } else {
                         System.out.println("Tim's y velocity " + gameState.tim.velocity.y);
@@ -59,7 +59,7 @@ public class World {
                 break;
             case KeyEvent.VK_RIGHT:
                 if (currentPlayer == gameState.tim) {
-                    if (gameState.tim.isClimbing) {
+                    if (gameState.tim.isClimbing()) {
                         gameState.tim.velocity.x = 5;
                     } else {
                         System.out.println("Tim's y velocity " + gameState.tim.velocity.y);
@@ -75,12 +75,12 @@ public class World {
                 System.out.println("swap");
                 break;
             case KeyEvent.VK_C:
-                if (gameState.currentPlayer() == gameState.tim && getRegion(gameState.tim) == 40 && !gameState.tim.isClimbing) {
-                    gameState.tim.isClimbing = true;
+                if (gameState.currentPlayer() == gameState.tim && getRegion(gameState.tim) == 40 && !gameState.tim.isClimbing()) {
+                    gameState.tim.setClimbing(true);
                     gameState.tim.resetXVelocity();
                     gameState.tim.resetYVelocity();
-                } else if (gameState.currentPlayer() == gameState.tim && gameState.tim.isClimbing) {
-                    gameState.tim.isClimbing = false;
+                } else if (gameState.currentPlayer() == gameState.tim && gameState.tim.isClimbing()) {
+                    gameState.tim.setClimbing(false);
                 }
                 break;
             case 49: // 1
@@ -128,7 +128,7 @@ public class World {
         int keyCode = event.getKeyCode();
         switch( keyCode ) {
             case KeyEvent.VK_UP:
-                if (gameState.tim.isClimbing)
+                if (gameState.tim.isClimbing())
                     currentPlayer.resetYVelocity();
                 break;
             case KeyEvent.VK_DOWN:
@@ -172,7 +172,7 @@ public class World {
         //update Tim
         if (!rightCollision(gameState.tim) && !leftCollision(gameState.tim) && !topCollision(gameState.tim) && !bottomCollision(gameState.tim)) {
             gameState.tim.updatePosition();
-            if (!gameState.tim.isClimbing)
+            if (!gameState.tim.isClimbing())
                 gameState.tim.incrementYVelocity(1);
         }
         else if (topCollision(gameState.tim) || bottomCollision(gameState.tim)){
@@ -189,7 +189,7 @@ public class World {
 
         // handle leaving climbable region
         if (gameState.currentPlayer() == gameState.tim && getRegion(gameState.tim) != 40)
-            gameState.tim.isClimbing = false;
+            gameState.tim.setClimbing(false);
 
         //update inactive player
         inactivePlayer.resetXVelocity();

@@ -39,4 +39,12 @@ public class Tim extends Player {
     public void resetXVelocity(){
         this.velocity = new Point2D.Float(0 , this.velocity.y);
     }
+
+    public void setClimbing(boolean value){
+        this.isClimbing = value;
+    }
+
+    public boolean isClimbing(){
+        return this.isClimbing;
+    }
 }
