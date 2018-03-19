@@ -26,24 +26,32 @@ public class World {
         int keyCode = event.getKeyCode();
         switch( keyCode ) {
             case KeyEvent.VK_UP:
-                System.out.println("up");
                 if (currentPlayer == gameState.tim) {
-                    int xx = (int) gameState.tim.position.x;
-                    int yy = (int) gameState.tim.position.y + gameState.tim.height;
+                    if (gameState.tim.isClimbing) {
+                        gameState.tim.velocity.y = -5;
+                    } else {
+                        int xx = (int) gameState.tim.position.x;
+                        int yy = (int) gameState.tim.position.y + gameState.tim.height;
 
-                    if (getCollisionStatus(xx, yy, gameState.tim.width, 15)) {
-                        gameState.tim.velocity.y = -35;
+                        if (getCollisionStatus(xx, yy, gameState.tim.width, 15)) {
+                            gameState.tim.velocity.y = -35;
+                        }
                     }
                 }
                 break;
             case KeyEvent.VK_DOWN:
-                System.out.println("down");
-                currentPlayer.velocity.y = 7;
+                if (currentPlayer == gameState.tim && gameState.tim.isClimbing) {
+                    gameState.tim.velocity.y = 5;
+                }
                 break;
             case KeyEvent.VK_LEFT:
                 if (currentPlayer == gameState.tim) {
-                    System.out.println("Tim's y velocity " + gameState.tim.velocity.y);
-                    gameState.tim.velocity.x = -7;
+                    if (gameState.tim.isClimbing) {
+                        gameState.tim.velocity.x = -5;
+                    } else {
+                        System.out.println("Tim's y velocity " + gameState.tim.velocity.y);
+                        gameState.tim.velocity.x = -7;
+                    }
                 } else{
                     System.out.println("left");
                     gameState.jack.decrementXVelocity(0.5f);
@@ -51,8 +59,12 @@ public class World {
                 break;
             case KeyEvent.VK_RIGHT:
                 if (currentPlayer == gameState.tim) {
-                    System.out.println("Tim's y velocity " + gameState.tim.velocity.y);
-                    gameState.tim.velocity.x = 7;
+                    if (gameState.tim.isClimbing) {
+                        gameState.tim.velocity.x = 5;
+                    } else {
+                        System.out.println("Tim's y velocity " + gameState.tim.velocity.y);
+                        gameState.tim.velocity.x = 7;
+                    }
                 } else{
                     System.out.println("right");
                     gameState.jack.incrementXVelocity(0.5f);
@@ -61,6 +73,15 @@ public class World {
             case KeyEvent.VK_E:
                 gameState.switchPlayer();
                 System.out.println("swap");
+                break;
+            case KeyEvent.VK_C:
+                if (gameState.currentPlayer() == gameState.tim && getRegion(gameState.tim) == 40 && !gameState.tim.isClimbing) {
+                    gameState.tim.isClimbing = true;
+                    gameState.tim.resetXVelocity();
+                    gameState.tim.resetYVelocity();
+                } else if (gameState.currentPlayer() == gameState.tim && gameState.tim.isClimbing) {
+                    gameState.tim.isClimbing = false;
+                }
                 break;
             case 49: // 1
                 System.out.println("Loading Level 1...");
@@ -106,6 +127,10 @@ public class World {
 
         int keyCode = event.getKeyCode();
         switch( keyCode ) {
+            case KeyEvent.VK_UP:
+                if (gameState.tim.isClimbing)
+                    currentPlayer.resetYVelocity();
+                break;
             case KeyEvent.VK_DOWN:
                 currentPlayer.resetYVelocity();
                 break;
@@ -147,7 +172,8 @@ public class World {
         //update Tim
         if (!rightCollision(gameState.tim) && !leftCollision(gameState.tim) && !topCollision(gameState.tim) && !bottomCollision(gameState.tim)) {
             gameState.tim.updatePosition();
-            gameState.tim.incrementYVelocity(1);
+            if (!gameState.tim.isClimbing)
+                gameState.tim.incrementYVelocity(1);
         }
         else if (topCollision(gameState.tim) || bottomCollision(gameState.tim)){
             gameState.tim.resetYVelocity();
@@ -160,6 +186,10 @@ public class World {
         } else if (topCollision(gameState.jack) || bottomCollision(gameState.jack)){
             gameState.jack.resetYVelocity();
         }
+
+        // handle leaving climbable region
+        if (gameState.currentPlayer() == gameState.tim && getRegion(gameState.tim) != 40)
+            gameState.tim.isClimbing = false;
 
         //update inactive player
         inactivePlayer.resetXVelocity();
@@ -244,6 +274,15 @@ public class World {
             }
         }
         return false;
+    }
+
+    private int getRegion(Player player) {
+        int xx = (int) player.position.x;
+        int yy = (int) player.position.y;
+        int width = player.width;
+        int height = player.height;
+
+        return (gameState.getBitmap().getRGB(xx + width/2, yy + height/2) >>> 16) & 0x000000FF;
     }
 
     public void loadNextLevel(){
