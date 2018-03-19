@@ -78,8 +78,8 @@ public class Display extends JPanel{
     // renders the world data
     public void render() {
         //set background (i.e. area not draw over with an image) to black
-        g2d.setColor(Color.BLACK);
-        g2d.fillRect(0,0,WIDTH,HEIGHT);
+      //  g2d.setColor(Color.BLACK);
+      //  g2d.fillRect(0,0,WIDTH,HEIGHT);
 
         //draw background offset by location of the active player
         g2d.drawImage(world.getBackground(), 0-(int)world.getActivePlayerX()+WIDTH/2, 0-(int)world.getActivePlayerY()+HEIGHT/2, null);

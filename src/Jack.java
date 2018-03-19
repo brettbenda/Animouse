@@ -21,18 +21,21 @@ public class Jack extends Player {
     }
 
     public void updatePosition(){
-        this.position = new Point2D.Float(this.position.x + this.velocity.x, this.position.y + this.velocity.y);
+     //   this.position = new Point2D.Float(this.position.x + this.velocity.x, this.position.y + this.velocity.y);
+        this.position.setLocation(this.position.x + this.velocity.x, this.position.y + this.velocity.y);
     }
 
     public void setPosition(Point2D.Float pos){
         this.position = pos;
+      //  this.position.setLocation(pos.x, pos.y);
     }
 
     public void incrementYVelocity(float value){
         if (this.velocity.y + value > 10) {
             this.velocity.y = 10;
         } else {
-            this.velocity = new Point2D.Float(this.velocity.x, this.velocity.y + value);
+        //    this.velocity = new Point2D.Float(this.velocity.x, this.velocity.y + value);
+            this.velocity.setLocation(this.velocity.x, this.velocity.y + value);
         }
     }
 
@@ -40,7 +43,8 @@ public class Jack extends Player {
         if (this.velocity.x + value > maxXVelocity) {
             this.velocity.x = maxXVelocity;
         } else {
-            this.velocity = new Point2D.Float(this.velocity.x+value, this.velocity.y );
+    //        this.velocity = new Point2D.Float(this.velocity.x+value, this.velocity.y );
+            this.velocity.setLocation(this.velocity.x + value, this.velocity.y);
         }
     }
 
@@ -48,7 +52,8 @@ public class Jack extends Player {
         if (this.velocity.x - value < -maxXVelocity) {
             this.velocity.x = -maxXVelocity;
         } else {
-            this.velocity = new Point2D.Float(this.velocity.x-value, this.velocity.y );
+   //         this.velocity = new Point2D.Float(this.velocity.x-value, this.velocity.y );
+            this.velocity.setLocation(this.velocity.x - value, this.velocity.y);
         }
     }
 

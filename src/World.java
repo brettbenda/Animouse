@@ -89,6 +89,8 @@ public class World {
                 if (gameState.currentPlayer() == gameState.jack && getRegion(gameState.jack) == 50) {
                     int regionIndex = getHookIndex(gameState.jack);
                     gameState.jack.setPosition(currentLevel.getHookablePoint(regionIndex));
+                    System.out.println("Grapple to region " + regionIndex);
+                    System.out.println("Grapple to location " + currentLevel.getHookablePoint(regionIndex).x + ", " + currentLevel.getHookablePoint(regionIndex).y);
                 }
                 break;
             case 49: // 1
@@ -104,8 +106,10 @@ public class World {
                 //create new level
                 Level nextLevel = new Level(2);
                 //assign points
-                nextLevel.addHookPoint(new Point2D.Float(1250,100));
-                nextLevel.addHookPoint(new Point2D.Float(200,100));
+            //    nextLevel.addHookPoint(new Point2D.Float(1250,100));
+          //      nextLevel.addHookPoint(new Point2D.Float(200,100));
+                nextLevel.addHookPoint(new Point2D.Float(1250,1000));
+                nextLevel.addHookPoint(new Point2D.Float(1400,1000));
                 //load level
                 gameState.loadLevel(nextLevel);
                 //make current level
