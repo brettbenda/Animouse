@@ -88,7 +88,8 @@ public class World {
             case KeyEvent.VK_Q:
                 if (gameState.currentPlayer() == gameState.jack && getRegion(gameState.jack) == 50) {
                     int regionIndex = getHookIndex(gameState.jack);
-                    gameState.jack.setPosition(currentLevel.getHookablePoint(regionIndex));
+                   // gameState.jack.setPosition(currentLevel.getHookablePoint(regionIndex));
+                    gameState.jack.grappleTo(currentLevel.getHookablePoint(regionIndex));
                     System.out.println("Grapple to region " + regionIndex);
                     System.out.println("Grapple to location " + currentLevel.getHookablePoint(regionIndex).x + ", " + currentLevel.getHookablePoint(regionIndex).y);
                 }
@@ -108,8 +109,8 @@ public class World {
                 //assign points
             //    nextLevel.addHookPoint(new Point2D.Float(1250,100));
           //      nextLevel.addHookPoint(new Point2D.Float(200,100));
-                nextLevel.addHookPoint(new Point2D.Float(1250,1000));
-                nextLevel.addHookPoint(new Point2D.Float(1400,1000));
+                nextLevel.addHookPoint(new Point2D.Float(1250,1628));
+                nextLevel.addHookPoint(new Point2D.Float(1400,1124));
                 //load level
                 gameState.loadLevel(nextLevel);
                 //make current level
@@ -200,7 +201,10 @@ public class World {
         }
 
         //update Jack
-        if (!rightCollision(gameState.jack) && !leftCollision(gameState.jack) && !topCollision(gameState.jack) && !bottomCollision(gameState.jack)) {
+        if (gameState.jack.isGrappling()){
+            gameState.jack.updatePosition();
+        }
+        else if (!rightCollision(gameState.jack) && !leftCollision(gameState.jack) && !topCollision(gameState.jack) && !bottomCollision(gameState.jack)) {
             gameState.jack.updatePosition();
             gameState.jack.incrementYVelocity(1);
         } else if (topCollision(gameState.jack) || bottomCollision(gameState.jack)){

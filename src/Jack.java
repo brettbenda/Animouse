@@ -1,13 +1,17 @@
-import java.awt.*;
 import java.awt.geom.Point2D;
 
 public class Jack extends Player {
 
     private final float maxXVelocity = 15;
+    private final float grappleSpeed = 40;
+    private boolean isGrappling;
+    private Point2D.Float hookPosition;
 
     public Jack(float x, float y) {
         this.position = new Point2D.Float(x, y);
         this.velocity = new Point2D.Float(0, 0);
+        this.isGrappling = false;
+        this.hookPosition = new Point2D.Float();
 
         // --- TEST VALUES ---
         this.currentImage = ImageLoader.loadImage("/test_images/tim_test.png");
@@ -21,8 +25,19 @@ public class Jack extends Player {
     }
 
     public void updatePosition(){
-     //   this.position = new Point2D.Float(this.position.x + this.velocity.x, this.position.y + this.velocity.y);
-        this.position.setLocation(this.position.x + this.velocity.x, this.position.y + this.velocity.y);
+        if (isGrappling){
+            System.out.println("isGrappling");
+            if ((this.velocity.x < 0 && position.x + velocity.x <= hookPosition.x)
+                    || (this.velocity.x > 0 && position.x + velocity.x >= hookPosition.x)) {
+                this.position.setLocation(this.hookPosition.x, this.hookPosition.y);
+                isGrappling = false;
+                this.velocity.setLocation(0, 0);
+            }
+            else
+                this.position.setLocation(this.position.x + this.velocity.x, this.position.y + this.velocity.y);
+        } else
+            this.position.setLocation(this.position.x + this.velocity.x, this.position.y + this.velocity.y);
+        System.out.println(this.position.y);
     }
 
     public void setPosition(Point2D.Float pos){
@@ -62,5 +77,17 @@ public class Jack extends Player {
 
     public void resetXVelocity(){
         this.velocity = new Point2D.Float(0 , this.velocity.y);
+    }
+
+    public boolean isGrappling(){
+        return this.isGrappling;
+    }
+
+    public void grappleTo(Point2D.Float pos){
+        this.isGrappling = true;
+        hookPosition.setLocation(pos.x, pos.y);
+        float dist = (float) Math.sqrt((pos.x - this.position.x)*(pos.x - this.position.x) + (pos.y - this.position.y)*(pos.y - this.position.y));
+        this.velocity.x = grappleSpeed * (hookPosition.x - this.position.x) / dist;
+        this.velocity.y = grappleSpeed * (hookPosition.y - this.position.y) / dist;
     }
 }
