@@ -28,7 +28,9 @@ public class Jack extends Player {
         if (isGrappling){
             System.out.println("isGrappling");
             if ((this.velocity.x < 0 && position.x + velocity.x <= hookPosition.x)
-                    || (this.velocity.x > 0 && position.x + velocity.x >= hookPosition.x)) {
+                    || (this.velocity.x > 0 && position.x + velocity.x >= hookPosition.x)
+                    || (this.velocity.y < 0 && position.y + velocity.y <= hookPosition.y)
+                    || (this.velocity.y > 0 && position.y + velocity.y >= hookPosition.y)) {
                 this.position.setLocation(this.hookPosition.x, this.hookPosition.y);
                 isGrappling = false;
                 this.velocity.setLocation(0, 0);
@@ -89,5 +91,9 @@ public class Jack extends Player {
         float dist = (float) Math.sqrt((pos.x - this.position.x)*(pos.x - this.position.x) + (pos.y - this.position.y)*(pos.y - this.position.y));
         this.velocity.x = grappleSpeed * (hookPosition.x - this.position.x) / dist;
         this.velocity.y = grappleSpeed * (hookPosition.y - this.position.y) / dist;
+        System.out.println("GRAPPLE TO " + pos.x + ", " + pos.y + " FROM " + this.position.x + ", " + this.position.y);
+        System.out.println("velocity x " + this.velocity.x);
+        System.out.println("velocity y " + this.velocity.y);
+
     }
 }
