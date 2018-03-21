@@ -18,10 +18,7 @@ public class Level {
     // public Cutscene[] endCutscenes;
 
     // constructor
-    public Level(int levelNumber) {
-
-        // load visualAssets
-        this.visualAssets = new VisualAssets();
+    public Level(int levelNumber, VisualAssets visualAssets) {
 
         // load imageLayer from image file
         // this.imageLayer = ImageLoader.loadImage(imageLayerPath);
