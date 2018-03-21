@@ -1,3 +1,4 @@
+import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 
 public class GameState {
@@ -18,13 +19,18 @@ public class GameState {
 
         // --- TEST VALUES ---
         this.selectedPlayer = 0; //0 for Tim, 1 for Jack
-        this.tim = new Tim(100, 800);
-        this.jack = new Jack(400, 540);
+        this.tim = new Tim(level.posTim.x, level.posTim.y);
+        this.jack = new Jack(level.posJack.x,level.posJack.y);
+
+
         // --- TEST VALUES ---
     }
 
     public void loadLevel(Level level) {
         this.level = level;
+        this.tim.position = level.posTim;
+        this.jack.position = level.posJack;
+
     }
 
     public BufferedImage getBackground() {

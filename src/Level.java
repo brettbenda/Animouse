@@ -35,8 +35,8 @@ public class Level {
         // this.endCutscenes = endCutscenes;
 
         // --- TEST VALUES ---
-        this.posTim = new Point2D.Float(960, 540);
-        this.posJack = new Point2D.Float(960, 540);
+        this.posTim = new Point2D.Float(100, 800);
+        this.posJack = new Point2D.Float(200, 540);
         this.posCamera = new Point2D.Float(960, 540);
         // --- TEST VALUES ---
     }
@@ -49,5 +49,19 @@ public class Level {
     //used to get the point belonging to a region
     public Point2D.Float getHookablePoint(int index){
         return hookablePoints.get(index);
+    }
+
+    public void setStartPosXTim(int x){
+
+    }
+    public void setStartPosYTim(int x){
+
+    }
+
+    public void setStartPosXJack(int x){
+
+    }
+    public void setStartPosYJack(int x){
+
     }
 }
