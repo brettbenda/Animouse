@@ -2,24 +2,31 @@ import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
+import java.util.ArrayList;
 
 public class World {
     private Display display;
     private GameState gameState;
     private Level currentLevel;
+    private ArrayList<Level> levels = new ArrayList<Level>();
 
+    private int plotPoint;
     private Camera camera;
 
     // constructor
     public World(Display display) {
         // store reference to display
         this.display = display;
-
+        this.plotPoint = 2;
         // initialize game state
         this.gameState = new GameState(new Level(0));
 
-        // create camera
-        // this.camera = new Camera(display.getWidth()/display.getHeight(), display.getWidth(), display.getHeight());
+        //preload levels
+        for(int i = 0; i < 9; i++){
+            levels.add(new Level(i));
+        }
+        levels.get(2).addHookPoint(new Point2D.Float(1250,1628));
+        levels.get(2).addHookPoint(new Point2D.Float(1400,1124));
     }
 
     public void handleKeyPress(KeyEvent event){
@@ -98,49 +105,40 @@ public class World {
                 break;
             case 49: // 1
                 System.out.println("Loading Level 1...");
-                gameState.loadLevel(new Level(0));
+                gameState.loadLevel(levels.get(0));
                 break;
             case 50: // 2
                 System.out.println("Loading Level 2...");
-                gameState.loadLevel(new Level(1));
+                gameState.loadLevel(levels.get(1));
                 break;
             case 51: // 3
                 System.out.println("Loading Level 3...");
-                //create new level
-                Level nextLevel = new Level(2);
-                //assign points
-            //    nextLevel.addHookPoint(new Point2D.Float(1250,100));
-          //      nextLevel.addHookPoint(new Point2D.Float(200,100));
-                nextLevel.addHookPoint(new Point2D.Float(1250,1628));
-                nextLevel.addHookPoint(new Point2D.Float(1400,1124));
-                //load level
-                gameState.loadLevel(nextLevel);
-                //make current level
-                this.currentLevel = nextLevel;
+                gameState.loadLevel(levels.get(2));
+                currentLevel = levels.get(2);
                 break;
             case 52: // 4
                 System.out.println("Loading Level 4...");
-                gameState.loadLevel(new Level(3));
+                gameState.loadLevel(levels.get(3));
                 break;
             case 53: // 5
                 System.out.println("Loading Level 5...");
-                gameState.loadLevel(new Level(4));
+                gameState.loadLevel(levels.get(4));
                 break;
             case 54: // 6
                 System.out.println("Loading Level 6...");
-                gameState.loadLevel(new Level(5));
+                gameState.loadLevel(levels.get(5));
                 break;
             case 55: // 7
                 System.out.println("Loading Level 7...");
-                gameState.loadLevel(new Level(6));
+                gameState.loadLevel(levels.get(6));
                 break;
             case 56: // 8
                 System.out.println("Loading Level 8...");
-                gameState.loadLevel(new Level(7));
+                gameState.loadLevel(levels.get(7));
                 break;
             case 57: // 9
                 System.out.println("Loading Level 9...");
-                gameState.loadLevel(new Level(8));
+                gameState.loadLevel(levels.get(8));
                 break;
         }
     }
@@ -216,6 +214,12 @@ public class World {
         // handle leaving climbable region
         if (gameState.currentPlayer() == gameState.tim && getRegion(gameState.tim) != 40)
             gameState.tim.setClimbing(false);
+
+        if(getRegion(gameState.tim)==30 && getRegion(gameState.jack)==30){
+            System.out.println("End of level!111!!!!1!!!1!11");
+            plotPoint++;
+            gameState.loadLevel(levels.get(plotPoint));
+        }
 
         //update inactive player
         inactivePlayer.resetXVelocity();
