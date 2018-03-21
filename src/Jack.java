@@ -4,13 +4,17 @@ public class Jack extends Player {
 
     private final float maxXVelocity = 15;
     private final float grappleSpeed = 40;
-    private boolean isGrappling;
+    private int movementState;
     private Point2D.Float hookPosition;
+
+    private final int NORMAL = 0;
+    private final int GRAPPLING = 1;
+    private final int HOOKED = 2;
 
     public Jack(float x, float y) {
         this.position = new Point2D.Float(x, y);
         this.velocity = new Point2D.Float(0, 0);
-        this.isGrappling = false;
+        this.movementState = NORMAL;
         this.hookPosition = new Point2D.Float();
 
         // --- TEST VALUES ---
@@ -25,14 +29,14 @@ public class Jack extends Player {
     }
 
     public void updatePosition(){
-        if (isGrappling){
+        if (isGrappling()){
             System.out.println("isGrappling");
             if ((this.velocity.x < 0 && position.x + velocity.x <= hookPosition.x)
                     || (this.velocity.x > 0 && position.x + velocity.x >= hookPosition.x)
                     || (this.velocity.y < 0 && position.y + velocity.y <= hookPosition.y)
                     || (this.velocity.y > 0 && position.y + velocity.y >= hookPosition.y)) {
                 this.position.setLocation(this.hookPosition.x, this.hookPosition.y);
-                isGrappling = false;
+                movementState = HOOKED;
                 this.velocity.setLocation(0, 0);
             }
             else
@@ -82,12 +86,25 @@ public class Jack extends Player {
         this.velocity = new Point2D.Float(0 , this.velocity.y);
     }
 
-    public boolean isGrappling(){
-        return this.isGrappling;
+    public boolean isNormal() {
+        return movementState == NORMAL;
     }
 
+    public boolean isGrappling(){
+        return movementState == GRAPPLING;
+    }
+
+    public boolean isHooked() {
+        return movementState == HOOKED;
+    }
+
+    public void setMovementState(int ms) {
+        this.movementState = ms;
+    }
+
+
     public void grappleTo(Point2D.Float pos){
-        this.isGrappling = true;
+        this.movementState = GRAPPLING;
         hookPosition.setLocation(pos.x, pos.y);
         float dist = (float) Math.sqrt((pos.x - this.position.x)*(pos.x - this.position.x) + (pos.y - this.position.y)*(pos.y - this.position.y));
         this.velocity.x = grappleSpeed * (hookPosition.x - this.position.x) / dist;
