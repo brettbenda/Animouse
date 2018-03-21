@@ -49,11 +49,21 @@ public class World {
                             gameState.tim.velocity.y = -35;
                         }
                     }
+                } else {
+                    if (gameState.jack.isHooked()) {
+                        gameState.jack.velocity = new Point2D.Float(0, -30);
+                        gameState.jack.setMovementState(0);
+                    }
                 }
                 break;
             case KeyEvent.VK_DOWN:
                 if (currentPlayer == gameState.tim && gameState.tim.isClimbing()) {
                     gameState.tim.velocity.y = 5;
+                } else {
+                    if (gameState.jack.isHooked()) {
+                        gameState.jack.velocity = new Point2D.Float(0, 30);
+                        gameState.jack.setMovementState(0);
+                    }
                 }
                 break;
             case KeyEvent.VK_LEFT:
@@ -64,9 +74,14 @@ public class World {
                         System.out.println("Tim's y velocity " + gameState.tim.velocity.y);
                         gameState.tim.velocity.x = -7;
                     }
-                } else{
-                    System.out.println("left");
-                    gameState.jack.decrementXVelocity(0.5f);
+                } else {
+                    if (gameState.jack.isHooked()) {
+                        gameState.jack.velocity = new Point2D.Float(-30, 0);
+                        gameState.jack.setMovementState(0);
+                    } else if (!gameState.jack.isHooked() && !gameState.jack.isGrappling()) {
+                        System.out.println("left");
+                        gameState.jack.decrementXVelocity(0.5f);
+                    }
                 }
                 break;
             case KeyEvent.VK_RIGHT:
@@ -77,9 +92,14 @@ public class World {
                         System.out.println("Tim's y velocity " + gameState.tim.velocity.y);
                         gameState.tim.velocity.x = 7;
                     }
-                } else{
-                    System.out.println("right");
-                    gameState.jack.incrementXVelocity(0.5f);
+                } else {
+                    if (gameState.jack.isHooked()) {
+                        gameState.jack.velocity = new Point2D.Float(30, 0);
+                        gameState.jack.setMovementState(0);
+                    } else if (!gameState.jack.isHooked() && !gameState.jack.isGrappling()) {
+                        System.out.println("right");
+                        gameState.jack.incrementXVelocity(0.5f);
+                    }
                 }
                 break;
             case KeyEvent.VK_E:
@@ -210,6 +230,9 @@ public class World {
         //update Jack
         if (gameState.jack.isGrappling()){
             gameState.jack.updatePosition();
+        }
+        else if (gameState.jack.isHooked()) {
+            // do nothing
         }
         else if (!rightCollision(gameState.jack) && !leftCollision(gameState.jack) && !topCollision(gameState.jack) && !bottomCollision(gameState.jack)) {
             gameState.jack.updatePosition();
