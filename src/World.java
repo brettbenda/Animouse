@@ -35,7 +35,9 @@ public class World {
                         int xx = (int) gameState.tim.position.x;
                         int yy = (int) gameState.tim.position.y + gameState.tim.height;
 
-                        if (getCollisionStatus(xx, yy, gameState.tim.width, 15)) {
+                        if (!getCollisionStatus(xx, yy, gameState.tim.width, 15) && areTimAndJackIntersecting() && gameState.tim.velocity.y>0) {
+                            gameState.tim.velocity.y = -70;
+                        }else if (getCollisionStatus(xx, yy, gameState.tim.width, 15)) {
                             gameState.tim.velocity.y = -35;
                         }
                     }
@@ -305,6 +307,15 @@ public class World {
         }
         return false;
     }
+
+    public boolean areTimAndJackIntersecting(){
+        if (Math.abs(gameState.tim.position.x - gameState.jack.position.x) <= gameState.tim.width
+                && Math.abs(gameState.tim.position.y - gameState.jack.position.y) <= gameState.tim.height)
+            return true;
+        else
+            return false;
+    }
+
 
     private int getRegion(Player player) {
         int xx = (int) player.position.x;
