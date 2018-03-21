@@ -3,9 +3,8 @@ import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
 public class Level {
-    private VisualAssets visualAssets;
 
-    public BufferedImage imageLayer;
+    public BufferedImage background;
     public BufferedImage bitmap;           // a.k.a. effectLayer
 
     public Point2D.Float posTim;
@@ -18,15 +17,15 @@ public class Level {
     // public Cutscene[] endCutscenes;
 
     // constructor
-    public Level(int levelNumber, VisualAssets visualAssets) {
+    public Level(int levelNumber) {
 
-        // load imageLayer from image file
-        // this.imageLayer = ImageLoader.loadImage(imageLayerPath);
-        this.imageLayer = visualAssets.getBackground(levelNumber);
+        // load background from image file
+        // this.background = ImageLoader.loadImage(imageLayerPath);
+        this.background = ImageLoader.loadImage("/VisualAssets/Background/levelBackground_" + levelNumber + ".png");
 
         // load bitmap from image file
         // this.bitmap = ImageLoader.loadImage(bitmapPath);
-        this.bitmap = visualAssets.getBitmap(levelNumber);
+        this.bitmap = ImageLoader.loadImage("/VisualAssets/Bitmap/levelBitmap_" + levelNumber + ".png");
 
         // load other data from text file
         // this.miscDataPath = ...
