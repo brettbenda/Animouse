@@ -203,8 +203,8 @@ public class World {
             gameState.tim.resetYVelocity();
         }
 
-
-        if(gameState.tim.velocity.y > 25 && rightCollision(gameState.tim)){
+        // Handle Death scenario for Tim
+        if(gameState.tim.velocity.y > 25 && rightCollision(gameState.tim) && !(areTimAndJackIntersecting())){
             gameState.loadLevel(new Level(3));
         }
 
