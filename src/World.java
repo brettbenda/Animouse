@@ -193,11 +193,17 @@ public class World {
         //update Tim
         if (!rightCollision(gameState.tim) && !leftCollision(gameState.tim) && !topCollision(gameState.tim) && !bottomCollision(gameState.tim)) {
             gameState.tim.updatePosition();
+
             if (!gameState.tim.isClimbing())
                 gameState.tim.incrementYVelocity(1);
         }
         else if (topCollision(gameState.tim) || bottomCollision(gameState.tim)){
             gameState.tim.resetYVelocity();
+        }
+
+
+        if(gameState.tim.velocity.y > 25 && rightCollision(gameState.tim)){
+            gameState.loadLevel(new Level(3));
         }
 
         //update Jack

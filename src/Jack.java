@@ -53,6 +53,7 @@ public class Jack extends Player {
         //    this.velocity = new Point2D.Float(this.velocity.x, this.velocity.y + value);
             this.velocity.setLocation(this.velocity.x, this.velocity.y + value);
         }
+
     }
 
     public void incrementXVelocity(float value){

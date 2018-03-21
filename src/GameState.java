@@ -18,7 +18,7 @@ public class GameState {
 
         // --- TEST VALUES ---
         this.selectedPlayer = 0; //0 for Tim, 1 for Jack
-        this.tim = new Tim(960, 300);
+        this.tim = new Tim(100, 800);
         this.jack = new Jack(400, 540);
         // --- TEST VALUES ---
     }
