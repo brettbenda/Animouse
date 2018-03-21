@@ -9,6 +9,7 @@ public class World {
     private GameState gameState;
     private Level currentLevel;
     private ArrayList<Level> levels = new ArrayList<Level>();
+    private VisualAssets visualAssets = new VisualAssets();
 
     private int plotPoint;
     private Camera camera;
@@ -19,11 +20,11 @@ public class World {
         this.display = display;
         this.plotPoint = 2;
         // initialize game state
-        this.gameState = new GameState(new Level(0));
+        this.gameState = new GameState(new Level(0, visualAssets));
 
         //preload levels
         for(int i = 0; i < 9; i++){
-            levels.add(new Level(i));
+            levels.add(new Level(i, visualAssets));
         }
         levels.get(2).addHookPoint(new Point2D.Float(1250,1628));
         levels.get(2).addHookPoint(new Point2D.Float(1400,1124));
@@ -203,7 +204,7 @@ public class World {
 
         // Handle Death scenario for Tim
         if(gameState.tim.velocity.y > 25 && rightCollision(gameState.tim) && !(areTimAndJackIntersecting())){
-            gameState.loadLevel(new Level(3));
+            gameState.loadLevel(new Level(3,visualAssets));
         }
 
         //update Jack
