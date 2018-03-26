@@ -26,8 +26,8 @@ public class World {
         // initialize game state
         this.gameState = new GameState(levels.get(0));
 
-        levels.get(2).addHookPoint(new Point2D.Float(1250,1628));
-        levels.get(2).addHookPoint(new Point2D.Float(1400,1124));
+      //  levels.get(2).addHookPoint(new Point2D.Float(1250,1628));
+       // levels.get(2).addHookPoint(new Point2D.Float(1400,1124));
     }
 
     public void handleKeyPress(KeyEvent event){
