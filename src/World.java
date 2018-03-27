@@ -9,6 +9,7 @@ public class World {
     private GameState gameState;
     private Level currentLevel;
     private ArrayList<Level> levels = new ArrayList<Level>();
+    private ArrayList<PlotPoint> plotPoints = new ArrayList<PlotPoint>();
 
     private int plotPoint;
     private Camera camera;
@@ -19,6 +20,8 @@ public class World {
         this.display = display;
         this.plotPoint = 2;
 
+        loadPlot();
+
         //preload levels
         for(int i = 0; i < 9; i++){
             levels.add(new Level(i));
@@ -28,6 +31,42 @@ public class World {
 
       //  levels.get(2).addHookPoint(new Point2D.Float(1250,1628));
        // levels.get(2).addHookPoint(new Point2D.Float(1400,1124));
+    }
+
+    private void loadPlot(){
+        int numOfFrames = 0;
+        for (int i = 0; i < 8; ++i){
+            switch(i){
+                case 0:
+                    numOfFrames = 1;
+                    break;
+                case 1:
+                    numOfFrames = 1;
+                    break;
+                case 2:
+                    numOfFrames = 1;
+                    break;
+                case 3:
+                    numOfFrames = 1;
+                    break;
+                case 4:
+                    numOfFrames = 1;
+                    break;
+                case 5:
+                    numOfFrames = 1;
+                    break;
+                case 6:
+                    numOfFrames = 1;
+                    break;
+                case 7:
+                    numOfFrames = 1;
+                    break;
+            }
+            plotPoints.add(new Cutscene(i, numOfFrames));
+            plotPoints.add(new Level(i));
+        }
+        numOfFrames = 1;
+        plotPoints.add(new Cutscene(8, numOfFrames));
     }
 
     public void handleKeyPress(KeyEvent event){
@@ -258,6 +297,7 @@ public class World {
         if(getRegion(gameState.tim)==30 && getRegion(gameState.jack)==30){
             //System.out.println("End of level!111!!!!1!!!1!11");
             plotPoint++;
+            // load plotPoints.get(plotPoint);
             gameState.loadLevel(levels.get(plotPoint));
         }
 
