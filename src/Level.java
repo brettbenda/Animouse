@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Level {
+public class Level extends PlotPoint{
 
     public BufferedImage background;
     public BufferedImage bitmap;           // a.k.a. effectLayer
@@ -16,7 +16,6 @@ public class Level {
     public Point2D.Float posJack;
     public Point2D.Float posCamera;
     public ArrayList<Point2D.Float> hookablePoints = new ArrayList<Point2D.Float>();
-
 
     // public Cutscene[] startCutscenes;
     // public Cutscene[] endCutscenes;
@@ -35,6 +34,7 @@ public class Level {
         // load other data from text file
         // this.miscDataPath = ...
         loadData(levelNumber);
+
 
         // store cutscenes
         // this.startCutscenes = startCutscenes;
