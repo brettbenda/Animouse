@@ -22,7 +22,7 @@ public class Tim extends Player {
 
     public void updatePosition(){
         this.position = new Point2D.Float(this.position.x + this.velocity.x, this.position.y + this.velocity.y);
-        System.out.println("🎈"+velocity.y);
+        //System.out.println("🎈"+velocity.y);
 
     }
 

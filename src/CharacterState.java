@@ -1,0 +1,3 @@
+public enum CharacterState {
+    CLIMBING, WALKING, FALLING, IDLE, GRAPPLING, DYING, JUMPING, HOOKED
+}

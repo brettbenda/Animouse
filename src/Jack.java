@@ -43,7 +43,7 @@ public class Jack extends Player {
                 this.position.setLocation(this.position.x + this.velocity.x, this.position.y + this.velocity.y);
         } else
             this.position.setLocation(this.position.x + this.velocity.x, this.position.y + this.velocity.y);
-        System.out.println(this.position.y);
+        //System.out.println(this.position.y);
     }
 
     public void setPosition(Point2D.Float pos){

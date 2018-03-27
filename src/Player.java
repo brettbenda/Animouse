@@ -10,6 +10,8 @@ public abstract class Player {
 
     protected BufferedImage currentImage;
 
+    protected CharacterState state;
+
     // private Animation currentAnim;
 
     public Point2D.Float getPosition() {
@@ -38,4 +40,11 @@ public abstract class Player {
         return this.currentImage;
     }
 
+    public void setState(CharacterState state){
+        this.state = state;
+    }
+
+    public CharacterState getState(){
+        return this.state;
+    }
 }
