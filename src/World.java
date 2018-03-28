@@ -9,7 +9,6 @@ public class World {
     private GameState gameState;
     private Level currentLevel;
     private ArrayList<Level> levels = new ArrayList<Level>();
-    private ArrayList<PlotPoint> plotPoints = new ArrayList<PlotPoint>();
 
     private int plotPoint;
     private Camera camera;
@@ -18,7 +17,7 @@ public class World {
     public World(Display display) {
         // store reference to display
         this.display = display;
-        this.plotPoint = 2;
+        this.plotPoint = 2 ;
 
         loadPlot();
 
@@ -62,11 +61,9 @@ public class World {
                     numOfFrames = 1;
                     break;
             }
-            plotPoints.add(new Cutscene(i, numOfFrames));
-            plotPoints.add(new Level(i));
+
         }
         numOfFrames = 1;
-        plotPoints.add(new Cutscene(8, numOfFrames));
     }
 
     public void handleKeyPress(KeyEvent event){
@@ -300,11 +297,12 @@ public class World {
             gameState.jack.resetYVelocity();
         }
 
-        if(getRegion(gameState.tim)==30 && getRegion(gameState.jack)==30){
-            //System.out.println("End of level!111!!!!1!!!1!11");
-            plotPoint++;
+        System.out.println("🎈" +"End of level!111!!!!1!!!1!11");
+
+        if(getRegion(gameState.tim)==30){
+
             // load plotPoints.get(plotPoint);
-            gameState.loadLevel(levels.get(plotPoint));
+            gameState.loadLevel(levels.get(++plotPoint));
         }
 
         //update inactive player

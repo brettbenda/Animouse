@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Level extends PlotPoint{
+public class Level {
 
     public BufferedImage background;
     public BufferedImage bitmap;           // a.k.a. effectLayer
