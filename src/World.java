@@ -328,7 +328,7 @@ public class World {
 
 
             if (getRegion(gameState.tim) == 30 || getRegion(gameState.jack) == 30) {
-                if (getRegion(gameState.tim) == 30) {
+                if (getRegion(gameState.tim) == 30 || getRegion(gameState.jack) == 30) {
                     System.out.println("🎈" + "End of level!111!!!!1!!!1!11");
 
                     if (isPlayable)
