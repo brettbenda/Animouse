@@ -7,6 +7,7 @@ public class FiniteAnimation implements Animation {
     private int index;
 
     public FiniteAnimation(BufferedImage frames[], int frameRate) {
+        this.frames = frames;
         this.index = 0;
         this.frameRate = frameRate;
         this.previousTime = System.currentTimeMillis();
@@ -14,10 +15,10 @@ public class FiniteAnimation implements Animation {
 
     public void update() {
         long currentTime = System.currentTimeMillis();
-        if (this.index < frames.length && currentTime - previousTime > frameRate) {
+        if (this.index < frames.length - 1 && currentTime - previousTime > frameRate) {
             this.index++;
+            previousTime = currentTime;
         }
-        previousTime = currentTime;
     }
 
     public BufferedImage getFrame() {
@@ -26,5 +27,6 @@ public class FiniteAnimation implements Animation {
 
     public void reset() {
         this.index = 0;
+        this.previousTime = System.currentTimeMillis();
     }
 }

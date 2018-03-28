@@ -335,6 +335,10 @@ public class World {
                 //update inactive player
                 inactivePlayer.resetXVelocity();
             }
+
+            // update character animations
+            gameState.tim.updateImage();
+            gameState.jack.updateImage();
         }
     }
 

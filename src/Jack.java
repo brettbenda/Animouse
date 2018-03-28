@@ -1,4 +1,5 @@
 import java.awt.geom.Point2D;
+import java.awt.image.BufferedImage;
 
 public class Jack extends Player {
 
@@ -21,6 +22,33 @@ public class Jack extends Player {
         this.currentImage = ImageLoader.loadImage("/test_images/tim_test.png");
         this.width = currentImage.getWidth();
         this.height = currentImage.getHeight();
+
+        this.state = CharacterState.IDLE;
+
+        BufferedImage TIM_JUMPING_ANIM[];
+        BufferedImage TIM_WALKING_ANIM[];
+        BufferedImage TIM_IDLE_ANIM[];
+
+        // Jumping Animation
+        TIM_JUMPING_ANIM = new BufferedImage[5];
+        for (int i = 0; i < TIM_JUMPING_ANIM.length; ++i) {
+            TIM_JUMPING_ANIM[i] = ImageLoader.loadImage("/test_images/tim_animation_" + i + ".png");
+        }
+        // Walking Animation
+        TIM_WALKING_ANIM = new BufferedImage[5];
+        for (int i = 0; i < TIM_WALKING_ANIM.length; ++i) {
+            TIM_WALKING_ANIM[i] = ImageLoader.loadImage("/test_images/tim_animation_" + i + ".png");
+        }
+        // Idle Animation
+        TIM_IDLE_ANIM = new BufferedImage[5];
+        for (int i = 0; i < TIM_IDLE_ANIM.length; ++i) {
+            TIM_IDLE_ANIM[i] = ImageLoader.loadImage("/test_images/tim_animation_" + i + ".png");
+        }
+
+        this.walkingAnim = new LoopingAnimation(TIM_WALKING_ANIM, 250);
+        this.jumpingAnim = new FiniteAnimation(TIM_JUMPING_ANIM, 250);
+        this.idleAnim = new LoopingAnimation(TIM_IDLE_ANIM, 250);
+        this.currentAnim = idleAnim;
         // --- TEST VALUES ---
     }
 

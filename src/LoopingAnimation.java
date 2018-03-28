@@ -6,7 +6,8 @@ public class LoopingAnimation implements Animation {
     private BufferedImage frames[];
     private int index;
 
-    public LoopingAnimation(BufferedImage frames[]) {
+    public LoopingAnimation(BufferedImage frames[], int frameRate) {
+        this.frames = frames;
         this.index = 0;
         this.frameRate = frameRate;
         this.previousTime = System.currentTimeMillis();
@@ -14,12 +15,12 @@ public class LoopingAnimation implements Animation {
 
     public void update() {
         long currentTime = System.currentTimeMillis();
-        if (this.index < this.frames.length && currentTime - this.previousTime > frameRate) {
+        if (this.index < this.frames.length - 1 && currentTime - this.previousTime > frameRate) {
             this.index++;
-        } else {
+            previousTime = currentTime;
+        } else if (currentTime - this.previousTime > frameRate) {
             reset();
         }
-        previousTime = currentTime;
     }
 
     public BufferedImage getFrame() {
@@ -28,5 +29,6 @@ public class LoopingAnimation implements Animation {
 
     public void reset() {
         this.index = 0;
+        this.previousTime = System.currentTimeMillis();
     }
 }
