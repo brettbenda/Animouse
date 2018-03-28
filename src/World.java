@@ -152,6 +152,10 @@ public class World {
                     break;
                 case KeyEvent.VK_E:
                     gameState.switchPlayer();
+                    gameState.tim.resetXVelocity();
+                    gameState.tim.resetYVelocity();
+                    gameState.jack.resetXVelocity();
+                    gameState.jack.resetYVelocity();
                     System.out.println("swap");
                     break;
                 case KeyEvent.VK_C:
