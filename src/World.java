@@ -17,7 +17,7 @@ public class World {
     public World(Display display) {
         // store reference to display
         this.display = display;
-        this.plotPoint = 2 ;
+        this.plotPoint = 0;
 
         loadPlot();
 
@@ -288,7 +288,7 @@ public class World {
         }
 
         // Handle Death scenario for Tim
-        if(gameState.tim.velocity.y > 25 && rightCollision(gameState.tim) && !(areTimAndJackIntersecting())){
+        if(gameState.tim.velocity.y > 65 && rightCollision(gameState.tim) && !(areTimAndJackIntersecting())){
             gameState.loadLevel(new Level(3));
         }
 
@@ -311,7 +311,7 @@ public class World {
 
         System.out.println("🎈" +"End of level!111!!!!1!!!1!11");
 
-        if(getRegion(gameState.tim)==30){
+        if(getRegion(gameState.tim)==30 || getRegion(gameState.jack)==30){
 
             // load plotPoints.get(plotPoint);
             gameState.loadLevel(levels.get(++plotPoint));
