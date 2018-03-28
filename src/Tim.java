@@ -1,3 +1,4 @@
+
 import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 
@@ -23,7 +24,14 @@ public class Tim extends Player {
     public void updatePosition(){
         this.position = new Point2D.Float(this.position.x + this.velocity.x, this.position.y + this.velocity.y);
         //System.out.println("🎈"+velocity.y);
+    }
 
+    public float getNextX() {
+        return this.position.x + this.velocity.x;
+    }
+
+    public float getNextY() {
+        return this.position.y + this.velocity.y;
     }
 
     public void incrementYVelocity(float value){

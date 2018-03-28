@@ -30,6 +30,10 @@ public abstract class Player {
 
     public abstract void updatePosition();
 
+    public abstract float getNextX();
+
+    public abstract float getNextY();
+
     public abstract void incrementYVelocity(float value);
 
     public abstract void resetYVelocity();
