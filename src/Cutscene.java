@@ -10,7 +10,7 @@ public class Cutscene extends PlotPoint{
     public Cutscene(int scene, int numOfFrames) {
         frames = new BufferedImage[numOfFrames];
         for (int i = 0; i < numOfFrames; ++i){
-            frames[i] = ImageLoader.loadImage("/VisualAssets/Cutscenes/scene_" + scene + "/frame_" + i + ".png");
+            frames[i] = ImageLoader.loadImage("/VisualAssets/Cutscenes/scene_" + scene + "/frame_" + i + ".jpg");
         }
         index = 0;
     }

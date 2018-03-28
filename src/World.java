@@ -272,11 +272,15 @@ public class World {
             gameState.tim.setState(CharacterState.IDLE);
         }
 
+        if(getRegion(gameState.tim)!=40 && gameState.tim.getState()==CharacterState.CLIMBING){
+            gameState.tim.setState(CharacterState.FALLING);
+        }
+
         // Handle Death scenario for Tim
         if(gameState.tim.velocity.y > 25 && rightCollision(gameState.tim) && !(areTimAndJackIntersecting())){
             gameState.loadLevel(new Level(3));
-
         }
+
 
         //update Jack
         if (gameState.jack.isGrappling()){
