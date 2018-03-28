@@ -19,7 +19,7 @@ public class World {
     public World(Display display) {
         // store reference to display
         this.display = display;
-        this.plotPoint = 2;
+        this.plotPoint = 0;
 
         loadPlot();
         isPlayable = false;
