@@ -264,7 +264,9 @@ public class World {
 
             if (gameState.tim.getState()!=CharacterState.CLIMBING) {
                 gameState.tim.incrementYVelocity(1);
-                gameState.tim.setState(CharacterState.FALLING);
+                if(gameState.tim.velocity.y>0) {
+                    gameState.tim.setState(CharacterState.FALLING);
+                }
             }
         }
         else if (topCollision(gameState.tim) || bottomCollision(gameState.tim)){
