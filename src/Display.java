@@ -84,17 +84,21 @@ public class Display extends JPanel{
         bufferG2D.setColor(Color.BLACK);
         bufferG2D.fillRect(0,0,WIDTH,HEIGHT);
 
-        //draw background offset by location of the active player
-        bufferG2D.drawImage(world.getBackground(), 0-(int)world.getActivePlayerX()+WIDTH/2, 0-(int)world.getActivePlayerY()+HEIGHT/2, null);
-        //draw background offset by location of the active player
-        bufferG2D.drawImage(world.getBackground(), 0-(int)world.getActivePlayerX()+WIDTH/2, 0-(int)world.getActivePlayerY()+HEIGHT/2, null);
+        if (world.isPlayable()) {
+            //draw background offset by location of the active player
+            bufferG2D.drawImage(world.getBackground(), 0 - (int) world.getActivePlayerX() + WIDTH / 2, 0 - (int) world.getActivePlayerY() + HEIGHT / 2, null);
+            //draw background offset by location of the active player
+            bufferG2D.drawImage(world.getBackground(), 0 - (int) world.getActivePlayerX() + WIDTH / 2, 0 - (int) world.getActivePlayerY() + HEIGHT / 2, null);
 
-        // draw players
-        // active player is in the center
-        bufferG2D.drawImage(world.getActivePlayerImage(), WIDTH/2, HEIGHT/2, null);
-        // inactive player is offset
-        bufferG2D.drawImage(world.getInactivePlayerImage(), (int) world.getInactivePlayerX()-(int)world.getActivePlayerX()+WIDTH/2, (int) world.getInactivePlayerY()-(int)world.getActivePlayerY()+HEIGHT/2, null);
-
+            // draw players
+            // active player is in the center
+            bufferG2D.drawImage(world.getActivePlayerImage(), WIDTH / 2, HEIGHT / 2, null);
+            // inactive player is offset
+            bufferG2D.drawImage(world.getInactivePlayerImage(), (int) world.getInactivePlayerX() - (int) world.getActivePlayerX() + WIDTH / 2, (int) world.getInactivePlayerY() - (int) world.getActivePlayerY() + HEIGHT / 2, null);
+        }
+        else{
+            bufferG2D.drawImage(world.getCutSceneFrame(), 0, 0, null);
+        }
         // draw buffer onto display
         g2d.drawImage(buffer, 0, 0, null);
 

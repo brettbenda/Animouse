@@ -9,17 +9,20 @@ public class World {
     private GameState gameState;
     private Level currentLevel;
     private ArrayList<Level> levels = new ArrayList<Level>();
+    private ArrayList<Cutscene> cutscenes = new ArrayList<Cutscene>();
 
     private int plotPoint;
+    private boolean isPlayable;
     private Camera camera;
 
     // constructor
     public World(Display display) {
         // store reference to display
         this.display = display;
-        this.plotPoint = 0;
+        this.plotPoint = 2;
 
         loadPlot();
+        isPlayable = false;
 
         //preload levels
         for(int i = 0; i < 9; i++){
@@ -37,10 +40,10 @@ public class World {
         for (int i = 0; i < 8; ++i){
             switch(i){
                 case 0:
-                    numOfFrames = 1;
+                    numOfFrames = 5;
                     break;
                 case 1:
-                    numOfFrames = 1;
+                    numOfFrames = 7;
                     break;
                 case 2:
                     numOfFrames = 1;
@@ -61,170 +64,187 @@ public class World {
                     numOfFrames = 1;
                     break;
             }
-
+            levels.add(new Level(i));
+            cutscenes.add(new Cutscene(i, numOfFrames));
         }
         numOfFrames = 1;
+        cutscenes.add(new Cutscene(8, numOfFrames));
     }
 
     public void handleKeyPress(KeyEvent event){
-        Player currentPlayer = gameState.currentPlayer();
+        if (isPlayable) {
+            Player currentPlayer = gameState.currentPlayer();
 
-        int keyCode = event.getKeyCode();
-        switch( keyCode ) {
-            case KeyEvent.VK_UP:
-                if (currentPlayer == gameState.tim) {
-                    if (gameState.tim.getState() == CharacterState.CLIMBING) {
-                        gameState.tim.velocity.y = -5;
+            int keyCode = event.getKeyCode();
+            switch (keyCode) {
+                case KeyEvent.VK_UP:
+                    if (currentPlayer == gameState.tim) {
+                        if (gameState.tim.getState() == CharacterState.CLIMBING) {
+                            gameState.tim.velocity.y = -5;
+                        } else {
+                            gameState.tim.setState(CharacterState.JUMPING);
+                            int xx = (int) gameState.tim.position.x;
+                            int yy = (int) gameState.tim.position.y + gameState.tim.height;
+
+                            if (!getCollisionStatus(xx, yy, gameState.tim.width, 15) && areTimAndJackIntersecting() && gameState.tim.velocity.y > 0) {
+                                gameState.tim.velocity.y = -70;
+                            } else if (getCollisionStatus(xx, yy, gameState.tim.width, 15)) {
+                                gameState.tim.velocity.y = -35;
+                            }
+                        }
                     } else {
-                        gameState.tim.setState(CharacterState.JUMPING);
-                        int xx = (int) gameState.tim.position.x;
-                        int yy = (int) gameState.tim.position.y + gameState.tim.height;
-
-                        if (!getCollisionStatus(xx, yy, gameState.tim.width, 15) && areTimAndJackIntersecting() && gameState.tim.velocity.y>0) {
-                            gameState.tim.velocity.y = -70;
-                        }else if (getCollisionStatus(xx, yy, gameState.tim.width, 15)) {
-                            gameState.tim.velocity.y = -35;
+                        if (gameState.jack.isHooked()) {
+                            gameState.jack.setState(CharacterState.HOOKED);
+                            gameState.jack.velocity = new Point2D.Float(0, -30);
+                            gameState.jack.setMovementState(0);
                         }
                     }
-                } else {
-                    if (gameState.jack.isHooked()) {
-                        gameState.jack.setState(CharacterState.HOOKED);
-                        gameState.jack.velocity = new Point2D.Float(0, -30);
-                        gameState.jack.setMovementState(0);
-                    }
-                }
-                break;
-            case KeyEvent.VK_DOWN:
-                if (currentPlayer == gameState.tim && gameState.tim.getState()==CharacterState.CLIMBING) {
-                    gameState.tim.velocity.y = 5;
-                } else {
-                    if (gameState.jack.isHooked()) {
-                        gameState.jack.velocity = new Point2D.Float(0, 30);
-                        gameState.jack.setMovementState(0);
-                    }
-                }
-                break;
-            case KeyEvent.VK_LEFT:
-                if (currentPlayer == gameState.tim) {
-                    if (gameState.tim.getState()==CharacterState.CLIMBING) {
-                        gameState.tim.velocity.x = -5;
+                    break;
+                case KeyEvent.VK_DOWN:
+                    if (currentPlayer == gameState.tim && gameState.tim.getState() == CharacterState.CLIMBING) {
+                        gameState.tim.velocity.y = 5;
                     } else {
-                        //System.out.println("Tim's y velocity " + gameState.tim.velocity.y);
-                        gameState.tim.setState(CharacterState.WALKING);
-                        gameState.tim.velocity.x = -7;
+                        if (gameState.jack.isHooked()) {
+                            gameState.jack.velocity = new Point2D.Float(0, 30);
+                            gameState.jack.setMovementState(0);
+                        }
                     }
-                } else {
-                    if (gameState.jack.isHooked()) {
-                        gameState.jack.velocity = new Point2D.Float(-30, 0);
-                        gameState.jack.setMovementState(0);
-                    } else if (!gameState.jack.isHooked() && !gameState.jack.isGrappling()) {
-                        //System.out.println("left");
-                        gameState.jack.decrementXVelocity(0.5f);
-                        gameState.jack.setState(CharacterState.WALKING);
-                    }
-                }
-                break;
-            case KeyEvent.VK_RIGHT:
-                if (currentPlayer == gameState.tim) {
-                    if (gameState.tim.getState()==CharacterState.CLIMBING) {
-                        gameState.tim.velocity.x = 5;
+                    break;
+                case KeyEvent.VK_LEFT:
+                    if (currentPlayer == gameState.tim) {
+                        if (gameState.tim.getState() == CharacterState.CLIMBING) {
+                            gameState.tim.velocity.x = -5;
+                        } else {
+                            //System.out.println("Tim's y velocity " + gameState.tim.velocity.y);
+                            gameState.tim.setState(CharacterState.WALKING);
+                            gameState.tim.velocity.x = -7;
+                        }
                     } else {
-                        //System.out.println("Tim's y velocity " + gameState.tim.velocity.y);
-                        gameState.tim.velocity.x = 7;
-                        gameState.tim.setState(CharacterState.WALKING);
+                        if (gameState.jack.isHooked()) {
+                            gameState.jack.velocity = new Point2D.Float(-30, 0);
+                            gameState.jack.setMovementState(0);
+                        } else if (!gameState.jack.isHooked() && !gameState.jack.isGrappling()) {
+                            //System.out.println("left");
+                            gameState.jack.decrementXVelocity(0.5f);
+                            gameState.jack.setState(CharacterState.WALKING);
+                        }
                     }
-                } else {
-                    if (gameState.jack.isHooked()) {
-                        gameState.jack.velocity = new Point2D.Float(30, 0);
-                        gameState.jack.setMovementState(0);
-                    } else if (!gameState.jack.isHooked() && !gameState.jack.isGrappling()) {
-                        //System.out.println("right");
-                        gameState.jack.incrementXVelocity(0.5f);
-                        gameState.jack.setState(CharacterState.WALKING);
+                    break;
+                case KeyEvent.VK_RIGHT:
+                    if (currentPlayer == gameState.tim) {
+                        if (gameState.tim.getState() == CharacterState.CLIMBING) {
+                            gameState.tim.velocity.x = 5;
+                        } else {
+                            //System.out.println("Tim's y velocity " + gameState.tim.velocity.y);
+                            gameState.tim.velocity.x = 7;
+                            gameState.tim.setState(CharacterState.WALKING);
+                        }
+                    } else {
+                        if (gameState.jack.isHooked()) {
+                            gameState.jack.velocity = new Point2D.Float(30, 0);
+                            gameState.jack.setMovementState(0);
+                        } else if (!gameState.jack.isHooked() && !gameState.jack.isGrappling()) {
+                            //System.out.println("right");
+                            gameState.jack.incrementXVelocity(0.5f);
+                            gameState.jack.setState(CharacterState.WALKING);
+                        }
                     }
-                }
-                break;
-            case KeyEvent.VK_E:
-                gameState.switchPlayer();
-                System.out.println("swap");
-                break;
-            case KeyEvent.VK_C:
-                if (gameState.currentPlayer() == gameState.tim && getRegion(gameState.tim) == 40 && gameState.tim.getState()!=CharacterState.CLIMBING) {
-                    gameState.tim.setState(CharacterState.CLIMBING);
-                    gameState.tim.resetXVelocity();
-                    gameState.tim.resetYVelocity();
-                } else if (gameState.currentPlayer() == gameState.tim && gameState.tim.getState()==CharacterState.CLIMBING) {
-                    gameState.tim.setState(CharacterState.JUMPING);
-                }
-                break;
-            case KeyEvent.VK_Q:
-                if (gameState.currentPlayer() == gameState.jack && getRegion(gameState.jack) == 50) {
-                    int regionIndex = getHookIndex(gameState.jack);
-                   // gameState.jack.setPosition(currentLevel.getHookablePoint(regionIndex));
-                    gameState.jack.grappleTo(currentLevel.getHookablePoint(regionIndex));
-                    gameState.jack.setState(CharacterState.GRAPPLING);
-                    System.out.println("Grapple to region " + regionIndex);
-                    System.out.println("Grapple to location " + currentLevel.getHookablePoint(regionIndex).x + ", " + currentLevel.getHookablePoint(regionIndex).y);
-                }
-                break;
-            case 49: // 1
-                System.out.println("Loading Level 1...");
-                gameState.loadLevel(levels.get(0));
-                break;
-            case 50: // 2
-                System.out.println("Loading Level 2...");
-                gameState.loadLevel(levels.get(1));
-                break;
-            case 51: // 3
-                System.out.println("Loading Level 3...");
-                gameState.loadLevel(levels.get(2));
-                currentLevel = levels.get(2);
-                break;
-            case 52: // 4
-                System.out.println("Loading Level 4...");
-                gameState.loadLevel(levels.get(3));
-                break;
-            case 53: // 5
-                System.out.println("Loading Level 5...");
-                gameState.loadLevel(levels.get(4));
-                break;
-            case 54: // 6
-                System.out.println("Loading Level 6...");
-                gameState.loadLevel(levels.get(5));
-                break;
-            case 55: // 7
-                System.out.println("Loading Level 7...");
-                gameState.loadLevel(levels.get(6));
-                break;
-            case 56: // 8
-                System.out.println("Loading Level 8...");
-                gameState.loadLevel(levels.get(7));
-                break;
-            case 57: // 9
-                System.out.println("Loading Level 9...");
-                gameState.loadLevel(levels.get(8));
-                break;
+                    break;
+                case KeyEvent.VK_E:
+                    gameState.switchPlayer();
+                    System.out.println("swap");
+                    break;
+                case KeyEvent.VK_C:
+                    if (gameState.currentPlayer() == gameState.tim && getRegion(gameState.tim) == 40 && gameState.tim.getState() != CharacterState.CLIMBING) {
+                        gameState.tim.setState(CharacterState.CLIMBING);
+                        gameState.tim.resetXVelocity();
+                        gameState.tim.resetYVelocity();
+                    } else if (gameState.currentPlayer() == gameState.tim && gameState.tim.getState() == CharacterState.CLIMBING) {
+                        gameState.tim.setState(CharacterState.JUMPING);
+                    }
+                    break;
+                case KeyEvent.VK_Q:
+                    if (gameState.currentPlayer() == gameState.jack && getRegion(gameState.jack) == 50) {
+                        int regionIndex = getHookIndex(gameState.jack);
+                        // gameState.jack.setPosition(currentLevel.getHookablePoint(regionIndex));
+                        gameState.jack.grappleTo(currentLevel.getHookablePoint(regionIndex));
+                        gameState.jack.setState(CharacterState.GRAPPLING);
+                        System.out.println("Grapple to region " + regionIndex);
+                        System.out.println("Grapple to location " + currentLevel.getHookablePoint(regionIndex).x + ", " + currentLevel.getHookablePoint(regionIndex).y);
+                    }
+                    break;
+                case 49: // 1
+                    System.out.println("Loading Level 1...");
+                    gameState.loadLevel(levels.get(0));
+                    break;
+                case 50: // 2
+                    System.out.println("Loading Level 2...");
+                    gameState.loadLevel(levels.get(1));
+                    break;
+                case 51: // 3
+                    System.out.println("Loading Level 3...");
+                    gameState.loadLevel(levels.get(2));
+                    currentLevel = levels.get(2);
+                    break;
+                case 52: // 4
+                    System.out.println("Loading Level 4...");
+                    gameState.loadLevel(levels.get(3));
+                    break;
+                case 53: // 5
+                    System.out.println("Loading Level 5...");
+                    gameState.loadLevel(levels.get(4));
+                    break;
+                case 54: // 6
+                    System.out.println("Loading Level 6...");
+                    gameState.loadLevel(levels.get(5));
+                    break;
+                case 55: // 7
+                    System.out.println("Loading Level 7...");
+                    gameState.loadLevel(levels.get(6));
+                    break;
+                case 56: // 8
+                    System.out.println("Loading Level 8...");
+                    gameState.loadLevel(levels.get(7));
+                    break;
+                case 57: // 9
+                    System.out.println("Loading Level 9...");
+                    gameState.loadLevel(levels.get(8));
+                    break;
+            }
         }
     }
 
     public void handleKeyRelease(KeyEvent event) {
-        Player currentPlayer = gameState.currentPlayer();
-
         int keyCode = event.getKeyCode();
-        switch( keyCode ) {
-            case KeyEvent.VK_UP:
-                if (gameState.tim.getState()==CharacterState.CLIMBING)
+
+        if (isPlayable) {
+            Player currentPlayer = gameState.currentPlayer();
+
+            switch (keyCode) {
+                case KeyEvent.VK_UP:
+                    if (gameState.tim.getState() == CharacterState.CLIMBING)
+                        currentPlayer.resetYVelocity();
+                    break;
+                case KeyEvent.VK_DOWN:
                     currentPlayer.resetYVelocity();
-                break;
-            case KeyEvent.VK_DOWN:
-                currentPlayer.resetYVelocity();
-                break;
-            case KeyEvent.VK_LEFT:
-                currentPlayer.resetXVelocity();
-                break;
-            case KeyEvent.VK_RIGHT :
-                currentPlayer.resetXVelocity();
-                break;
+                    break;
+                case KeyEvent.VK_LEFT:
+                    currentPlayer.resetXVelocity();
+                    break;
+                case KeyEvent.VK_RIGHT:
+                    currentPlayer.resetXVelocity();
+                    break;
+            }
+        }
+        else{
+            if (keyCode == KeyEvent.VK_SPACE){
+                cutscenes.get(plotPoint).advance();
+                if (cutscenes.get(plotPoint).ended()){
+                    isPlayable = !isPlayable;
+                    currentLevel = levels.get(plotPoint);
+                    gameState.loadLevel(currentLevel);
+                }
+            }
         }
     }
 
@@ -251,75 +271,71 @@ public class World {
     }
 
     public void tick(){
-        Player currentPlayer = gameState.currentPlayer();
-        Player inactivePlayer = gameState.inactivePlayer();
+        if (isPlayable) {
+            Player currentPlayer = gameState.currentPlayer();
+            Player inactivePlayer = gameState.inactivePlayer();
 
-        System.out.println(gameState.tim.getState() +  " " + gameState.jack.getState());
-        //update Tim
-        if (!rightCollision(gameState.tim) && !leftCollision(gameState.tim) && !topCollision(gameState.tim) && !bottomCollision(gameState.tim)) {
-            gameState.tim.updatePosition();
+            System.out.println(gameState.tim.getState() + " " + gameState.jack.getState());
+            //update Tim
+            if (!rightCollision(gameState.tim) && !leftCollision(gameState.tim) && !topCollision(gameState.tim) && !bottomCollision(gameState.tim)) {
+                gameState.tim.updatePosition();
 
-            if (gameState.tim.getState()!=CharacterState.CLIMBING) {
-                gameState.tim.incrementYVelocity(1);
+                if (gameState.tim.getState() != CharacterState.CLIMBING) {
+                    gameState.tim.incrementYVelocity(1);
+                }
+
+            } else if (!isCollidingY(gameState.tim)) {
+                gameState.tim.resetXVelocity();
+                gameState.tim.updatePosition();
+            } else if (!isCollidingX(gameState.tim)) {
+                gameState.tim.resetYVelocity();
+                gameState.tim.updatePosition();
+            } else if (topCollision(gameState.tim) || bottomCollision(gameState.tim)) {
+
+                gameState.tim.resetYVelocity();
+                if (gameState.tim.velocity.x == 0)
+                    gameState.tim.setState(CharacterState.IDLE);
+
             }
 
+            if (getRegion(gameState.tim) != 40 && gameState.tim.getState() == CharacterState.CLIMBING) {
+                gameState.tim.setState(CharacterState.JUMPING);
+            }
+
+            // Handle Death scenario for Tim
+            if (gameState.tim.velocity.y > 65 && rightCollision(gameState.tim) && !(areTimAndJackIntersecting())) {
+                gameState.loadLevel(new Level(3));
+            }
+
+
+            //update Jack
+            if (gameState.jack.isGrappling()) {
+                gameState.jack.updatePosition();
+            } else if (gameState.jack.isHooked()) {
+                // do nothing
+            } else if (!rightCollision(gameState.jack) && !leftCollision(gameState.jack) && !topCollision(gameState.jack) && !bottomCollision(gameState.jack)) {
+                gameState.jack.updatePosition();
+                gameState.jack.incrementYVelocity(1);
+            } else if (topCollision(gameState.jack) || bottomCollision(gameState.jack)) {
+                if (gameState.jack.velocity.x == 0)
+                    gameState.jack.setState(CharacterState.IDLE);
+                gameState.jack.resetYVelocity();
+            }
+
+
+            if (getRegion(gameState.tim) == 30 || getRegion(gameState.jack) == 30) {
+                if (getRegion(gameState.tim) == 30) {
+                    System.out.println("🎈" + "End of level!111!!!!1!!!1!11");
+
+                    if (isPlayable)
+                        ++plotPoint;
+                    isPlayable = !isPlayable;
+                }
+
+                //update inactive player
+                inactivePlayer.resetXVelocity();
+            }
         }
-
-        else if (!isCollidingY(gameState.tim)) {
-            gameState.tim.resetXVelocity();
-            gameState.tim.updatePosition();
-        }
-
-        else if (!isCollidingX(gameState.tim)) {
-            gameState.tim.resetYVelocity();
-            gameState.tim.updatePosition();
-        }
-
-        else if (topCollision(gameState.tim) || bottomCollision(gameState.tim)){
-
-            gameState.tim.resetYVelocity();
-            if(gameState.tim.velocity.x ==0)
-                gameState.tim.setState(CharacterState.IDLE);
-
-        }
-
-        if(getRegion(gameState.tim)!=40 && gameState.tim.getState()==CharacterState.CLIMBING){
-            gameState.tim.setState(CharacterState.JUMPING);
-        }
-
-        // Handle Death scenario for Tim
-        if(gameState.tim.velocity.y > 65 && rightCollision(gameState.tim) && !(areTimAndJackIntersecting())){
-            gameState.loadLevel(new Level(3));
-        }
-
-
-        //update Jack
-        if (gameState.jack.isGrappling()){
-            gameState.jack.updatePosition();
-        }
-        else if (gameState.jack.isHooked()) {
-            // do nothing
-        }
-        else if (!rightCollision(gameState.jack) && !leftCollision(gameState.jack) && !topCollision(gameState.jack) && !bottomCollision(gameState.jack)) {
-            gameState.jack.updatePosition();
-            gameState.jack.incrementYVelocity(1);
-        } else if (topCollision(gameState.jack) || bottomCollision(gameState.jack)){
-            if(gameState.jack.velocity.x == 0)
-                gameState.jack.setState(CharacterState.IDLE);
-            gameState.jack.resetYVelocity();
-        }
-
-        System.out.println("🎈" +"End of level!111!!!!1!!!1!11");
-
-        if(getRegion(gameState.tim)==30 || getRegion(gameState.jack)==30){
-
-            // load plotPoints.get(plotPoint);
-            currentLevel = levels.get((plotPoint+1));
-            gameState.loadLevel(levels.get(++plotPoint));
-        }
-
-        //update inactive player
-        inactivePlayer.resetXVelocity();
     }
 
     // in progress
@@ -526,6 +542,14 @@ public class World {
 
         // play start cutscenes
         // ...
+    }
+
+    public boolean isPlayable(){
+        return this.isPlayable;
+    }
+
+    public BufferedImage getCutSceneFrame(){
+        return cutscenes.get(plotPoint).getCurrentFrame();
     }
 
     public BufferedImage getBackground() {

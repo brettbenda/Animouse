@@ -24,7 +24,7 @@ public class Cutscene {
     }
 
     protected boolean ended(){
-        if (index > frames.length)
+        if (index == frames.length)
             return true;
         else
             return false;
