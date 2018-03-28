@@ -266,7 +266,19 @@ public class World {
                 gameState.tim.incrementYVelocity(1);
             }
 
-        }else if (topCollision(gameState.tim) || bottomCollision(gameState.tim)){
+        }
+
+        else if (!isCollidingY(gameState.tim)) {
+            gameState.tim.resetXVelocity();
+            gameState.tim.updatePosition();
+        }
+
+        else if (!isCollidingX(gameState.tim)) {
+            gameState.tim.resetYVelocity();
+            gameState.tim.updatePosition();
+        }
+
+        else if (topCollision(gameState.tim) || bottomCollision(gameState.tim)){
 
             gameState.tim.resetYVelocity();
             if(gameState.tim.velocity.x ==0)
@@ -392,6 +404,94 @@ public class World {
         return false;
     }
 
+    public boolean isCollidingX(Player player){
+        int posX = (int) player.getNextX();
+        int posY = (int) player.getPosition().y;
+        int width = player.width;
+        int height = player.height;
+        int color;
+
+        // top collision check
+        for (int i = posX; i < posX + width; ++i) {
+            color = (gameState.getBitmap().getRGB(i, posY) >>> 16) & 0x000000FF;
+            if (color == 10) {
+                return true;
+            }
+        }
+
+        // left collision check
+        for (int j = posY; j < posY + height; ++j) {
+            color = (gameState.getBitmap().getRGB(posX, j) >>> 16) & 0x000000FF;
+            if (color == 10) {
+                return true;
+            }
+        }
+
+        // bottom collision check
+        posY += gameState.tim.height;
+        for (int i = posX; i < posX + height; ++i) {
+            color = (gameState.getBitmap().getRGB(i, posY) >>> 16) & 0x000000FF;
+            if (color == 10) {
+                return true;
+            }
+        }
+
+        // right collision check
+        posX = (int) player.getNextX() + player.width;
+        posY = (int) player.getPosition().y;
+        for (int j = posY; j < posY + height; ++j) {
+            color = (gameState.getBitmap().getRGB(posX, j) >>> 16) & 0x000000FF;
+            if (color == 10) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean isCollidingY(Player player){
+        int posX = (int) player.getPosition().x;
+        int posY = (int) player.getNextY();
+        int width = player.width;
+        int height = player.height;
+        int color;
+
+        // top collision check
+        for (int i = posX; i < posX + width; ++i) {
+            color = (gameState.getBitmap().getRGB(i, posY) >>> 16) & 0x000000FF;
+            if (color == 10) {
+                return true;
+            }
+        }
+
+        // left collision check
+        for (int j = posY; j < posY + height; ++j) {
+            color = (gameState.getBitmap().getRGB(posX, j) >>> 16) & 0x000000FF;
+            if (color == 10) {
+                return true;
+            }
+        }
+
+        // bottom collision check
+        posY += gameState.tim.height;
+        for (int i = posX; i < posX + height; ++i) {
+            color = (gameState.getBitmap().getRGB(i, posY) >>> 16) & 0x000000FF;
+            if (color == 10) {
+                return true;
+            }
+        }
+
+        // right collision check
+        posX = (int) player.getPosition().x + player.width;
+        posY = (int) player.getNextY();
+        for (int j = posY; j < posY + height; ++j) {
+            color = (gameState.getBitmap().getRGB(posX, j) >>> 16) & 0x000000FF;
+            if (color == 10) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public boolean areTimAndJackIntersecting(){
         if (Math.abs(gameState.tim.position.x - gameState.jack.position.x) <= gameState.tim.width
                 && Math.abs(gameState.tim.position.y - gameState.jack.position.y) <= gameState.tim.height)
@@ -399,7 +499,6 @@ public class World {
         else
             return false;
     }
-
 
     private int getRegion(Player player) {
         int xx = (int) player.position.x;
