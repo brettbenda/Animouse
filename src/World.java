@@ -157,7 +157,7 @@ public class World {
                     gameState.tim.resetXVelocity();
                     gameState.tim.resetYVelocity();
                 } else if (gameState.currentPlayer() == gameState.tim && gameState.tim.getState()==CharacterState.CLIMBING) {
-                    gameState.tim.setState(CharacterState.FALLING);
+                    gameState.tim.setState(CharacterState.JUMPING);
                 }
                 break;
             case KeyEvent.VK_Q:
@@ -264,18 +264,18 @@ public class World {
 
             if (gameState.tim.getState()!=CharacterState.CLIMBING) {
                 gameState.tim.incrementYVelocity(1);
-                if(gameState.tim.velocity.y>0 && (gameState.tim.getState()!=CharacterState.IDLE && gameState.tim.getState()!=CharacterState.WALKING)) {
-                    gameState.tim.setState(CharacterState.FALLING);
-                }
             }
-        }
-        else if (topCollision(gameState.tim) || bottomCollision(gameState.tim)){
+
+        }else if (topCollision(gameState.tim) || bottomCollision(gameState.tim)){
+
             gameState.tim.resetYVelocity();
-            gameState.tim.setState(CharacterState.IDLE);
+            if(gameState.tim.velocity.x ==0)
+                gameState.tim.setState(CharacterState.IDLE);
+
         }
 
         if(getRegion(gameState.tim)!=40 && gameState.tim.getState()==CharacterState.CLIMBING){
-            gameState.tim.setState(CharacterState.FALLING);
+            gameState.tim.setState(CharacterState.JUMPING);
         }
 
         // Handle Death scenario for Tim
@@ -294,11 +294,9 @@ public class World {
         else if (!rightCollision(gameState.jack) && !leftCollision(gameState.jack) && !topCollision(gameState.jack) && !bottomCollision(gameState.jack)) {
             gameState.jack.updatePosition();
             gameState.jack.incrementYVelocity(1);
-            if(gameState.jack.velocity.y>0 && (gameState.jack.getState()!=CharacterState.IDLE && gameState.jack.getState()!=CharacterState.WALKING)) {
-                gameState.jack.setState(CharacterState.FALLING);
-            }
         } else if (topCollision(gameState.jack) || bottomCollision(gameState.jack)){
-            gameState.jack.setState(CharacterState.IDLE);
+            if(gameState.jack.velocity.x == 0)
+                gameState.jack.setState(CharacterState.IDLE);
             gameState.jack.resetYVelocity();
         }
 
