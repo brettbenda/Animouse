@@ -33,13 +33,42 @@ public class VisualAssets {
 
     private void loadTimArt(){
         TIM = ImageLoader.loadImage("/VisualAssets/Tim/Tim.png");
-        // add for loops for Tim's animations
 
+        // Jumping Animation
+        TIM_JUMPING_ANIM = new BufferedImage[5];
+        for (int i = 0; i < TIM_JUMPING_ANIM.length; ++i) {
+            TIM_JUMPING_ANIM[i] = ImageLoader.loadImage("/test_images/tim_animation_" + i + ".png");
+        }
+        // Walking Animation
+        TIM_WALKING_ANIM = new BufferedImage[5];
+        for (int i = 0; i < TIM_WALKING_ANIM.length; ++i) {
+            TIM_WALKING_ANIM[i] = ImageLoader.loadImage("/test_images/tim_animation_" + i + ".png");
+        }
+        // Idle Animation
+        TIM_IDLE_ANIM = new BufferedImage[5];
+        for (int i = 0; i < TIM_IDLE_ANIM.length; ++i) {
+            TIM_IDLE_ANIM[i] = ImageLoader.loadImage("/test_images/tim_animation_" + i + ".png");
+        }
     }
 
     private void loadJackArt(){
         //      JACK = ImageLoader.loadImage("/VisualAssets/Jack/Jack.png");
-        // add for loops for Tim's animations
+
+        // Jumping Animation
+        JACK_JUMPING_ANIM = new BufferedImage[5];
+        for (int i = 0; i < JACK_JUMPING_ANIM.length; ++i) {
+            JACK_JUMPING_ANIM[i] = ImageLoader.loadImage("/test_images/tim_animation_" + i + ".png");
+        }
+        // Walking Animation
+        JACK_WALKING_ANIM = new BufferedImage[5];
+        for (int i = 0; i < JACK_WALKING_ANIM.length; ++i) {
+            JACK_WALKING_ANIM[i] = ImageLoader.loadImage("/test_images/tim_animation_" + i + ".png");
+        }
+        // Idle Animation
+        JACK_IDLE_ANIM = new BufferedImage[5];
+        for (int i = 0; i < JACK_IDLE_ANIM.length; ++i) {
+            JACK_IDLE_ANIM[i] = ImageLoader.loadImage("/test_images/tim_animation_" + i + ".png");
+        }
     }
 
     private void loadLevelBackgrounds(){
