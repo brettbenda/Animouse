@@ -264,7 +264,7 @@ public class World {
 
             if (gameState.tim.getState()!=CharacterState.CLIMBING) {
                 gameState.tim.incrementYVelocity(1);
-                if(gameState.tim.velocity.y>0) {
+                if(gameState.tim.velocity.y>0 && (gameState.tim.getState()!=CharacterState.IDLE && gameState.tim.getState()!=CharacterState.WALKING)) {
                     gameState.tim.setState(CharacterState.FALLING);
                 }
             }
@@ -294,7 +294,9 @@ public class World {
         else if (!rightCollision(gameState.jack) && !leftCollision(gameState.jack) && !topCollision(gameState.jack) && !bottomCollision(gameState.jack)) {
             gameState.jack.updatePosition();
             gameState.jack.incrementYVelocity(1);
-            gameState.jack.setState(CharacterState.FALLING);
+            if(gameState.jack.velocity.y>0 && (gameState.jack.getState()!=CharacterState.IDLE && gameState.jack.getState()!=CharacterState.WALKING)) {
+                gameState.jack.setState(CharacterState.FALLING);
+            }
         } else if (topCollision(gameState.jack) || bottomCollision(gameState.jack)){
             gameState.jack.setState(CharacterState.IDLE);
             gameState.jack.resetYVelocity();
