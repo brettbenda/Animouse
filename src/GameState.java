@@ -29,10 +29,7 @@ public class GameState {
         this.level = level;
         this.tim.position = level.posTim;
         this.jack.position = level.posJack;
-        this.tim.resetXVelocity();
-        this.tim.resetYVelocity();
-        this.jack.resetXVelocity();
-        this.jack.resetYVelocity();
+
     }
 
     public BufferedImage getBackground() {

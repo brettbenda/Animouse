@@ -330,7 +330,10 @@ public class World {
             if (getRegion(gameState.tim) == 30 || getRegion(gameState.jack) == 30) {
                 if (getRegion(gameState.tim) == 30 || getRegion(gameState.jack) == 30) {
                     System.out.println("🎈" + "End of level!111!!!!1!!!1!11");
-
+                    gameState.tim.resetXVelocity();
+                    gameState.tim.resetYVelocity();
+                    gameState.jack.resetXVelocity();
+                    gameState.jack.resetYVelocity();
                     if (isPlayable)
                         ++plotPoint;
                     isPlayable = !isPlayable;
