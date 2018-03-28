@@ -314,6 +314,7 @@ public class World {
         if(getRegion(gameState.tim)==30 || getRegion(gameState.jack)==30){
 
             // load plotPoints.get(plotPoint);
+            currentLevel = levels.get((plotPoint+1));
             gameState.loadLevel(levels.get(++plotPoint));
         }
 
