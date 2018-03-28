@@ -4,6 +4,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
+import java.nio.Buffer;
 import java.security.Key;
 
 public class Display extends JPanel{
@@ -78,17 +79,24 @@ public class Display extends JPanel{
     // renders the world data
     public void render() {
         //set background (i.e. area not draw over with an image) to black
-      //  g2d.setColor(Color.BLACK);
-      //  g2d.fillRect(0,0,WIDTH,HEIGHT);
+        BufferedImage buffer = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_ARGB);
+        Graphics2D bufferG2D = buffer.createGraphics();
+        bufferG2D.setColor(Color.BLACK);
+        bufferG2D.fillRect(0,0,WIDTH,HEIGHT);
 
         //draw background offset by location of the active player
-        g2d.drawImage(world.getBackground(), 0-(int)world.getActivePlayerX()+WIDTH/2, 0-(int)world.getActivePlayerY()+HEIGHT/2, null);
+        bufferG2D.drawImage(world.getBackground(), 0-(int)world.getActivePlayerX()+WIDTH/2, 0-(int)world.getActivePlayerY()+HEIGHT/2, null);
+        //draw background offset by location of the active player
+        bufferG2D.drawImage(world.getBackground(), 0-(int)world.getActivePlayerX()+WIDTH/2, 0-(int)world.getActivePlayerY()+HEIGHT/2, null);
 
         // draw players
-        //active player is in the center
-        g2d.drawImage(world.getActivePlayerImage(), WIDTH/2, HEIGHT/2, null);
-        //inactive player is offset
-        g2d.drawImage(world.getInactivePlayerImage(), (int) world.getInactivePlayerX()-(int)world.getActivePlayerX()+WIDTH/2, (int) world.getInactivePlayerY()-(int)world.getActivePlayerY()+HEIGHT/2, null);
+        // active player is in the center
+        bufferG2D.drawImage(world.getActivePlayerImage(), WIDTH/2, HEIGHT/2, null);
+        // inactive player is offset
+        bufferG2D.drawImage(world.getInactivePlayerImage(), (int) world.getInactivePlayerX()-(int)world.getActivePlayerX()+WIDTH/2, (int) world.getInactivePlayerY()-(int)world.getActivePlayerY()+HEIGHT/2, null);
+
+        // draw buffer onto display
+        g2d.drawImage(buffer, 0, 0, null);
 
         repaint();
     }
