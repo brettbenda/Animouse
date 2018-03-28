@@ -412,6 +412,7 @@ public class World {
 
         return ((gameState.getBitmap().getRGB(xx + width/2, yy + height/2) >>> 8) & 0x000000FF)/10 ;
     }
+
     public void loadNextLevel(){
         // play end cutscenes
         // ...
