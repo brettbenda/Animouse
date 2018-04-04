@@ -168,6 +168,10 @@ public class World {
                     }
                     break;
                 case KeyEvent.VK_Q:
+                    double dX = gameState.tim.getPosition().getX()-gameState.jack.getPosition().getX();
+                    double dY = gameState.tim.getPosition().getY()-gameState.jack.getPosition().getY();
+                    double distance = Math.sqrt(Math.pow(dX,2)+Math.pow(dY,2));
+                    System.out.println("Distance from Jack to Tim" + distance);
                     if (gameState.currentPlayer() == gameState.jack && getRegion(gameState.jack) == 50) {
                         int regionIndex = getHookIndex(gameState.jack);
                         // gameState.jack.setPosition(currentLevel.getHookablePoint(regionIndex));
@@ -175,6 +179,11 @@ public class World {
                         gameState.jack.setState(CharacterState.GRAPPLING);
                         System.out.println("Grapple to region " + regionIndex);
                         System.out.println("Grapple to location " + currentLevel.getHookablePoint(regionIndex).x + ", " + currentLevel.getHookablePoint(regionIndex).y);
+                    }else if(gameState.currentPlayer() == gameState.jack && distance<1000 && distance>0){
+                        gameState.jack.grappleTo(gameState.tim.getPosition());
+                        gameState.jack.setState(CharacterState.GRAPPLING);
+                        System.out.println("Grapple to Tim");
+                        System.out.println("Grapple to location " + gameState.tim.getPosition().x + ", " + gameState.tim.getPosition().y);
                     }
                     break;
                 case 49: // 1
