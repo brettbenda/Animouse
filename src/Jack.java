@@ -21,7 +21,7 @@ public class Jack extends Player {
         // --- TEST VALUES ---
         this.currentImage = ImageLoader.loadImage("/VisualAssets/Jack/jack.png");
         this.width = currentImage.getWidth();
-        this.height = currentImage.getHeight();
+        this.height = currentImage.getHeight() - 4;
 
         System.out.println(width + "" + height);
 

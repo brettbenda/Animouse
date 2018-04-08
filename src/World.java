@@ -299,7 +299,7 @@ public class World {
             if (!rightCollision(gameState.tim) && !leftCollision(gameState.tim) && !topCollision(gameState.tim) && !bottomCollision(gameState.tim)) {
                 gameState.tim.updatePosition();
 
-                if (gameState.tim.getState() != CharacterState.CLIMBING) {
+                if (gameState.tim.getState() != CharacterState.CLIMBING && !isOnGround(gameState.tim)) {
                     gameState.tim.incrementYVelocity(1);
                 }
 
@@ -334,7 +334,9 @@ public class World {
                 // do nothing
             } else if (!rightCollision(gameState.jack) && !leftCollision(gameState.jack) && !topCollision(gameState.jack) && !bottomCollision(gameState.jack)) {
                 gameState.jack.updatePosition();
-                gameState.jack.incrementYVelocity(1);
+                if (!isOnGround(gameState.jack)) {
+                    gameState.jack.incrementYVelocity(1);
+                }
             } else if (topCollision(gameState.jack) || bottomCollision(gameState.jack)) {
                 if (gameState.jack.velocity.x == 0)
                     gameState.jack.setState(CharacterState.IDLE);
@@ -632,5 +634,52 @@ public class World {
 
     public GameState getGameState() {
         return gameState;
+    }
+
+    private boolean isOnGround(Player player) {
+        int width = player.width;
+        int height = 3;
+        int posX = (int) player.getPosition().x;
+        int posY = (int) player.getPosition().y + player.height;
+        int color;
+
+        // top collision check
+        for (int i = posX; i < posX + width; ++i) {
+            color = (gameState.getBitmap().getRGB(i, posY) >>> 16) & 0x000000FF;
+            if (color == 10) {
+//                System.out.println("topY");
+                return true;
+            }
+        }
+
+        // left collision check
+        for (int j = posY; j < posY + height; ++j) {
+            color = (gameState.getBitmap().getRGB(posX, j) >>> 16) & 0x000000FF;
+            if (color == 10) {
+//                System.out.println("leftY");
+                return true;
+            }
+        }
+
+        // bottom collision check
+        posY += height;
+        for (int i = posX; i < posX + height; ++i) {
+            color = (gameState.getBitmap().getRGB(i, posY) >>> 16) & 0x000000FF;
+            if (color == 10) {
+//                System.out.println("bottomY");
+                return true;
+            }
+        }
+
+        // right collision check
+        posX = (int) player.getPosition().x + player.width;
+        for (int j = posY; j < posY + height; ++j) {
+            color = (gameState.getBitmap().getRGB(posX, j) >>> 16) & 0x000000FF;
+            if (color == 10) {
+//                System.out.println("rightY");
+                return true;
+            }
+        }
+        return false;
     }
 }
