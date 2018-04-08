@@ -15,6 +15,8 @@ public class World {
     private boolean isPlayable;
     private Camera camera;
 
+    public Point2D grapplePoint;
+
     // constructor
     public World(Display display) {
         // store reference to display
@@ -175,12 +177,14 @@ public class World {
                     if (gameState.currentPlayer() == gameState.jack && getRegion(gameState.jack) == 50) {
                         int regionIndex = getHookIndex(gameState.jack);
                         // gameState.jack.setPosition(currentLevel.getHookablePoint(regionIndex));
+                        grapplePoint = currentLevel.getHookablePoint(regionIndex);
                         gameState.jack.grappleTo(currentLevel.getHookablePoint(regionIndex));
                         gameState.jack.setState(CharacterState.GRAPPLING);
                         System.out.println("Grapple to region " + regionIndex);
                         System.out.println("Grapple to location " + currentLevel.getHookablePoint(regionIndex).x + ", " + currentLevel.getHookablePoint(regionIndex).y);
                     }else if(gameState.currentPlayer() == gameState.jack && distance<1000 && distance>0){
                         gameState.jack.grappleTo(gameState.tim.getPosition());
+                        grapplePoint = gameState.tim.getPosition();
                         gameState.jack.setState(CharacterState.GRAPPLING);
                         System.out.println("Grapple to Tim");
                         System.out.println("Grapple to location " + gameState.tim.getPosition().x + ", " + gameState.tim.getPosition().y);
@@ -623,5 +627,9 @@ public class World {
 
     public float getJackY() {
         return gameState.jack.getPosition().y;
+    }
+
+    public GameState getGameState() {
+        return gameState;
     }
 }

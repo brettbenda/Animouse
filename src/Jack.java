@@ -23,6 +23,8 @@ public class Jack extends Player {
         this.width = currentImage.getWidth();
         this.height = currentImage.getHeight();
 
+        System.out.println(width + "" + height);
+
         this.state = CharacterState.IDLE;
 
         BufferedImage TIM_JUMPING_ANIM[];
