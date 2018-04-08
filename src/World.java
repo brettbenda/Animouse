@@ -13,7 +13,6 @@ public class World {
 
     private int plotPoint;
     private boolean isPlayable;
-    private Camera camera;
 
     public Point2D grapplePoint;
 
@@ -279,7 +278,10 @@ public class World {
         int g = (color >>> 8) & 0x000000FF;
         int b = color & 0x000000FF;
 
-        System.out.println(r + " " + b + " " + g);
+        //System.out.println(r + " " + b + " " + g);
+
+        //BELOW PRINTS OUT IMAGE COORDS, USEFUL FOR HOOK POINTS
+        System.out.println((xx+getActivePlayerX()-1920/2) + " " + (yy+getActivePlayerY()-1080/2));
 
         // check the region at the mouse position
         if ( (r == 10) && (g == 0) && (b == 0) ) {
@@ -292,8 +294,7 @@ public class World {
             Player currentPlayer = gameState.currentPlayer();
             Player inactivePlayer = gameState.inactivePlayer();
 
-            //System.out.println(gameState.tim.getPosition().x + " " + gameState.tim.getPosition().y);
-            System.out.println(gameState.jack.getState());
+
             //update Tim
             if (!rightCollision(gameState.tim) && !leftCollision(gameState.tim) && !topCollision(gameState.tim) && !bottomCollision(gameState.tim)) {
                 gameState.tim.updatePosition();

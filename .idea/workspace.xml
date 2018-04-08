@@ -97,27 +97,50 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="World.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="World.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/World.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="636">
-              <caret line="186" column="67" lean-forward="false" selection-start-line="186" selection-start-column="67" selection-end-line="186" selection-end-column="67" />
+            <state relative-caret-position="3043">
+              <caret line="379" column="50" lean-forward="true" selection-start-line="379" selection-start-column="50" selection-end-line="379" selection-end-column="50" />
               <folding>
                 <element signature="e#328#335#0" expanded="true" />
                 <element signature="e#396#406#0" expanded="true" />
-                <element signature="e#24135#24136#0" expanded="true" />
-                <element signature="e#24167#24168#0" expanded="true" />
+                <element signature="e#24113#24114#0" expanded="true" />
+                <element signature="e#24145#24146#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Display.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Display.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Display.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
+            <state relative-caret-position="1675">
               <caret line="93" column="57" lean-forward="false" selection-start-line="93" selection-start-column="57" selection-end-line="93" selection-end-column="57" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Launcher.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Launcher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding>
+                <element signature="e#284#285#0" expanded="true" />
+                <element signature="e#334#335#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -209,14 +232,14 @@
         <option value="$PROJECT_DIR$/src/Player.java" />
         <option value="$PROJECT_DIR$/src/Tim.java" />
         <option value="$PROJECT_DIR$/src/Jack.java" />
-        <option value="$PROJECT_DIR$/src/World.java" />
         <option value="$PROJECT_DIR$/src/Display.java" />
+        <option value="$PROJECT_DIR$/src/World.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="858" />
-    <option name="y" value="-44" />
+    <option name="x" value="543" />
+    <option name="y" value="-14" />
     <option name="width" value="1148" />
     <option name="height" value="1454" />
   </component>
@@ -588,7 +611,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2278" height="1466" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -598,7 +620,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13348766" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13348766" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32987553" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="4.432624E-4" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -768,8 +790,8 @@
           <folding>
             <element signature="e#328#335#0" expanded="true" />
             <element signature="e#396#406#0" expanded="true" />
-            <element signature="e#24135#24136#0" expanded="true" />
-            <element signature="e#24167#24168#0" expanded="true" />
+            <element signature="e#24113#24114#0" expanded="true" />
+            <element signature="e#24145#24146#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -838,8 +860,8 @@
           <folding>
             <element signature="e#328#335#0" expanded="true" />
             <element signature="e#396#406#0" expanded="true" />
-            <element signature="e#24135#24136#0" expanded="true" />
-            <element signature="e#24167#24168#0" expanded="true" />
+            <element signature="e#24113#24114#0" expanded="true" />
+            <element signature="e#24145#24146#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -918,8 +940,8 @@
           <folding>
             <element signature="e#328#335#0" expanded="true" />
             <element signature="e#396#406#0" expanded="true" />
-            <element signature="e#24135#24136#0" expanded="true" />
-            <element signature="e#24167#24168#0" expanded="true" />
+            <element signature="e#24113#24114#0" expanded="true" />
+            <element signature="e#24145#24146#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -970,8 +992,8 @@
           <folding>
             <element signature="e#328#335#0" expanded="true" />
             <element signature="e#396#406#0" expanded="true" />
-            <element signature="e#24135#24136#0" expanded="true" />
-            <element signature="e#24167#24168#0" expanded="true" />
+            <element signature="e#24113#24114#0" expanded="true" />
+            <element signature="e#24145#24146#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -987,20 +1009,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Launcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1078,16 +1086,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tim.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <marker date="1522369102395" expanded="true" signature="1698:1736" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Jack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-892">
@@ -1098,15 +1096,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/World.java">
+    <entry file="file://$PROJECT_DIR$/src/Tim.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="636">
-          <caret line="186" column="67" lean-forward="false" selection-start-line="186" selection-start-column="67" selection-end-line="186" selection-end-column="67" />
+        <state relative-caret-position="25">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="e#328#335#0" expanded="true" />
-            <element signature="e#396#406#0" expanded="true" />
-            <element signature="e#24135#24136#0" expanded="true" />
-            <element signature="e#24167#24168#0" expanded="true" />
+            <marker date="1522369102395" expanded="true" signature="1698:1736" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1119,11 +1114,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Launcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="e#284#285#0" expanded="true" />
+            <element signature="e#334#335#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Display.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
+        <state relative-caret-position="1675">
           <caret line="93" column="57" lean-forward="false" selection-start-line="93" selection-start-column="57" selection-end-line="93" selection-end-column="57" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/World.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3043">
+          <caret line="379" column="50" lean-forward="true" selection-start-line="379" selection-start-column="50" selection-end-line="379" selection-end-column="50" />
+          <folding>
+            <element signature="e#328#335#0" expanded="true" />
+            <element signature="e#396#406#0" expanded="true" />
+            <element signature="e#24113#24114#0" expanded="true" />
+            <element signature="e#24145#24146#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
