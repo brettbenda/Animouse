@@ -97,8 +97,8 @@
       <file leaf-file-name="FiniteAnimation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FiniteAnimation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="725">
-              <caret line="31" column="1" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+            <state relative-caret-position="0">
+              <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -117,12 +117,22 @@
       <file leaf-file-name="World.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/World.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="177" column="93" lean-forward="true" selection-start-line="177" selection-start-column="93" selection-end-line="177" selection-end-column="93" />
+            <state relative-caret-position="-5050">
+              <caret line="330" column="48" lean-forward="true" selection-start-line="330" selection-start-column="48" selection-end-line="330" selection-end-column="48" />
               <folding>
                 <element signature="e#328#335#0" expanded="true" />
                 <element signature="e#396#406#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Display.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Display.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1675">
+              <caret line="84" column="7" lean-forward="false" selection-start-line="84" selection-start-column="7" selection-end-line="84" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -149,23 +159,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CharacterState.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CharacterState.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="1" column="67" lean-forward="false" selection-start-line="1" selection-start-column="67" selection-end-line="1" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Jack.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Jack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state relative-caret-position="1400">
+              <caret line="57" column="44" lean-forward="false" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
               <folding>
-                <marker date="1522369101914" expanded="true" signature="1942:1980" ph="{...}" />
+                <marker date="1523203723591" expanded="true" signature="2210:2248" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -210,6 +210,8 @@
       <find>Hooked</find>
       <find>FALL</find>
       <find>PlotPoint</find>
+      <find>Sys</find>
+      <find>Sys//</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -227,21 +229,21 @@
         <option value="$PROJECT_DIR$/src/VisualAssets.java" />
         <option value="$PROJECT_DIR$/src/Level.java" />
         <option value="$PROJECT_DIR$/src/Cutscene.java" />
-        <option value="$PROJECT_DIR$/src/Display.java" />
         <option value="$PROJECT_DIR$/src/FiniteAnimation.java" />
         <option value="$PROJECT_DIR$/src/LoopingAnimation.java" />
         <option value="$PROJECT_DIR$/src/Player.java" />
         <option value="$PROJECT_DIR$/src/Tim.java" />
+        <option value="$PROJECT_DIR$/src/Display.java" />
         <option value="$PROJECT_DIR$/src/Jack.java" />
         <option value="$PROJECT_DIR$/src/World.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="289" />
-    <option name="y" value="-16" />
-    <option name="width" value="1628" />
-    <option name="height" value="1530" />
+    <option name="x" value="551" />
+    <option name="y" value="-24" />
+    <option name="width" value="1148" />
+    <option name="height" value="1454" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -259,36 +261,25 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Animouse-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Animouse-master" type="462c0819:PsiDirectoryNode" />
+              <item name="Animouse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Animouse" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Animouse-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Animouse-master" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Animouse-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Animouse-master" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="test_images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Animouse-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Animouse-master" type="462c0819:PsiDirectoryNode" />
+              <item name="Animouse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Animouse" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -632,12 +623,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34182099" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3449074" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32987553" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10638298" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21276596" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -789,7 +780,7 @@
         <state relative-caret-position="704">
           <caret line="32" column="72" lean-forward="false" selection-start-line="32" selection-start-column="72" selection-end-line="32" selection-end-column="72" />
           <folding>
-            <marker date="1522369101914" expanded="true" signature="1942:1980" ph="{...}" />
+            <marker date="1523203723591" expanded="true" signature="2210:2248" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -824,7 +815,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -886,7 +876,7 @@
         <state relative-caret-position="704">
           <caret line="32" column="72" lean-forward="false" selection-start-line="32" selection-start-column="72" selection-end-line="32" selection-end-column="72" />
           <folding>
-            <marker date="1522369101914" expanded="true" signature="1942:1980" ph="{...}" />
+            <marker date="1523203723591" expanded="true" signature="2210:2248" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -964,7 +954,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1522369101914" expanded="true" signature="1942:1980" ph="{...}" />
+            <marker date="1523203723591" expanded="true" signature="2210:2248" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1027,7 +1017,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1058,14 +1047,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Animation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Level.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -1073,44 +1054,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Display.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="99" column="70" lean-forward="false" selection-start-line="99" selection-start-column="70" selection-end-line="99" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="16" column="32" lean-forward="false" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Cutscene.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="489">
           <caret line="26" column="20" lean-forward="true" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FiniteAnimation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="31" column="1" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Jack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <marker date="1522369101914" expanded="true" signature="1942:1980" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1124,6 +1071,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/LoopingAnimation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="775">
+          <caret line="33" column="1" lean-forward="false" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
@@ -1134,18 +1089,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LoopingAnimation.java">
+    <entry file="file://$PROJECT_DIR$/src/Jack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="33" column="1" lean-forward="false" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+        <state relative-caret-position="1400">
+          <caret line="57" column="44" lean-forward="false" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
+          <folding>
+            <marker date="1523203723591" expanded="true" signature="2210:2248" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Display.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1675">
+          <caret line="84" column="7" lean-forward="false" selection-start-line="84" selection-start-column="7" selection-end-line="84" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="16" column="32" lean-forward="false" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Animation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FiniteAnimation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/World.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="177" column="93" lean-forward="true" selection-start-line="177" selection-start-column="93" selection-end-line="177" selection-end-column="93" />
+        <state relative-caret-position="-5050">
+          <caret line="330" column="48" lean-forward="true" selection-start-line="330" selection-start-column="48" selection-end-line="330" selection-end-column="48" />
           <folding>
             <element signature="e#328#335#0" expanded="true" />
             <element signature="e#396#406#0" expanded="true" />

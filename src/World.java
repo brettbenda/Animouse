@@ -288,7 +288,8 @@ public class World {
             Player currentPlayer = gameState.currentPlayer();
             Player inactivePlayer = gameState.inactivePlayer();
 
-            System.out.println(gameState.tim.getState() + " " + gameState.jack.getState());
+            //System.out.println(gameState.tim.getPosition().x + " " + gameState.tim.getPosition().y);
+            System.out.println(gameState.jack.getState());
             //update Tim
             if (!rightCollision(gameState.tim) && !leftCollision(gameState.tim) && !topCollision(gameState.tim) && !bottomCollision(gameState.tim)) {
                 gameState.tim.updatePosition();
@@ -426,7 +427,7 @@ public class World {
 
     public boolean bottomCollision(Player player) {
         int posX = (int) player.getNextPosition().x;
-        int posY = (int) player.getNextPosition().y + gameState.tim.height;
+        int posY = (int) player.getNextPosition().y + player.height;
         int height = player.height;
         int color;
 
@@ -463,7 +464,7 @@ public class World {
         }
 
         // bottom collision check
-        posY += gameState.tim.height;
+        posY += player.height;
         for (int i = posX; i < posX + height; ++i) {
             color = (gameState.getBitmap().getRGB(i, posY) >>> 16) & 0x000000FF;
             if (color == 10) {
@@ -507,7 +508,7 @@ public class World {
         }
 
         // bottom collision check
-        posY += gameState.tim.height;
+        posY += player.height;
         for (int i = posX; i < posX + height; ++i) {
             color = (gameState.getBitmap().getRGB(i, posY) >>> 16) & 0x000000FF;
             if (color == 10) {

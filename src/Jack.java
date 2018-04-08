@@ -19,7 +19,7 @@ public class Jack extends Player {
         this.hookPosition = new Point2D.Float();
 
         // --- TEST VALUES ---
-        this.currentImage = ImageLoader.loadImage("/test_images/tim_test.png");
+        this.currentImage = ImageLoader.loadImage("/VisualAssets/Jack/jack.png");
         this.width = currentImage.getWidth();
         this.height = currentImage.getHeight();
 
@@ -32,17 +32,20 @@ public class Jack extends Player {
         // Jumping Animation
         TIM_JUMPING_ANIM = new BufferedImage[5];
         for (int i = 0; i < TIM_JUMPING_ANIM.length; ++i) {
-            TIM_JUMPING_ANIM[i] = ImageLoader.loadImage("/test_images/tim_animation_" + i + ".png");
+           // TIM_JUMPING_ANIM[i] = ImageLoader.loadImage("/test_images/tim_animation_" + i + ".png");
+            TIM_JUMPING_ANIM[i] = ImageLoader.loadImage("/VisualAssets/Jack/jack.png");
         }
         // Walking Animation
         TIM_WALKING_ANIM = new BufferedImage[5];
         for (int i = 0; i < TIM_WALKING_ANIM.length; ++i) {
-            TIM_WALKING_ANIM[i] = ImageLoader.loadImage("/test_images/tim_animation_" + i + ".png");
+           //TIM_WALKING_ANIM[i] = ImageLoader.loadImage("/test_images/tim_animation_" + i + ".png");
+            TIM_WALKING_ANIM[i] = ImageLoader.loadImage("/VisualAssets/Jack/jack.png");
         }
         // Idle Animation
         TIM_IDLE_ANIM = new BufferedImage[5];
         for (int i = 0; i < TIM_IDLE_ANIM.length; ++i) {
-            TIM_IDLE_ANIM[i] = ImageLoader.loadImage("/test_images/tim_animation_" + i + ".png");
+            //TIM_IDLE_ANIM[i] = ImageLoader.loadImage("/test_images/tim_animation_" + i + ".png");
+            TIM_IDLE_ANIM[i] = ImageLoader.loadImage("/VisualAssets/Jack/jack.png");
         }
 
         this.walkingAnim = new LoopingAnimation(TIM_WALKING_ANIM, 250);
