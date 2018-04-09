@@ -3,6 +3,8 @@ import java.awt.event.MouseEvent;
 import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
+import java.net.URL;
+import javax.sound.sampled.*;
 
 public class World {
     private Display display;
