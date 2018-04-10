@@ -21,11 +21,12 @@ public class Jack extends Player {
         // --- TEST VALUES ---
         this.currentImage = ImageLoader.loadImage("/VisualAssets/Jack/jack.png");
         this.width = currentImage.getWidth();
-        this.height = currentImage.getHeight() - 4;
+        this.height = currentImage.getHeight() - 5;
 
         System.out.println(width + "" + height);
 
         this.state = CharacterState.IDLE;
+        this.dir = Direction.RIGHT;
 
         BufferedImage TIM_JUMPING_ANIM[];
         BufferedImage TIM_WALKING_ANIM[];

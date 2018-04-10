@@ -15,9 +15,10 @@ public class Tim extends Player {
         // --- TEST VALUES ---
         this.currentImage = ImageLoader.loadImage("/VisualAssets/Tim/tim.png");
         this.width = currentImage.getWidth();
-        this.height = currentImage.getHeight();
+        this.height = currentImage.getHeight() - 5;
 
         this.state = CharacterState.IDLE;
+        this.dir = Direction.RIGHT;
 
         BufferedImage TIM_JUMPING_ANIM[];
         BufferedImage TIM_WALKING_ANIM[];

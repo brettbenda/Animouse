@@ -127,6 +127,7 @@ public class World {
                             gameState.tim.velocity.x = -7;
                         }
                         SoundEffect.TIM_WALKING.playLoop();
+                        gameState.tim.dir = Player.Direction.LEFT;
                     } else {
                         if (gameState.jack.isHooked()) {
                             gameState.jack.velocity = new Point2D.Float(-30, 0);
@@ -137,6 +138,7 @@ public class World {
                             gameState.jack.setState(CharacterState.WALKING);
                         }
                         SoundEffect.JACK_WALKING.playLoop();
+                        gameState.jack.dir = Player.Direction.LEFT;
                     }
                     break;
                 case KeyEvent.VK_RIGHT:
@@ -149,6 +151,7 @@ public class World {
                             gameState.tim.setState(CharacterState.WALKING);
                         }
                         SoundEffect.TIM_WALKING.playLoop();
+                        gameState.tim.dir = Player.Direction.RIGHT;
                     } else {
                         if (gameState.jack.isHooked()) {
                             gameState.jack.velocity = new Point2D.Float(30, 0);
@@ -159,6 +162,7 @@ public class World {
                             gameState.jack.setState(CharacterState.WALKING);
                         }
                         SoundEffect.JACK_WALKING.playLoop();
+                        gameState.jack.dir = Player.Direction.RIGHT;
                     }
                     break;
                 case KeyEvent.VK_E:

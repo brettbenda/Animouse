@@ -2,8 +2,14 @@ import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 
 public abstract class Player {
+    public enum Direction {
+        RIGHT, LEFT
+    }
+
     protected int width;
     protected int height;
+
+    protected Direction dir;
 
     protected Point2D.Float position;
     protected Point2D.Float velocity;
@@ -44,7 +50,17 @@ public abstract class Player {
     public abstract void resetXVelocity();
 
     public BufferedImage getSprite() {
-        return this.currentImage;
+        if (this.dir == Direction.RIGHT) {
+            return this.currentImage;
+        } else {
+            BufferedImage image = new BufferedImage(this.currentImage.getWidth(), this.currentImage.getHeight(), BufferedImage.TYPE_INT_ARGB);
+            for (int i = 0; i < image.getWidth(); ++i) {
+                for (int j = 0; j < image.getHeight(); ++j) {
+                    image.setRGB(i, j, this.currentImage.getRGB(image.getWidth() - i - 1, j));
+                }
+            }
+            return image;
+        }
     }
 
     public void setState(CharacterState state){
