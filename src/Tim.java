@@ -15,7 +15,7 @@ public class Tim extends Player {
         // --- TEST VALUES ---
         this.currentImage = ImageLoader.loadImage("/VisualAssets/Tim/tim.png");
         this.width = currentImage.getWidth();
-        this.height = currentImage.getHeight() - 5;
+        this.height = currentImage.getHeight() - 10;
 
         this.state = CharacterState.IDLE;
         this.dir = Direction.RIGHT;

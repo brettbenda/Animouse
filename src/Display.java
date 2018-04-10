@@ -87,8 +87,6 @@ public class Display extends JPanel{
         if (world.isPlayable()) {
             //draw background offset by location of the active player
             bufferG2D.drawImage(world.getBackground(), 0 - (int) world.getActivePlayerX() + WIDTH / 2, 0 - (int) world.getActivePlayerY() + HEIGHT / 2, null);
-            //draw background offset by location of the active player
-            bufferG2D.drawImage(world.getBackground(), 0 - (int) world.getActivePlayerX() + WIDTH / 2, 0 - (int) world.getActivePlayerY() + HEIGHT / 2, null);
 
             if(world.getGameState().jack.getState()==CharacterState.GRAPPLING){
                 bufferG2D.setStroke(new BasicStroke(10));

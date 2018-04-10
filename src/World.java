@@ -363,22 +363,19 @@ public class World {
                 gameState.jack.resetYVelocity();
             }
 
-
             if (getRegion(gameState.tim) == 30 || getRegion(gameState.jack) == 30) {
-                if (getRegion(gameState.tim) == 30 || getRegion(gameState.jack) == 30) {
-                    System.out.println("🎈" + "End of level!111!!!!1!!!1!11");
-                    gameState.tim.resetXVelocity();
-                    gameState.tim.resetYVelocity();
-                    gameState.jack.resetXVelocity();
-                    gameState.jack.resetYVelocity();
-                    if (isPlayable)
-                        ++plotPoint;
-                    isPlayable = !isPlayable;
-                }
-
-                //update inactive player
-                inactivePlayer.resetXVelocity();
+                System.out.println("🎈" + "End of level!111!!!!1!!!1!11");
+                gameState.tim.resetXVelocity();
+                gameState.tim.resetYVelocity();
+                gameState.jack.resetXVelocity();
+                gameState.jack.resetYVelocity();
+                if (isPlayable)
+                    ++plotPoint;
+                isPlayable = !isPlayable;
             }
+
+            //update inactive player
+            inactivePlayer.resetXVelocity();
 
             // update character animations
             gameState.tim.updateImage();
@@ -658,7 +655,7 @@ public class World {
 
     private boolean isOnGround(Player player) {
         int width = player.width;
-        int height = 3;
+        int height = 10;
         int posX = (int) player.getPosition().x;
         int posY = (int) player.getPosition().y + player.height;
         int color;
@@ -667,7 +664,6 @@ public class World {
         for (int i = posX; i < posX + width; ++i) {
             color = (gameState.getBitmap().getRGB(i, posY) >>> 16) & 0x000000FF;
             if (color == 10) {
-//                System.out.println("topY");
                 return true;
             }
         }
@@ -676,17 +672,15 @@ public class World {
         for (int j = posY; j < posY + height; ++j) {
             color = (gameState.getBitmap().getRGB(posX, j) >>> 16) & 0x000000FF;
             if (color == 10) {
-//                System.out.println("leftY");
                 return true;
             }
         }
 
         // bottom collision check
-        posY += height;
+        posY = (int) player.getPosition().y + player.height;
         for (int i = posX; i < posX + height; ++i) {
             color = (gameState.getBitmap().getRGB(i, posY) >>> 16) & 0x000000FF;
             if (color == 10) {
-//                System.out.println("bottomY");
                 return true;
             }
         }
@@ -696,10 +690,13 @@ public class World {
         for (int j = posY; j < posY + height; ++j) {
             color = (gameState.getBitmap().getRGB(posX, j) >>> 16) & 0x000000FF;
             if (color == 10) {
-//                System.out.println("rightY");
                 return true;
             }
         }
         return false;
+    }
+
+    public BufferedImage getBitmap() {
+        return gameState.getBitmap();
     }
 }
