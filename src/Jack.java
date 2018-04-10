@@ -5,7 +5,7 @@ public class Jack extends Player {
 
     private final float maxXVelocity = 15;
     private final float grappleSpeed = 40;
-    private int movementState;
+    public int movementState;
     private Point2D.Float hookPosition;
 
     private final int NORMAL = 0;

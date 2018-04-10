@@ -29,7 +29,7 @@ public class World {
         isPlayable = false;
 
         //preload levels
-        for(int i = 0; i < 9; i++){
+        for(int i = 0; i < 8; i++){
             levels.add(new Level(i));
         }
 
@@ -166,12 +166,14 @@ public class World {
                     }
                     break;
                 case KeyEvent.VK_E:
-                    gameState.switchPlayer();
-                    gameState.tim.resetXVelocity();
-                    gameState.tim.resetYVelocity();
-                    gameState.jack.resetXVelocity();
-                    gameState.jack.resetYVelocity();
-                    System.out.println("swap");
+                    if (!gameState.jack.isHooked()) {
+                        gameState.switchPlayer();
+                        gameState.tim.resetXVelocity();
+                        gameState.tim.resetYVelocity();
+                        gameState.jack.resetXVelocity();
+                        gameState.jack.resetYVelocity();
+                        System.out.println("swap");
+                    }
                     break;
                 case KeyEvent.VK_C:
                     if (gameState.currentPlayer() == gameState.tim && getRegion(gameState.tim) == 40 && gameState.tim.getState() != CharacterState.CLIMBING) {

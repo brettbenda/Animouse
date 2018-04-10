@@ -3,7 +3,7 @@ import java.io.BufferedReader;
 
 public class VisualAssets {
 
-    final int numOfLevels = 9;
+    final int numOfLevels = 8;
 
     BufferedImage TIM;
     BufferedImage[] TIM_JUMPING_ANIM;
