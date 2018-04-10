@@ -2,6 +2,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.MouseEvent;
 import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.util.ArrayList;
 import java.net.URL;
 import javax.sound.sampled.*;
@@ -31,11 +32,12 @@ public class World {
         for(int i = 0; i < 9; i++){
             levels.add(new Level(i));
         }
+
         // initialize game state
         this.gameState = new GameState(levels.get(0));
 
-      //  levels.get(2).addHookPoint(new Point2D.Float(1250,1628));
-       // levels.get(2).addHookPoint(new Point2D.Float(1400,1124));
+        SoundEffect.init();
+        SoundEffect.MUSIC.playLoop();
     }
 
     private void loadPlot(){
@@ -91,8 +93,10 @@ public class World {
 
                             if (!getCollisionStatus(xx, yy, gameState.tim.width, 15) && areTimAndJackIntersecting() && gameState.tim.velocity.y > 0) {
                                 gameState.tim.velocity.y = -70;
+                                SoundEffect.JUMPING.playOnce();
                             } else if (getCollisionStatus(xx, yy, gameState.tim.width, 15)) {
                                 gameState.tim.velocity.y = -35;
+                                SoundEffect.JUMPING.playOnce();
                             }
                         }
                     } else {
@@ -122,6 +126,7 @@ public class World {
                             gameState.tim.setState(CharacterState.WALKING);
                             gameState.tim.velocity.x = -7;
                         }
+                        SoundEffect.TIM_WALKING.playLoop();
                     } else {
                         if (gameState.jack.isHooked()) {
                             gameState.jack.velocity = new Point2D.Float(-30, 0);
@@ -131,6 +136,7 @@ public class World {
                             gameState.jack.decrementXVelocity(0.5f);
                             gameState.jack.setState(CharacterState.WALKING);
                         }
+                        SoundEffect.JACK_WALKING.playLoop();
                     }
                     break;
                 case KeyEvent.VK_RIGHT:
@@ -142,6 +148,7 @@ public class World {
                             gameState.tim.velocity.x = 7;
                             gameState.tim.setState(CharacterState.WALKING);
                         }
+                        SoundEffect.TIM_WALKING.playLoop();
                     } else {
                         if (gameState.jack.isHooked()) {
                             gameState.jack.velocity = new Point2D.Float(30, 0);
@@ -151,6 +158,7 @@ public class World {
                             gameState.jack.incrementXVelocity(0.5f);
                             gameState.jack.setState(CharacterState.WALKING);
                         }
+                        SoundEffect.JACK_WALKING.playLoop();
                     }
                     break;
                 case KeyEvent.VK_E:
@@ -248,9 +256,13 @@ public class World {
                     break;
                 case KeyEvent.VK_LEFT:
                     currentPlayer.resetXVelocity();
+                    SoundEffect.TIM_WALKING.stop();
+                    SoundEffect.JACK_WALKING.stop();
                     break;
                 case KeyEvent.VK_RIGHT:
                     currentPlayer.resetXVelocity();
+                    SoundEffect.TIM_WALKING.stop();
+                    SoundEffect.JACK_WALKING.stop();
                     break;
             }
         }
