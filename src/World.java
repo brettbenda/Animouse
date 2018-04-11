@@ -45,34 +45,34 @@ public class World {
         for (int i = 0; i < 8; ++i){
             switch(i){
                 case 0:
-                    numOfFrames = 5;
+                    numOfFrames = 41;
                     break;
                 case 1:
-                    numOfFrames = 7;
+                    numOfFrames = 41;
                     break;
                 case 2:
-                    numOfFrames = 1;
+                    numOfFrames = 41;
                     break;
                 case 3:
-                    numOfFrames = 1;
+                    numOfFrames = 41;
                     break;
                 case 4:
-                    numOfFrames = 1;
+                    numOfFrames = 41;
                     break;
                 case 5:
-                    numOfFrames = 1;
+                    numOfFrames = 41;
                     break;
                 case 6:
-                    numOfFrames = 1;
+                    numOfFrames = 41;
                     break;
                 case 7:
-                    numOfFrames = 1;
+                    numOfFrames = 41;
                     break;
             }
             levels.add(new Level(i));
             cutscenes.add(new Cutscene(i, numOfFrames));
         }
-        numOfFrames = 1;
+        numOfFrames = 41;
         cutscenes.add(new Cutscene(8, numOfFrames));
     }
 
@@ -183,12 +183,23 @@ public class World {
                     }
                     break;
                 case KeyEvent.VK_C:
-                    if (gameState.currentPlayer() == gameState.tim && getRegion(gameState.tim) == 40 && gameState.tim.getState() != CharacterState.CLIMBING) {
-                        gameState.tim.setState(CharacterState.CLIMBING);
-                        gameState.tim.resetXVelocity();
-                        gameState.tim.resetYVelocity();
-                    } else if (gameState.currentPlayer() == gameState.tim && gameState.tim.getState() == CharacterState.CLIMBING) {
-                        gameState.tim.setState(CharacterState.JUMPING);
+                    if (currentLevel.id == 7) {
+                        if (gameState.currentPlayer() == gameState.tim && getRegion(gameState.tim) == 40 && gameState.tim.getState() != CharacterState.CLIMBING) {
+                            gameState.tim.setCarrying();
+                            gameState.tim.resetXVelocity();
+                            gameState.tim.resetYVelocity();
+                        } else if (gameState.currentPlayer() == gameState.tim && gameState.tim.getState() == CharacterState.CLIMBING) {
+                            gameState.tim.setFalling();
+                        }
+                    }
+                    else {
+                        if (gameState.currentPlayer() == gameState.tim && getRegion(gameState.tim) == 40 && gameState.tim.getState() != CharacterState.CLIMBING) {
+                            gameState.tim.setState(CharacterState.CLIMBING);
+                            gameState.tim.resetXVelocity();
+                            gameState.tim.resetYVelocity();
+                        } else if (gameState.currentPlayer() == gameState.tim && gameState.tim.getState() == CharacterState.CLIMBING) {
+                            gameState.tim.setState(CharacterState.JUMPING);
+                        }
                     }
                     break;
                 case KeyEvent.VK_Q:
@@ -286,7 +297,7 @@ public class World {
         else{
             if (keyCode == KeyEvent.VK_SPACE){
                 cutscenes.get(plotPoint).advance();
-                if (cutscenes.get(plotPoint).ended()){
+                if (cutscenes.get(plotPoint).ended){
                     isPlayable = !isPlayable;
                     currentLevel = levels.get(plotPoint);
                     gameState.loadLevel(currentLevel);
@@ -350,12 +361,22 @@ public class World {
             }
 
             if (getRegion(gameState.tim) != 40 && gameState.tim.getState() == CharacterState.CLIMBING) {
+                if (currentLevel.id == 7) {
+                    gameState.tim.setFalling();
+                }
                 gameState.tim.setState(CharacterState.JUMPING);
             }
 
             // Handle Death scenario for Tim
             if (gameState.tim.velocity.y > 65 && rightCollision(gameState.tim) && !(areTimAndJackIntersecting())) {
                 gameState.loadLevel(new Level(3));
+            }
+
+            // special case for final level
+            if (currentLevel.id == 7 && gameState.tim.position.y > 3000) {
+                gameState.loadLevel(levels.get(7));
+                currentLevel = levels.get(7);
+                System.out.println("restart");
             }
 
 

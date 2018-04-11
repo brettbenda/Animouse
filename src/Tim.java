@@ -10,10 +10,13 @@ public class Tim extends Player {
     private Animation climbAnim;
     private Animation carryAnim;
 
+    public boolean isCarrying;
+
     public Tim(float x, float y) {
         this.position = new Point2D.Float(x, y);
         this.velocity = new Point2D.Float(0, 0);
         this.isClimbing = false;
+        this.isCarrying = false;
 
         // --- TEST VALUES ---
         this.currentImage = ImageLoader.loadImage("/VisualAssets/Tim/tim.png");
@@ -52,7 +55,7 @@ public class Tim extends Player {
         // Idle Animation
         TIM_CARRY_ANIM = new BufferedImage[5];
         for (int i = 0; i < TIM_CARRY_ANIM.length; ++i) {
-            TIM_CARRY_ANIM[i] = ImageLoader.loadImage("/VisualAssets/Tim/tim.png");
+            TIM_CARRY_ANIM[i] = ImageLoader.loadImage("/test_images/tim_test.png");
         }
 
 
@@ -102,40 +105,55 @@ public class Tim extends Player {
         return this.isClimbing;
     }
 
+    public void setFalling() {
+        this.state = CharacterState.JUMPING;
+    }
+
+    public void setCarrying() {
+        this.isCarrying = true;
+        this.state = CharacterState.CLIMBING;
+        currentAnim = carryAnim;
+        this.width = currentAnim.getFrame().getWidth();
+        this.height = currentAnim.getFrame().getHeight() - 5;
+        currentAnim.reset();
+    }
+
     public void setState(CharacterState state){
-        if (this.state != state) {
-            if (state == CharacterState.WALKING) {
-                currentAnim = walkingAnim;
-                this.width = currentAnim.getFrame().getWidth();
-                this.height = currentAnim.getFrame().getHeight() - 5;
-                currentAnim.reset();
-                currentImage = currentAnim.getFrame();
-            } else if (state == CharacterState.IDLE) {
-                currentAnim = idleAnim;
-                this.width = currentAnim.getFrame().getWidth();
-                this.height = currentAnim.getFrame().getHeight() - 5;
-                currentAnim.reset();
-                currentImage = currentAnim.getFrame();
-            } else if (state == CharacterState.JUMPING) {
-                currentAnim = jumpingAnim;
-                this.width = currentAnim.getFrame().getWidth();
-                this.height = currentAnim.getFrame().getHeight() - 5;
-                currentAnim.reset();
-                currentImage = currentAnim.getFrame();
-            } else if (state == CharacterState.CARRYING) {
-                currentAnim = carryAnim;
-                this.width = currentAnim.getFrame().getWidth();
-                this.height = currentAnim.getFrame().getHeight() - 5;
-                currentAnim.reset();
-                currentImage = currentAnim.getFrame();
-            } else if (state == CharacterState.CLIMBING) {
-                currentAnim = climbAnim;
-                this.width = currentAnim.getFrame().getWidth();
-                this.height = currentAnim.getFrame().getHeight() - 5;
-                currentAnim.reset();
-                currentImage = currentAnim.getFrame();
+        if (!isCarrying) {
+            if (this.state != state) {
+                if (state == CharacterState.WALKING) {
+                    currentAnim = walkingAnim;
+                    this.width = currentAnim.getFrame().getWidth();
+                    this.height = currentAnim.getFrame().getHeight() - 5;
+                    currentAnim.reset();
+                    currentImage = currentAnim.getFrame();
+                } else if (state == CharacterState.IDLE) {
+                    currentAnim = idleAnim;
+                    this.width = currentAnim.getFrame().getWidth();
+                    this.height = currentAnim.getFrame().getHeight() - 5;
+                    currentAnim.reset();
+                    currentImage = currentAnim.getFrame();
+                } else if (state == CharacterState.JUMPING) {
+                    currentAnim = jumpingAnim;
+                    this.width = currentAnim.getFrame().getWidth();
+                    this.height = currentAnim.getFrame().getHeight() - 5;
+                    currentAnim.reset();
+                    currentImage = currentAnim.getFrame();
+                } else if (state == CharacterState.CARRYING) {
+                    currentAnim = carryAnim;
+                    this.width = currentAnim.getFrame().getWidth();
+                    this.height = currentAnim.getFrame().getHeight() - 5;
+                    currentAnim.reset();
+                    currentImage = currentAnim.getFrame();
+                } else if (state == CharacterState.CLIMBING) {
+                    currentAnim = climbAnim;
+                    this.width = currentAnim.getFrame().getWidth();
+                    this.height = currentAnim.getFrame().getHeight() - 5;
+                    currentAnim.reset();
+                    currentImage = currentAnim.getFrame();
+                }
             }
+            this.state = state;
         }
-        this.state = state;
     }
 }

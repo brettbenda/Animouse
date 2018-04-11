@@ -20,11 +20,14 @@ public class Level{
     public boolean playTim;
     public boolean playJack;
 
+    public int id;
+
     // public Cutscene[] startCutscenes;
     // public Cutscene[] endCutscenes;
 
     // constructor
     public Level(int levelNumber) {
+        this.id = levelNumber;
 
         // load background from image file
         // this.background = ImageLoader.loadImage(imageLayerPath);
