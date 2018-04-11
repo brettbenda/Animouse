@@ -17,6 +17,9 @@ public class Level{
     public Point2D.Float posCamera;
     public ArrayList<Point2D.Float> hookablePoints = new ArrayList<Point2D.Float>();
 
+    public boolean playTim;
+    public boolean playJack;
+
     // public Cutscene[] startCutscenes;
     // public Cutscene[] endCutscenes;
 
@@ -34,17 +37,6 @@ public class Level{
         // load other data from text file
         // this.miscDataPath = ...
         loadData(levelNumber);
-
-
-        // store cutscenes
-        // this.startCutscenes = startCutscenes;
-        // this.endCutscenes = endCutscenes;
-
-        // --- TEST VALUES ---
-     //   this.posTim = new Point2D.Float(100, 800);
-       // this.posJack = new Point2D.Float(200, 540);
-     //   this.posCamera = new Point2D.Float(960, 540);
-        // --- TEST VALUES ---
     }
 
     private void loadData(int levelNumber) {
@@ -65,6 +57,18 @@ public class Level{
                     this.posTim = new Point2D.Float(x, y);
                 else if (i == 3)
                     this.posJack = new Point2D.Float(x, y);
+                else if (i == 5) {
+                    if (x == 1) {
+                        playTim = true;
+                    } else {
+                        playTim = false;
+                    }
+                    if (y == 1) {
+                        playJack = true;
+                    } else {
+                        playJack = false;
+                    }
+                }
                 else if (i % 2 == 1)
                     hookablePoints.add(new Point2D.Float(x, y));
 

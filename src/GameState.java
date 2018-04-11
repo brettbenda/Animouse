@@ -29,6 +29,11 @@ public class GameState {
         this.level = level;
         this.tim.position = level.posTim;
         this.jack.position = level.posJack;
+        if (level.playTim) {
+            selectedPlayer = 0;
+        } else {
+            selectedPlayer = 1;
+        }
 
     }
 
