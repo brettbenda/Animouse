@@ -50,12 +50,12 @@ public class Tim extends Player {
         // CLIMB Animation
         TIM_CLIMB_ANIM = new BufferedImage[5];
         for (int i = 0; i < TIM_CLIMB_ANIM.length; ++i) {
-            TIM_CLIMB_ANIM[i] = ImageLoader.loadImage("/VisualAssets/Jack/jack.png");
+            TIM_CLIMB_ANIM[i] = ImageLoader.loadImage("/VisualAssets/Tim/tim_climbing.png");
         }
         // Idle Animation
         TIM_CARRY_ANIM = new BufferedImage[5];
         for (int i = 0; i < TIM_CARRY_ANIM.length; ++i) {
-            TIM_CARRY_ANIM[i] = ImageLoader.loadImage("/test_images/tim_test.png");
+            TIM_CARRY_ANIM[i] = ImageLoader.loadImage("/VisualAssets/Tim/tim_carrying.png");
         }
 
 

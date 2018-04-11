@@ -360,7 +360,7 @@ public class World {
 
             }
 
-            if (getRegion(gameState.tim) != 40 && gameState.tim.getState() == CharacterState.CLIMBING) {
+            if (!canClimb() && gameState.tim.getState() == CharacterState.CLIMBING) {
                 if (currentLevel.id == 7) {
                     gameState.tim.setFalling();
                 }
@@ -748,6 +748,13 @@ public class World {
 
     public boolean renderJack() {
         return currentLevel.playJack;
+    }
+
+    private boolean canClimb() {
+        int xx = (int) getActivePlayer().getMidpoint().x;
+        int yy = (int) getActivePlayer().getMidpoint().y;
+
+        return ((gameState.getBitmap().getRGB(xx, yy) >>> 16) & 0x000000FF) == 40;
     }
 }
 
