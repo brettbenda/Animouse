@@ -66,7 +66,7 @@ public class World {
                     numOfFrames = 28;
                     break;
                 case 7:
-                    numOfFrames = 40;
+                    numOfFrames = 20;
                     break;
             }
             levels.add(new Level(i));
