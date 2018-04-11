@@ -83,14 +83,18 @@ public class Display extends JPanel{
         Graphics2D bufferG2D = buffer.createGraphics();
         bufferG2D.setColor(Color.BLACK);
         bufferG2D.fillRect(0,0,WIDTH,HEIGHT);
+        bufferG2D.setStroke(new BasicStroke(5));
 
         if (world.isPlayable()) {
             //draw background offset by location of the active player
             bufferG2D.drawImage(world.getBackground(), 0 - (int) world.getActivePlayerX() + WIDTH / 2, 0 - (int) world.getActivePlayerY() + HEIGHT / 2, null);
 
-            if(world.getGameState().jack.getState()==CharacterState.GRAPPLING && world.getGameState().currentPlayer()!= world.getGameState().tim){
-                bufferG2D.setStroke(new BasicStroke(10));
-                bufferG2D.drawLine(WIDTH/2,HEIGHT/2,(int)world.grapplePoint.getX()- (int) world.getActivePlayerX() + WIDTH / 2,(int)world.grapplePoint.getY()- (int) world.getActivePlayerY() + HEIGHT / 2);
+            if(world.getGameState().jack.getState()==CharacterState.GRAPPLING && world.getGameState().currentPlayer()!= world.getGameState().tim) {
+                if (world.getGameState().jack.dir == Player.Direction.RIGHT) {
+                    bufferG2D.drawLine(WIDTH / 2 + world.getGameState().jack.width, HEIGHT / 2 + 3*world.getGameState().jack.height/4, (int) world.grapplePoint.getX() - (int) world.getActivePlayerX() + WIDTH / 2, (int) world.grapplePoint.getY() - (int) world.getActivePlayerY() + HEIGHT / 2);
+                }else{
+                    bufferG2D.drawLine(WIDTH / 2, HEIGHT / 2 + 3*world.getGameState().jack.height/4, (int) world.grapplePoint.getX() - (int) world.getActivePlayerX() + WIDTH / 2, (int) world.grapplePoint.getY() - (int) world.getActivePlayerY() + HEIGHT / 2);
+                }
             }
 
             // draw players

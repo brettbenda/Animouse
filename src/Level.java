@@ -20,23 +20,18 @@ public class Level{
     public boolean playTim;
     public boolean playJack;
 
-<<<<<<< HEAD
-    public int levelNumber;
-=======
+
     public int id;
 
->>>>>>> ec2e0284b151e1ac882527f8fbaf34175c392cf7
+
     // public Cutscene[] startCutscenes;
     // public Cutscene[] endCutscenes;
 
     // constructor
     public Level(int levelNumber) {
-<<<<<<< HEAD
-        this.levelNumber = levelNumber;
-=======
+
         this.id = levelNumber;
 
->>>>>>> ec2e0284b151e1ac882527f8fbaf34175c392cf7
         // load background from image file
         // this.background = ImageLoader.loadImage(imageLayerPath);
         this.background = ImageLoader.loadImage("/VisualAssets/Background/levelBackground_" + levelNumber + ".png");
