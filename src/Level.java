@@ -20,12 +20,13 @@ public class Level{
     public boolean playTim;
     public boolean playJack;
 
+    public int levelNumber;
     // public Cutscene[] startCutscenes;
     // public Cutscene[] endCutscenes;
 
     // constructor
     public Level(int levelNumber) {
-
+        this.levelNumber = levelNumber;
         // load background from image file
         // this.background = ImageLoader.loadImage(imageLayerPath);
         this.background = ImageLoader.loadImage("/VisualAssets/Background/levelBackground_" + levelNumber + ".png");
