@@ -41,7 +41,6 @@ public class World {
         this.gameState = new GameState(levels.get(0));
 
         SoundEffect.init();
-        SoundEffect.MUSIC.playLoop();
     }
 
     private void loadPlot(){
@@ -311,6 +310,7 @@ public class World {
                         isPlayable = !isPlayable;
                         currentLevel = levels.get(plotPoint);
                         gameState.loadLevel(currentLevel);
+
                     }
                 }
             }
@@ -410,6 +410,7 @@ public class World {
 
             if (getRegion(gameState.tim) == 30 && getRegion(gameState.jack) == 30 || isInsideEventRegion()) {
                 System.out.println("🎈" + "End of level!111!!!!1!!!1!11");
+
                 gameState.tim.resetXVelocity();
                 gameState.tim.resetYVelocity();
                 gameState.jack.resetXVelocity();
@@ -611,16 +612,6 @@ public class World {
         return ((gameState.getBitmap().getRGB(xx + width/2, yy + height/2) >>> 8) & 0x000000FF)/10 ;
     }
 
-    public void loadNextLevel(){
-        // play end cutscenes
-        // ...
-
-        // go to next level
-        // ...
-
-        // play start cutscenes
-        // ...
-    }
 
     public boolean isPlayable(){
         return this.isPlayable;
@@ -777,6 +768,46 @@ public class World {
 
         return ((gameState.getBitmap().getRGB(xT, yT) >>> 16) & 0x000000FF) == 30 &&
                 ((gameState.getBitmap().getRGB(xJ, yJ) >>> 16) & 0x000000FF) == 30;
+    }
+
+    private void loadBGMusic() {
+        if (currentLevel.id == 0) {
+            SoundEffect.BGMUSIC0.playLoop();
+        } else if (currentLevel.id == 1) {
+            SoundEffect.BGMUSIC1.playLoop();
+        } else if (currentLevel.id == 2) {
+            SoundEffect.BGMUSIC2.playLoop();
+        } else if (currentLevel.id == 3) {
+            SoundEffect.BGMUSIC3.playLoop();
+        } else if (currentLevel.id == 4) {
+            SoundEffect.BGMUSIC4.playLoop();
+        } else if (currentLevel.id == 5) {
+            SoundEffect.BGMUSIC5.playLoop();
+        } else if (currentLevel.id == 6) {
+            SoundEffect.BGMUSIC6.playLoop();
+        } else {
+            SoundEffect.BGMUSIC7.playLoop();
+        }
+    }
+
+    private void stopBGMusic() {
+        if (currentLevel.id == 0) {
+            SoundEffect.BGMUSIC0.stop();
+        } else if (currentLevel.id == 1) {
+            SoundEffect.BGMUSIC1.stop();
+        } else if (currentLevel.id == 2) {
+            SoundEffect.BGMUSIC2.stop();
+        } else if (currentLevel.id == 3) {
+            SoundEffect.BGMUSIC3.stop();
+        } else if (currentLevel.id == 4) {
+            SoundEffect.BGMUSIC4.stop();
+        } else if (currentLevel.id == 5) {
+            SoundEffect.BGMUSIC5.stop();
+        } else if (currentLevel.id == 6) {
+            SoundEffect.BGMUSIC6.stop();
+        } else {
+            SoundEffect.BGMUSIC7.stop();
+        }
     }
 }
 
