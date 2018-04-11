@@ -19,11 +19,15 @@ public class World {
 
     public Point2D grapplePoint;
 
+    public boolean isOver;
+
     // constructor
     public World(Display display) {
         // store reference to display
         this.display = display;
         this.plotPoint = 0;
+
+        this.isOver = false;
 
         loadPlot();
         isPlayable = false;
@@ -301,9 +305,13 @@ public class World {
             if (keyCode == KeyEvent.VK_SPACE){
                 cutscenes.get(plotPoint).advance();
                 if (cutscenes.get(plotPoint).ended){
-                    isPlayable = !isPlayable;
-                    currentLevel = levels.get(plotPoint);
-                    gameState.loadLevel(currentLevel);
+                    if (plotPoint == 8) {
+                        isOver = true;
+                    } else {
+                        isPlayable = !isPlayable;
+                        currentLevel = levels.get(plotPoint);
+                        gameState.loadLevel(currentLevel);
+                    }
                 }
             }
         }
