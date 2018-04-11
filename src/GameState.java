@@ -29,12 +29,17 @@ public class GameState {
         this.level = level;
         this.tim.position = level.posTim;
         this.jack.position = level.posJack;
+        this.tim.resetYVelocity();
+        this.jack.resetXVelocity();
         if (level.playTim) {
             selectedPlayer = 0;
         } else {
             selectedPlayer = 1;
         }
 
+        if (level.id == 7) {
+            tim.setCarrying();
+        }
     }
 
     public BufferedImage getBackground() {
