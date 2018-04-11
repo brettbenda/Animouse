@@ -15,6 +15,7 @@ public abstract class Player {
     protected Point2D.Float velocity;
 
     protected BufferedImage currentImage;
+    protected BufferedImage crosshair;
 
     protected CharacterState state;
     protected Animation currentAnim;

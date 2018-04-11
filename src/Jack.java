@@ -20,6 +20,7 @@ public class Jack extends Player {
 
         // --- TEST VALUES ---
         this.currentImage = ImageLoader.loadImage("/VisualAssets/Jack/jack.png");
+        this.crosshair = ImageLoader.loadImage("/VisualAssets/Jack/crosshair.png");
         this.width = currentImage.getWidth();
         this.height = currentImage.getHeight() - 5;
 

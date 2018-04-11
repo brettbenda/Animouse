@@ -6,7 +6,17 @@ public enum SoundEffect {
     TIM_WALKING("./res/AudioAssets/walk.wav"),
     JACK_WALKING("./res/AudioAssets/walk.wav"),
     JUMPING("./res/AudioAssets/jump.wav"),
-    MUSIC("./res/AudioAssets/music.wav");
+    CLICK("./res/AudioAssets/jump.wav"),
+    RAIN("./res/AudioAssets/jump.wav"),
+    OUTSIDEAMBIENT("./res/AudioAssets/jump.wav"),
+    BGMUSIC0("./res/AudioAssets/music.wav"),
+    BGMUSIC1("./res/AudioAssets/music.wav"),
+    BGMUSIC2("./res/AudioAssets/music.wav"),
+    BGMUSIC3("./res/AudioAssets/music.wav"),
+    BGMUSIC4("./res/AudioAssets/music.wav"),
+    BGMUSIC5("./res/AudioAssets/music.wav"),
+    BGMUSIC6("./res/AudioAssets/music.wav"),
+    BGMUSIC7("./res/AudioAssets/music.wav");
 
     private Clip clip;
 
