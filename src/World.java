@@ -61,7 +61,7 @@ public class World {
                     numOfFrames = 26;
                     break;
                 case 4:
-                    numOfFrames = 33;
+                    numOfFrames = 35;
                     break;
                 case 5:
                     numOfFrames = 6;
