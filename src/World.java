@@ -384,7 +384,7 @@ public class World {
             }
 
             // special case for final level
-            if (currentLevel.id == 7 && gameState.tim.position.y > 3000) {
+            if (currentLevel.id == 7 && gameState.tim.position.y > 2500) {
                 gameState.loadLevel(levels.get(7));
                 currentLevel = levels.get(7);
                 System.out.println("restart");
