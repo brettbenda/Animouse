@@ -167,12 +167,19 @@ public class World {
                     break;
                 case KeyEvent.VK_E:
                     if (!gameState.jack.isHooked()) {
-                        gameState.switchPlayer();
-                        gameState.tim.resetXVelocity();
-                        gameState.tim.resetYVelocity();
-                        gameState.jack.resetXVelocity();
-                        gameState.jack.resetYVelocity();
-                        System.out.println("swap");
+                        if (gameState.inactivePlayer() == gameState.tim && currentLevel.playTim) {
+                            gameState.switchPlayer();
+                            gameState.tim.resetXVelocity();
+                            gameState.tim.resetYVelocity();
+                            gameState.jack.resetXVelocity();
+                            gameState.jack.resetYVelocity();
+                        }  else if (gameState.inactivePlayer() == gameState.jack && currentLevel.playJack) {
+                            gameState.switchPlayer();
+                            gameState.tim.resetXVelocity();
+                            gameState.tim.resetYVelocity();
+                            gameState.jack.resetXVelocity();
+                            gameState.jack.resetYVelocity();
+                        }
                     }
                     break;
                 case KeyEvent.VK_C:
@@ -208,39 +215,43 @@ public class World {
                 case 49: // 1
                     System.out.println("Loading Level 1...");
                     gameState.loadLevel(levels.get(0));
+                    currentLevel = levels.get(0);
                     break;
                 case 50: // 2
                     System.out.println("Loading Level 2...");
                     gameState.loadLevel(levels.get(1));
+                    currentLevel = levels.get(1);
                     break;
                 case 51: // 3
                     System.out.println("Loading Level 3...");
                     gameState.loadLevel(levels.get(2));
                     currentLevel = levels.get(2);
+
                     break;
                 case 52: // 4
                     System.out.println("Loading Level 4...");
                     gameState.loadLevel(levels.get(3));
+                    currentLevel = levels.get(3);
                     break;
                 case 53: // 5
                     System.out.println("Loading Level 5...");
                     gameState.loadLevel(levels.get(4));
+                    currentLevel = levels.get(4);
                     break;
                 case 54: // 6
                     System.out.println("Loading Level 6...");
                     gameState.loadLevel(levels.get(5));
+                    currentLevel = levels.get(5);
                     break;
                 case 55: // 7
                     System.out.println("Loading Level 7...");
                     gameState.loadLevel(levels.get(6));
+                    currentLevel = levels.get(6);
                     break;
                 case 56: // 8
                     System.out.println("Loading Level 8...");
                     gameState.loadLevel(levels.get(7));
-                    break;
-                case 57: // 9
-                    System.out.println("Loading Level 9...");
-                    gameState.loadLevel(levels.get(8));
+                    currentLevel = levels.get(7);
                     break;
             }
         }
@@ -363,7 +374,7 @@ public class World {
                 gameState.jack.resetYVelocity();
             }
 
-            if (getRegion(gameState.tim) == 30 || getRegion(gameState.jack) == 30) {
+            if (getRegion(gameState.tim) == 30 && getRegion(gameState.jack) == 30) {
                 System.out.println("🎈" + "End of level!111!!!!1!!!1!11");
                 gameState.tim.resetXVelocity();
                 gameState.tim.resetYVelocity();
@@ -625,6 +636,17 @@ public class World {
         return gameState.tim.getPosition().y;
     }
 
+    public Player getTim() {
+        return gameState.tim;
+    }
+
+    public Player getJack() {
+        return gameState.jack;
+    }
+
+    public  Player getActivePlayer() {
+        return gameState.currentPlayer();
+    }
     public BufferedImage getJackImage() {
         return gameState.jack.getSprite();
     }
@@ -696,4 +718,13 @@ public class World {
     public BufferedImage getBitmap() {
         return gameState.getBitmap();
     }
+
+    public boolean renderTim() {
+        return currentLevel.playTim;
+    }
+
+    public boolean renderJack() {
+        return currentLevel.playJack;
+    }
 }
+

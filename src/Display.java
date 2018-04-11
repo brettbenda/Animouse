@@ -92,11 +92,24 @@ public class Display extends JPanel{
                 bufferG2D.setStroke(new BasicStroke(10));
                 bufferG2D.drawLine(WIDTH/2,HEIGHT/2,(int)world.grapplePoint.getX()- (int) world.getActivePlayerX() + WIDTH / 2,(int)world.grapplePoint.getY()- (int) world.getActivePlayerY() + HEIGHT / 2);
             }
+
             // draw players
-            // active player is in the center
-            bufferG2D.drawImage(world.getActivePlayerImage(), WIDTH / 2, HEIGHT / 2, null);
-            // inactive player is offset
-            bufferG2D.drawImage(world.getInactivePlayerImage(), (int) world.getInactivePlayerX() - (int) world.getActivePlayerX() + WIDTH / 2, (int) world.getInactivePlayerY() - (int) world.getActivePlayerY() + HEIGHT / 2, null);
+            if (world.getTim() == world.getActivePlayer()) {
+                if (world.renderTim())
+                    bufferG2D.drawImage(world.getTimImage(), WIDTH / 2, HEIGHT / 2, null);
+            } else {
+                if (world.renderTim())
+                    bufferG2D.drawImage(world.getTimImage(), (int) world.getInactivePlayerX() - (int) world.getActivePlayerX() + WIDTH / 2, (int) world.getInactivePlayerY() - (int) world.getActivePlayerY() + HEIGHT / 2, null);
+            }
+
+
+            if (world.getJack() == world.getActivePlayer()) {
+                if (world.renderJack())
+                    bufferG2D.drawImage(world.getJackImage(), WIDTH / 2, HEIGHT / 2, null);
+            } else {
+                if (world.renderJack())
+                    bufferG2D.drawImage(world.getJackImage(), (int) world.getInactivePlayerX() - (int) world.getActivePlayerX() + WIDTH / 2, (int) world.getInactivePlayerY() - (int) world.getActivePlayerY() + HEIGHT / 2, null);
+            }
         }
         else{
             bufferG2D.drawImage(world.getCutSceneFrame(), 0, 0, null);
