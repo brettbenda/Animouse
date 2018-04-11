@@ -101,7 +101,7 @@ public class World {
                         }
                     } else {
                         if (gameState.jack.isHooked()) {
-                            gameState.jack.setState(CharacterState.HOOKED);
+                            gameState.jack.setState(CharacterState.FALLING);
                             gameState.jack.velocity = new Point2D.Float(0, -20);
                             gameState.jack.setMovementState(0);
                         }
@@ -112,6 +112,7 @@ public class World {
                         gameState.tim.velocity.y = 5;
                     } else {
                         if (gameState.jack.isHooked()) {
+                            gameState.jack.setState(CharacterState.FALLING);
                             gameState.jack.velocity = new Point2D.Float(0, 15);
                             gameState.jack.setMovementState(0);
                         }
@@ -130,6 +131,7 @@ public class World {
                         gameState.tim.dir = Player.Direction.LEFT;
                     } else {
                         if (gameState.jack.isHooked()) {
+                            gameState.jack.setState(CharacterState.FALLING);
                             gameState.jack.velocity = new Point2D.Float(-15, 0);
                             gameState.jack.setMovementState(0);
                         } else if (!gameState.jack.isHooked() && !gameState.jack.isGrappling()) {
@@ -154,6 +156,7 @@ public class World {
                         gameState.tim.dir = Player.Direction.RIGHT;
                     } else {
                         if (gameState.jack.isHooked()) {
+                            gameState.jack.setState(CharacterState.FALLING);
                             gameState.jack.velocity = new Point2D.Float(15, 0);
                             gameState.jack.setMovementState(0);
                         } else if (!gameState.jack.isHooked() && !gameState.jack.isGrappling()) {
