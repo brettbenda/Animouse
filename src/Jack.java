@@ -35,13 +35,13 @@ public class Jack extends Player {
         // Jumping Animation
         TIM_JUMPING_ANIM = new BufferedImage[5];
         for (int i = 0; i < TIM_JUMPING_ANIM.length; ++i) {
-            // TIM_JUMPING_ANIM[i] = ImageLoader.loadImage("/test_images/tim_animation_" + i + ".png");
+           // TIM_JUMPING_ANIM[i] = ImageLoader.loadImage("/test_images/tim_animation_" + i + ".png");
             TIM_JUMPING_ANIM[i] = ImageLoader.loadImage("/VisualAssets/Jack/jack.png");
         }
         // Walking Animation
         TIM_WALKING_ANIM = new BufferedImage[5];
         for (int i = 0; i < TIM_WALKING_ANIM.length; ++i) {
-            //TIM_WALKING_ANIM[i] = ImageLoader.loadImage("/test_images/tim_animation_" + i + ".png");
+           //TIM_WALKING_ANIM[i] = ImageLoader.loadImage("/test_images/tim_animation_" + i + ".png");
             TIM_WALKING_ANIM[i] = ImageLoader.loadImage("/VisualAssets/Jack/jack.png");
         }
         // Idle Animation
@@ -155,27 +155,5 @@ public class Jack extends Player {
 
     public float getNextY() {
         return this.position.y + this.velocity.y;
-    }
-
-    public void setState(CharacterState state){
-        if (this.state != state) {
-            if (state == CharacterState.WALKING) {
-                currentAnim = walkingAnim;
-                this.width = currentAnim.getFrame().getWidth();
-                this.height = currentAnim.getFrame().getHeight() - 5;
-                currentAnim.reset();
-            } else if (state == CharacterState.IDLE) {
-                currentAnim = idleAnim;
-                this.width = currentAnim.getFrame().getWidth();
-                this.height = currentAnim.getFrame().getHeight() - 5;
-                currentAnim.reset();
-            } else if (state == CharacterState.JUMPING) {
-                currentAnim = jumpingAnim;
-                this.width = currentAnim.getFrame().getWidth();
-                this.height = currentAnim.getFrame().getHeight() - 5;
-                currentAnim.reset();
-            }
-        }
-        this.state = state;
     }
 }
