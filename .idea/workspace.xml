@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="9d7276dd-baac-4314-929d-b01a73c8c762" name="Default" comment="" />
+=======
+    <list default="true" id="9d7276dd-baac-4314-929d-b01a73c8c762" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_6.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/levelData/levelData_6.txt" afterPath="$PROJECT_DIR$/res/levelData/levelData_6.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Jack.java" afterPath="$PROJECT_DIR$/src/Jack.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tim.java" afterPath="$PROJECT_DIR$/src/Tim.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/World.java" afterPath="$PROJECT_DIR$/src/World.java" />
+    </list>
+>>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -76,15 +86,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
+<<<<<<< HEAD
       <file leaf-file-name="World.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/World.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-950">
               <caret line="201" column="21" lean-forward="false" selection-start-line="201" selection-start-column="21" selection-end-line="201" selection-end-column="21" />
+=======
+      <file leaf-file-name="Tim.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Tim.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="560">
+              <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="World.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/World.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="96" column="71" lean-forward="false" selection-start-line="96" selection-start-column="71" selection-end-line="96" selection-end-column="71" />
+>>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
+<<<<<<< HEAD
           </provider>
         </entry>
       </file>
@@ -93,6 +122,68 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
               <caret line="93" column="13" lean-forward="false" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
+=======
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="levelBackground_4.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/VisualAssets/Background/levelBackground_4.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="levelBackground_5.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/VisualAssets/Background/levelBackground_5.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="levelBackground_2.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/VisualAssets/Background/levelBackground_2.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="levelBackground_3.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/VisualAssets/Background/levelBackground_3.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="levelBackground_1.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/VisualAssets/Background/levelBackground_1.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="levelBitmap_6.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_6.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="levelData_6.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/levelData/levelData_6.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Jack.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Jack.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="560">
+              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+>>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
               <folding />
             </state>
           </provider>
@@ -131,6 +222,8 @@
       <find>cutsce</find>
       <find>isOnGround</find>
       <find>getback</find>
+      <find>tick</find>
+      <find>getCollisionstatus</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -155,12 +248,13 @@
         <option value="$PROJECT_DIR$/src/Cutscene.java" />
         <option value="$PROJECT_DIR$/res/levelData/levelData_0.txt" />
         <option value="$PROJECT_DIR$/res/levelData/levelData_1.txt" />
-        <option value="$PROJECT_DIR$/src/Jack.java" />
-        <option value="$PROJECT_DIR$/src/Tim.java" />
         <option value="$PROJECT_DIR$/res/levelData/levelData_5.txt" />
         <option value="$PROJECT_DIR$/res/levelData/levelData_4.txt" />
-        <option value="$PROJECT_DIR$/src/World.java" />
         <option value="$PROJECT_DIR$/src/Display.java" />
+        <option value="$PROJECT_DIR$/src/Jack.java" />
+        <option value="$PROJECT_DIR$/src/Tim.java" />
+        <option value="$PROJECT_DIR$/res/levelData/levelData_6.txt" />
+        <option value="$PROJECT_DIR$/src/World.java" />
       </list>
     </option>
   </component>
@@ -652,6 +746,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/World.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3696">
@@ -669,6 +764,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
     <entry file="file://$PROJECT_DIR$/src/Jack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -810,6 +907,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/res/levelData/levelData_6.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -817,6 +915,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
     <entry file="file://$PROJECT_DIR$/res/levelData/levelData_8.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -831,6 +931,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/Jack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
@@ -846,6 +947,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
     <entry file="file://$PROJECT_DIR$/src/VisualAssets.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -884,21 +987,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Background/levelBackground_2.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/VisualAssets/Background/levelBackground_0.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/res/VisualAssets/Background/levelBackground_1.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
+=======
+>>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
     <entry file="file://$PROJECT_DIR$/src/FiniteAnimation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -918,26 +1019,72 @@
         <state />
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_4.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_2.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+=======
     <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_3.png">
+>>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_2.png">
+=======
+    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_1.png">
+>>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_3.png">
+=======
+    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_0.png">
+>>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/res/VisualAssets/Background/levelBackground_3.png">
+=======
+    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_4.png">
+>>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Background/levelBackground_4.png">
+=======
+    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_5.png">
+>>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Background/levelBackground_5.png">
+=======
+    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Background/levelBackground_6.png">
+>>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_5.png">
+=======
+    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_7.png">
+>>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_6.png">
+=======
     <entry file="file://$PROJECT_DIR$/res/VisualAssets/Background/levelBackground_4.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -948,33 +1095,71 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_5.png">
+    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Background/levelBackground_1.png">
       <provider selected="true" editor-type-id="images">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Background/levelBackground_2.png">
+>>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_0.png">
+=======
+    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Background/levelBackground_3.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tim.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Jack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_6.png">
+>>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_0.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/Display.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="93" column="13" lean-forward="false" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
+=======
+    <entry file="file://$PROJECT_DIR$/res/levelData/levelData_6.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+>>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/World.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="-950">
           <caret line="201" column="21" lean-forward="false" selection-start-line="201" selection-start-column="21" selection-end-line="201" selection-end-column="21" />
+=======
+        <state relative-caret-position="90">
+          <caret line="96" column="71" lean-forward="false" selection-start-line="96" selection-start-column="71" selection-end-line="96" selection-end-column="71" />
+>>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
