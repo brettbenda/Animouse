@@ -408,7 +408,7 @@ public class World {
                 gameState.jack.resetYVelocity();
             }
 
-            if (getRegion(gameState.tim) == 30 && getRegion(gameState.jack) == 30) {
+            if (getRegion(gameState.tim) == 30 && getRegion(gameState.jack) == 30 || isInsideEventRegion()) {
                 System.out.println("🎈" + "End of level!111!!!!1!!!1!11");
                 gameState.tim.resetXVelocity();
                 gameState.tim.resetYVelocity();
@@ -766,6 +766,17 @@ public class World {
         int yy = (int) getActivePlayer().getMidpoint().y;
 
         return ((gameState.getBitmap().getRGB(xx, yy) >>> 16) & 0x000000FF) == 40;
+    }
+
+    private boolean isInsideEventRegion() {
+        int xT = (int) gameState.tim.getMidpoint().x;
+        int yT = (int) gameState.tim.getMidpoint().y;
+
+        int xJ = (int) gameState.tim.getMidpoint().x;
+        int yJ = (int) gameState.tim.getMidpoint().y;
+
+        return ((gameState.getBitmap().getRGB(xT, yT) >>> 16) & 0x000000FF) == 30 &&
+                ((gameState.getBitmap().getRGB(xJ, yJ) >>> 16) & 0x000000FF) == 30;
     }
 }
 
