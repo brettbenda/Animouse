@@ -2,47 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d7276dd-baac-4314-929d-b01a73c8c762" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_28.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_29.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_30.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_31.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_32.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_33.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_34.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_35.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_36.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_37.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_38.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_39.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_40.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_0.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_0.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_1.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_10.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_10.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_11.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_11.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_12.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_12.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_13.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_13.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_14.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_14.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_15.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_15.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_16.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_16.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_17.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_17.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_18.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_18.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_19.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_19.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_2.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_20.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_20.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_21.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_21.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_22.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_22.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_23.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_23.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_24.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_24.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_25.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_25.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_26.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_26.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_27.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_27.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_3.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_4.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_5.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_5.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_6.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_6.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_7.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_7.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_8.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_8.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_9.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_6/frame_9.png" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_20.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_21.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_22.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_23.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_24.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_25.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_26.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_27.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_28.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_29.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_30.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_31.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_32.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_33.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_34.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_35.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_36.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_37.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_38.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_39.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_40.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_0.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_0.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_1.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_10.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_10.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_11.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_11.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_12.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_12.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_13.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_13.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_14.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_14.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_15.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_15.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_16.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_16.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_17.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_17.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_18.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_18.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_19.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_19.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_2.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_3.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_4.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_5.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_6.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_7.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_8.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_9.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_8/frame_9.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/World.java" afterPath="$PROJECT_DIR$/src/World.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -62,8 +62,8 @@
       <file leaf-file-name="World.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/World.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="800">
-              <caret line="65" column="36" lean-forward="false" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
+            <state relative-caret-position="840">
+              <caret line="75" column="52" lean-forward="true" selection-start-line="75" selection-start-column="52" selection-end-line="75" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -247,6 +247,21 @@
               <item name="Animouse-master" type="462c0819:PsiDirectoryNode" />
               <item name="res" type="462c0819:PsiDirectoryNode" />
               <item name="VisualAssets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Animouse-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Animouse-master" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="VisualAssets" type="462c0819:PsiDirectoryNode" />
+              <item name="Cutscenes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Animouse-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Animouse-master" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="VisualAssets" type="462c0819:PsiDirectoryNode" />
+              <item name="Cutscenes" type="462c0819:PsiDirectoryNode" />
+              <item name="scene_8" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Animouse-master" type="b2602c69:ProjectViewProjectNode" />
@@ -1095,8 +1110,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/World.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="65" column="36" lean-forward="false" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
+        <state relative-caret-position="840">
+          <caret line="75" column="52" lean-forward="true" selection-start-line="75" selection-start-column="52" selection-end-line="75" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

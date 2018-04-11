@@ -66,13 +66,13 @@ public class World {
                     numOfFrames = 28;
                     break;
                 case 7:
-                    numOfFrames = 41;
+                    numOfFrames = 40;
                     break;
             }
             levels.add(new Level(i));
             cutscenes.add(new Cutscene(i, numOfFrames));
         }
-        numOfFrames = 41;
+        numOfFrames = 20;
         cutscenes.add(new Cutscene(8, numOfFrames));
     }
 
