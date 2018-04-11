@@ -58,6 +58,20 @@ public class Jack extends Player {
         // --- TEST VALUES ---
     }
 
+    public void reset(){
+        this.velocity = new Point2D.Float(0, 0);
+        this.movementState = NORMAL;
+        this.hookPosition = new Point2D.Float();
+
+        // --- TEST VALUES ---
+        this.width = currentImage.getWidth();
+        this.height = currentImage.getHeight() - 5;
+
+        this.state = CharacterState.IDLE;
+        this.dir = Direction.RIGHT;
+        this.currentAnim = idleAnim;
+    }
+
     public Point2D.Float getNextPosition() {
         return new Point2D.Float(position.x + velocity.x, position.y + velocity.y);
     }

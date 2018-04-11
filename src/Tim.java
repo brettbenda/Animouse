@@ -68,6 +68,19 @@ public class Tim extends Player {
         // --- TEST VALUES ---
     }
 
+    public void reset(){
+        this.velocity = new Point2D.Float(0, 0);
+        this.isClimbing = false;
+        this.isCarrying = false;
+
+        this.width = currentImage.getWidth()/2;
+        this.height = currentImage.getHeight() - 5;
+
+        this.state = CharacterState.IDLE;
+        this.dir = Direction.RIGHT;
+        this.currentAnim = idleAnim;
+    }
+
     public Point2D.Float getNextPosition() {
         return new Point2D.Float(position.x + velocity.x, position.y + velocity.y);
     }

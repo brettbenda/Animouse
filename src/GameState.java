@@ -27,6 +27,8 @@ public class GameState {
 
     public void loadLevel(Level level) {
         this.level = level;
+        this.tim.reset();
+        this.jack.reset();
         this.tim.position = level.posTim;
         this.jack.position = level.posJack;
         this.tim.resetYVelocity();
