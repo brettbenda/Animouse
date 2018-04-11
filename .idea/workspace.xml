@@ -1,7 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d7276dd-baac-4314-929d-b01a73c8c762" name="Default" comment="" />
+    <list default="true" id="9d7276dd-baac-4314-929d-b01a73c8c762" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_13.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_14.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_15.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_17.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_18.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_19.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_20.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_21.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_22.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_23.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_24.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_25.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_26.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_27.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_28.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_29.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_30.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_31.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_32.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_33.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_34.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_35.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_36.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_37.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_38.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_39.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_40.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_20.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_21.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_22.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_23.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_24.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_25.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_26.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_27.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_28.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_29.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_30.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_31.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_32.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_33.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_34.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_35.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_36.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_37.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_38.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_39.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_40.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_26.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_27.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_28.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_29.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_30.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_31.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_32.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_33.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_34.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_35.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_36.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_37.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_38.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_39.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_40.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_0.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_0.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_1.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_2.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_3.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_4.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_5.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_6.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_1/frame_6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_0.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_0.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_1.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_10.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_10.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_11.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_11.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_12.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_12.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_13.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_13.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_14.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_14.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_15.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_15.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_16.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_16.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_17.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_17.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_18.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_18.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_19.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_19.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_2.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_3.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_4.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_5.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_6.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_7.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_8.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_9.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_2/frame_9.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_0.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_0.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_1.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_10.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_10.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_11.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_11.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_12.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_12.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_13.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_13.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_14.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_14.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_15.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_15.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_16.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_16.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_17.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_17.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_18.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_18.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_19.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_19.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_2.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_20.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_20.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_21.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_21.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_22.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_22.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_23.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_23.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_24.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_24.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_25.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_25.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_3.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_4.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_5.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_6.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_7.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_8.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_9.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Cutscenes/scene_3/frame_9.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/World.java" afterPath="$PROJECT_DIR$/src/World.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -11,20 +136,18 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Animouse_master$Launcher.coverage" NAME="Launcher Coverage Results" MODIFIED="1523387926843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Animouse$Launcher.coverage" NAME="Launcher Coverage Results" MODIFIED="1523207132111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Animouse_master$Launcher.coverage" NAME="Launcher Coverage Results" MODIFIED="1523387926843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
       <file leaf-file-name="World.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/World.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="158" column="76" lean-forward="false" selection-start-line="158" selection-start-column="76" selection-end-line="158" selection-end-column="76" />
+            <state relative-caret-position="640">
+              <caret line="56" column="36" lean-forward="false" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#400#407#0" expanded="true" />
-                <element signature="e#468#478#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -33,7 +156,7 @@
       <file leaf-file-name="Level.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Level.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1500">
+            <state relative-caret-position="2400">
               <caret line="67" column="29" lean-forward="false" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
               <folding />
             </state>
@@ -43,7 +166,7 @@
       <file leaf-file-name="GameState.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GameState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="925">
+            <state relative-caret-position="1480">
               <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding />
             </state>
@@ -53,12 +176,9 @@
       <file leaf-file-name="Display.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Display.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1850">
+            <state relative-caret-position="2880">
               <caret line="90" column="158" lean-forward="false" selection-start-line="90" selection-start-column="158" selection-end-line="90" selection-end-column="158" />
-              <folding>
-                <element signature="e#1413#1575#0" expanded="true" />
-                <element signature="e#1574#1575#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -66,7 +186,7 @@
       <file leaf-file-name="Launcher.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Launcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
+            <state relative-caret-position="440">
               <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding>
                 <element signature="e#215#345#0" expanded="true" />
@@ -78,7 +198,7 @@
       <file leaf-file-name="Jack.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Jack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4050">
+            <state relative-caret-position="6480">
               <caret line="181" column="0" lean-forward="false" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
               <folding />
             </state>
@@ -88,7 +208,7 @@
       <file leaf-file-name="Tim.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Tim.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1200">
+            <state relative-caret-position="1920">
               <caret line="52" column="85" lean-forward="false" selection-start-line="52" selection-start-column="85" selection-end-line="52" selection-end-column="85" />
               <folding />
             </state>
@@ -98,7 +218,7 @@
       <file leaf-file-name="CharacterState.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CharacterState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
+            <state relative-caret-position="40">
               <caret line="1" column="81" lean-forward="false" selection-start-line="1" selection-start-column="81" selection-end-line="1" selection-end-column="81" />
               <folding />
             </state>
@@ -108,7 +228,7 @@
       <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
+            <state relative-caret-position="1040">
               <caret line="29" column="62" lean-forward="false" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
               <folding>
                 <element signature="e#654#655#0" expanded="true" />
@@ -189,6 +309,9 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -223,9 +346,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -555,7 +675,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="2278" height="1466" extended-state="6" />
+    <frame x="-16" y="-16" width="3232" height="1732" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -566,12 +686,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2646605" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2642905" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32987553" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21187943" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.211875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -673,8 +793,85 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#400#407#0" expanded="true" />
-            <element signature="e#468#478#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Level.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2400">
+          <caret line="67" column="29" lean-forward="false" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1480">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Display.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2880">
+          <caret line="90" column="158" lean-forward="false" selection-start-line="90" selection-start-column="158" selection-end-line="90" selection-end-column="158" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Launcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="e#215#345#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Jack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6480">
+          <caret line="181" column="0" lean-forward="false" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tim.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1920">
+          <caret line="52" column="85" lean-forward="false" selection-start-line="52" selection-start-column="85" selection-end-line="52" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CharacterState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="1" column="81" lean-forward="false" selection-start-line="1" selection-start-column="81" selection-end-line="1" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1040">
+          <caret line="29" column="62" lean-forward="false" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
+          <folding>
+            <element signature="e#654#655#0" expanded="true" />
+            <element signature="e#725#726#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/World.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -699,10 +896,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1850">
           <caret line="90" column="158" lean-forward="false" selection-start-line="90" selection-start-column="158" selection-end-line="90" selection-end-column="158" />
-          <folding>
-            <element signature="e#1413#1575#0" expanded="true" />
-            <element signature="e#1574#1575#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -757,8 +951,6 @@
           <caret line="217" column="86" lean-forward="false" selection-start-line="217" selection-start-column="86" selection-end-line="217" selection-end-column="86" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#400#407#0" expanded="true" />
-            <element signature="e#468#478#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -828,10 +1020,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2760">
           <caret line="90" column="158" lean-forward="false" selection-start-line="90" selection-start-column="158" selection-end-line="90" selection-end-column="158" />
-          <folding>
-            <element signature="e#1413#1575#0" expanded="true" />
-            <element signature="e#1574#1575#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -841,8 +1030,6 @@
           <caret line="99" column="29" lean-forward="false" selection-start-line="99" selection-start-column="29" selection-end-line="99" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#400#407#0" expanded="true" />
-            <element signature="e#468#478#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -912,16 +1099,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1625">
           <caret line="83" column="55" lean-forward="true" selection-start-line="83" selection-start-column="55" selection-end-line="83" selection-end-column="55" />
-          <folding>
-            <element signature="e#1413#1575#0" expanded="true" />
-            <element signature="e#1574#1575#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Jack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4050">
+        <state relative-caret-position="6480">
           <caret line="181" column="0" lean-forward="false" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
           <folding />
         </state>
@@ -929,7 +1113,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Launcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
+        <state relative-caret-position="440">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="e#215#345#0" expanded="true" />
@@ -939,7 +1123,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Level.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1500">
+        <state relative-caret-position="2400">
           <caret line="67" column="29" lean-forward="false" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
           <folding />
         </state>
@@ -947,7 +1131,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CharacterState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
+        <state relative-caret-position="40">
           <caret line="1" column="81" lean-forward="false" selection-start-line="1" selection-start-column="81" selection-end-line="1" selection-end-column="81" />
           <folding />
         </state>
@@ -955,7 +1139,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GameState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="925">
+        <state relative-caret-position="1480">
           <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding />
         </state>
@@ -963,18 +1147,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Display.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1850">
+        <state relative-caret-position="2880">
           <caret line="90" column="158" lean-forward="false" selection-start-line="90" selection-start-column="158" selection-end-line="90" selection-end-column="158" />
-          <folding>
-            <element signature="e#1413#1575#0" expanded="true" />
-            <element signature="e#1574#1575#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tim.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
+        <state relative-caret-position="1920">
           <caret line="52" column="85" lean-forward="false" selection-start-line="52" selection-start-column="85" selection-end-line="52" selection-end-column="85" />
           <folding />
         </state>
@@ -982,7 +1163,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
+        <state relative-caret-position="1040">
           <caret line="29" column="62" lean-forward="false" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
           <folding>
             <element signature="e#654#655#0" expanded="true" />
@@ -993,12 +1174,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/World.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="158" column="76" lean-forward="false" selection-start-line="158" selection-start-column="76" selection-end-line="158" selection-end-column="76" />
+        <state relative-caret-position="640">
+          <caret line="56" column="36" lean-forward="false" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#400#407#0" expanded="true" />
-            <element signature="e#468#478#0" expanded="true" />
           </folding>
         </state>
       </provider>

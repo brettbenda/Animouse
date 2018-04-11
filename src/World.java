@@ -48,13 +48,13 @@ public class World {
                     numOfFrames = 41;
                     break;
                 case 1:
-                    numOfFrames = 41;
+                    numOfFrames = 7;
                     break;
                 case 2:
-                    numOfFrames = 41;
+                    numOfFrames = 20;
                     break;
                 case 3:
-                    numOfFrames = 41;
+                    numOfFrames = 26;
                     break;
                 case 4:
                     numOfFrames = 41;
