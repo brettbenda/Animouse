@@ -92,10 +92,10 @@ public class World {
                             int yy = (int) gameState.tim.position.y + gameState.tim.height;
 
                             if (!getCollisionStatus(gameState.tim) && areTimAndJackIntersecting() && gameState.tim.velocity.y > 0) {
-                                gameState.tim.velocity.y = -70;
+                                gameState.tim.velocity.y = -40;
                                 SoundEffect.JUMPING.playOnce();
-                            } else if (getCollisionStatus(gameState.tim)) {
-                                gameState.tim.velocity.y = -35;
+                            } else if (getCollisionStatus(gameState.tim) && gameState.tim.velocity.y==0) {
+                                gameState.tim.velocity.y = -20;
                                 SoundEffect.JUMPING.playOnce();
                             }
                         }

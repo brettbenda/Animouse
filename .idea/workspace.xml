@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< HEAD
     <list default="true" id="9d7276dd-baac-4314-929d-b01a73c8c762" name="Default" comment="" />
-=======
-    <list default="true" id="9d7276dd-baac-4314-929d-b01a73c8c762" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_6.png" afterPath="$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_6.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/levelData/levelData_6.txt" afterPath="$PROJECT_DIR$/res/levelData/levelData_6.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Jack.java" afterPath="$PROJECT_DIR$/src/Jack.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tim.java" afterPath="$PROJECT_DIR$/src/Tim.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/World.java" afterPath="$PROJECT_DIR$/src/World.java" />
-    </list>
->>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,100 +10,55 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CloverPlugin" class="com.atlassian.clover.idea.config.IdeaCloverConfig">
-    <includePassedTestCoverageOnly>true</includePassedTestCoverageOnly>
-    <useGeneratedInitString>true</useGeneratedInitString>
-    <manualInitString null="true" />
-    <showTooltips>true</showTooltips>
-    <failedCoveredHighlight>-11513856</failedCoveredHighlight>
-    <periodicRefresh>false</periodicRefresh>
-    <languageLevel>1.8 - lambda functions, virtual extension methods.</languageLevel>
-    <instrumentLambda class="com.atlassian.clover.cfg.instr.java.LambdaInstrumentation">NONE</instrumentLambda>
-    <testCaseLayout class="com.atlassian.clover.idea.config.TestCaseLayout">TEST_CASES</testCaseLayout>
-    <autoScrollFromSource>false</autoScrollFromSource>
-    <coveredHighlight>-16756736</coveredHighlight>
-    <outOfDateStripe>-256</outOfDateStripe>
-    <includes null="true" />
-    <excludes null="true" />
-    <alwaysExpandTestClasses>false</alwaysExpandTestClasses>
-    <autoViewInCloudReport>true</autoViewInCloudReport>
-    <filteredHighlight>-11513776</filteredHighlight>
-    <flushPolicy>0</flushPolicy>
-    <outOfDateHighlight>-16777201</outOfDateHighlight>
-    <showInline>true</showInline>
-    <dumpInstrumentedSources>false</dumpInstrumentedSources>
-    <hideFullyCovered>false</hideFullyCovered>
-    <autoRefresh>true</autoRefresh>
-    <modelScope class="com.atlassian.clover.idea.util.ModelScope">APP_CLASSES_ONLY</modelScope>
-    <coveredStripe>-16711936</coveredStripe>
-    <highlightCovered>true</highlightCovered>
-    <viewCoverage>true</viewCoverage>
-    <notCoveredHighlight>-11534336</notCoveredHighlight>
-    <relativeInitString>false</relativeInitString>
-    <failedCoveredStripe>-14336</failedCoveredStripe>
-    <testViewScope class="com.atlassian.clover.idea.config.TestViewScope">GLOBAL</testViewScope>
-    <showGutter>true</showGutter>
-    <alwaysCollapseTestClasses>false</alwaysCollapseTestClasses>
-    <notCoveredStripe>-65536</notCoveredStripe>
-    <autoScroll>true</autoScroll>
-    <calculateTestCoverage>true</calculateTestCoverage>
-    <autoRefreshInterval>2000</autoRefreshInterval>
-    <generatedInitString>C:\Users\GwenYu\IdeaProjects\Animouse\.clover\coverage.db</generatedInitString>
-    <regexpContexts class="java.util.ArrayList" />
-    <flushInterval>5000</flushInterval>
-    <flattenPackages>false</flattenPackages>
-    <viewIncludeAnnotation>true</viewIncludeAnnotation>
-    <loadPerTestData>true</loadPerTestData>
-    <showErrorMarks>true</showErrorMarks>
-    <buildWithClover>true</buildWithClover>
-    <lastProjectConfigTabSelected>0</lastProjectConfigTabSelected>
-    <contextFilterSpec />
-    <span>0</span>
-    <instrumentTests>true</instrumentTests>
-    <projectRebuild class="com.atlassian.clover.idea.config.ProjectRebuild">ASK</projectRebuild>
-    <showSummaryInToolbar>true</showSummaryInToolbar>
-    <filteredStripe>-4144960</filteredStripe>
-    <cloudReportIncludeSubpkgs>false</cloudReportIncludeSubpkgs>
-    <enabled>false</enabled>
-    <showSummaryInToolwindow>true</showSummaryInToolwindow>
-  </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Animouse_master$Launcher.coverage" NAME="Launcher Coverage Results" MODIFIED="1523387926843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Animouse$Launcher.coverage" NAME="Launcher Coverage Results" MODIFIED="1523207132111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
-  <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-<<<<<<< HEAD
       <file leaf-file-name="World.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/World.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-950">
-              <caret line="201" column="21" lean-forward="false" selection-start-line="201" selection-start-column="21" selection-end-line="201" selection-end-column="21" />
-=======
-      <file leaf-file-name="Tim.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Tim.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="World.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/World.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="96" column="71" lean-forward="false" selection-start-line="96" selection-start-column="71" selection-end-line="96" selection-end-column="71" />
->>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
+            <state relative-caret-position="-4575">
+              <caret line="83" column="30" lean-forward="true" selection-start-line="83" selection-start-column="30" selection-end-line="83" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#22917#22918#0" expanded="true" />
+                <element signature="e#22955#22956#0" expanded="true" />
+                <element signature="e#23001#23002#0" expanded="true" />
+                <element signature="e#23066#23067#0" expanded="true" />
+                <element signature="e#23110#23111#0" expanded="true" />
+                <element signature="e#23158#23159#0" expanded="true" />
+                <element signature="e#23208#23209#0" expanded="true" />
+                <element signature="e#23268#23269#0" expanded="true" />
+                <element signature="e#23306#23307#0" expanded="true" />
+                <element signature="e#23370#23371#0" expanded="true" />
+                <element signature="e#23408#23409#0" expanded="true" />
+                <element signature="e#23472#23473#0" expanded="true" />
+                <element signature="e#23524#23525#0" expanded="true" />
+                <element signature="e#23585#23586#0" expanded="true" />
+                <element signature="e#23625#23626#0" expanded="true" />
+                <element signature="e#23690#23691#0" expanded="true" />
+                <element signature="e#23730#23731#0" expanded="true" />
+                <element signature="e#23795#23796#0" expanded="true" />
+                <element signature="e#23837#23838#0" expanded="true" />
+                <element signature="e#23885#23886#0" expanded="true" />
+                <element signature="e#23915#23916#0" expanded="true" />
+                <element signature="e#23967#23968#0" expanded="true" />
+                <element signature="e#23997#23998#0" expanded="true" />
+                <element signature="e#24049#24050#0" expanded="true" />
+                <element signature="e#24092#24093#0" expanded="true" />
+                <element signature="e#24141#24142#0" expanded="true" />
+                <element signature="e#24172#24173#0" expanded="true" />
+                <element signature="e#24225#24226#0" expanded="true" />
+                <element signature="e#24256#24257#0" expanded="true" />
+                <element signature="e#24309#24310#0" expanded="true" />
+                <element signature="e#24348#24349#0" expanded="true" />
+                <element signature="e#24380#24381#0" expanded="true" />
+                <marker date="1523408907661" expanded="false" signature="26127:26138" ph=" { " />
+                <marker date="1523408907661" expanded="false" signature="26167:26173" ph=" }" />
               </folding>
             </state>
-<<<<<<< HEAD
           </provider>
         </entry>
       </file>
@@ -122,68 +67,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
               <caret line="93" column="13" lean-forward="false" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
-=======
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="levelBackground_4.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/VisualAssets/Background/levelBackground_4.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="levelBackground_5.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/VisualAssets/Background/levelBackground_5.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="levelBackground_2.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/VisualAssets/Background/levelBackground_2.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="levelBackground_3.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/VisualAssets/Background/levelBackground_3.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="levelBackground_1.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/VisualAssets/Background/levelBackground_1.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="levelBitmap_6.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_6.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="levelData_6.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/levelData/levelData_6.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Jack.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Jack.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
->>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
               <folding />
             </state>
           </provider>
@@ -198,33 +81,6 @@
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>isClimbing</find>
-      <find>level</find>
-      <find>isCl</find>
-      <find>setC</find>
-      <find>tim.set</find>
-      <find>jack.set</find>
-      <find>isGrappling</find>
-      <find>print</find>
-      <find>jack.setState</find>
-      <find>FALLING</find>
-      <find>hooked</find>
-      <find>setMov</find>
-      <find>Hooked</find>
-      <find>FALL</find>
-      <find>PlotPoint</find>
-      <find>Sys</find>
-      <find>Sys//</find>
-      <find>ground</find>
-      <find>cutsce</find>
-      <find>isOnGround</find>
-      <find>getback</find>
-      <find>tick</find>
-      <find>getCollisionstatus</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -248,12 +104,11 @@
         <option value="$PROJECT_DIR$/src/Cutscene.java" />
         <option value="$PROJECT_DIR$/res/levelData/levelData_0.txt" />
         <option value="$PROJECT_DIR$/res/levelData/levelData_1.txt" />
+        <option value="$PROJECT_DIR$/src/Jack.java" />
+        <option value="$PROJECT_DIR$/src/Tim.java" />
         <option value="$PROJECT_DIR$/res/levelData/levelData_5.txt" />
         <option value="$PROJECT_DIR$/res/levelData/levelData_4.txt" />
         <option value="$PROJECT_DIR$/src/Display.java" />
-        <option value="$PROJECT_DIR$/src/Jack.java" />
-        <option value="$PROJECT_DIR$/src/Tim.java" />
-        <option value="$PROJECT_DIR$/res/levelData/levelData_6.txt" />
         <option value="$PROJECT_DIR$/src/World.java" />
       </list>
     </option>
@@ -286,6 +141,11 @@
             <path>
               <item name="Animouse" type="b2602c69:ProjectViewProjectNode" />
               <item name="Animouse" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Animouse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Animouse" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Animouse" type="b2602c69:ProjectViewProjectNode" />
@@ -574,9 +434,6 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="9d7276dd-baac-4314-929d-b01a73c8c762" name="Default" comment="" />
@@ -632,16 +489,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2278" height="1466" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32750505" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3271605" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20756173" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20756173" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32987553" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -741,18 +599,47 @@
     </breakpoint-manager>
     <watches-manager />
   </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
-  </component>
   <component name="editorHistoryManager">
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/World.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3696">
           <caret line="112" column="66" lean-forward="false" selection-start-line="112" selection-start-column="66" selection-end-line="112" selection-end-column="66" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#22917#22918#0" expanded="true" />
+            <element signature="e#22955#22956#0" expanded="true" />
+            <element signature="e#23001#23002#0" expanded="true" />
+            <element signature="e#23066#23067#0" expanded="true" />
+            <element signature="e#23110#23111#0" expanded="true" />
+            <element signature="e#23158#23159#0" expanded="true" />
+            <element signature="e#23208#23209#0" expanded="true" />
+            <element signature="e#23268#23269#0" expanded="true" />
+            <element signature="e#23306#23307#0" expanded="true" />
+            <element signature="e#23370#23371#0" expanded="true" />
+            <element signature="e#23408#23409#0" expanded="true" />
+            <element signature="e#23472#23473#0" expanded="true" />
+            <element signature="e#23524#23525#0" expanded="true" />
+            <element signature="e#23585#23586#0" expanded="true" />
+            <element signature="e#23625#23626#0" expanded="true" />
+            <element signature="e#23690#23691#0" expanded="true" />
+            <element signature="e#23730#23731#0" expanded="true" />
+            <element signature="e#23795#23796#0" expanded="true" />
+            <element signature="e#23837#23838#0" expanded="true" />
+            <element signature="e#23885#23886#0" expanded="true" />
+            <element signature="e#23915#23916#0" expanded="true" />
+            <element signature="e#23967#23968#0" expanded="true" />
+            <element signature="e#23997#23998#0" expanded="true" />
+            <element signature="e#24049#24050#0" expanded="true" />
+            <element signature="e#24092#24093#0" expanded="true" />
+            <element signature="e#24141#24142#0" expanded="true" />
+            <element signature="e#24172#24173#0" expanded="true" />
+            <element signature="e#24225#24226#0" expanded="true" />
+            <element signature="e#24256#24257#0" expanded="true" />
+            <element signature="e#24309#24310#0" expanded="true" />
+            <element signature="e#24348#24349#0" expanded="true" />
+            <element signature="e#24380#24381#0" expanded="true" />
+            <marker date="1523408907661" expanded="false" signature="26127:26138" ph=" { " />
+            <marker date="1523408907661" expanded="false" signature="26167:26173" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -764,8 +651,6 @@
         </state>
       </provider>
     </entry>
-=======
->>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
     <entry file="file://$PROJECT_DIR$/src/Jack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -802,6 +687,40 @@
           <caret line="97" column="25" lean-forward="true" selection-start-line="97" selection-start-column="25" selection-end-line="97" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#22917#22918#0" expanded="true" />
+            <element signature="e#22955#22956#0" expanded="true" />
+            <element signature="e#23001#23002#0" expanded="true" />
+            <element signature="e#23066#23067#0" expanded="true" />
+            <element signature="e#23110#23111#0" expanded="true" />
+            <element signature="e#23158#23159#0" expanded="true" />
+            <element signature="e#23208#23209#0" expanded="true" />
+            <element signature="e#23268#23269#0" expanded="true" />
+            <element signature="e#23306#23307#0" expanded="true" />
+            <element signature="e#23370#23371#0" expanded="true" />
+            <element signature="e#23408#23409#0" expanded="true" />
+            <element signature="e#23472#23473#0" expanded="true" />
+            <element signature="e#23524#23525#0" expanded="true" />
+            <element signature="e#23585#23586#0" expanded="true" />
+            <element signature="e#23625#23626#0" expanded="true" />
+            <element signature="e#23690#23691#0" expanded="true" />
+            <element signature="e#23730#23731#0" expanded="true" />
+            <element signature="e#23795#23796#0" expanded="true" />
+            <element signature="e#23837#23838#0" expanded="true" />
+            <element signature="e#23885#23886#0" expanded="true" />
+            <element signature="e#23915#23916#0" expanded="true" />
+            <element signature="e#23967#23968#0" expanded="true" />
+            <element signature="e#23997#23998#0" expanded="true" />
+            <element signature="e#24049#24050#0" expanded="true" />
+            <element signature="e#24092#24093#0" expanded="true" />
+            <element signature="e#24141#24142#0" expanded="true" />
+            <element signature="e#24172#24173#0" expanded="true" />
+            <element signature="e#24225#24226#0" expanded="true" />
+            <element signature="e#24256#24257#0" expanded="true" />
+            <element signature="e#24309#24310#0" expanded="true" />
+            <element signature="e#24348#24349#0" expanded="true" />
+            <element signature="e#24380#24381#0" expanded="true" />
+            <marker date="1523408907661" expanded="false" signature="26127:26138" ph=" { " />
+            <marker date="1523408907661" expanded="false" signature="26167:26173" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -810,13 +729,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1683">
           <caret line="53" column="24" lean-forward="false" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -907,7 +819,6 @@
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/res/levelData/levelData_6.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -915,8 +826,6 @@
         </state>
       </provider>
     </entry>
-=======
->>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
     <entry file="file://$PROJECT_DIR$/res/levelData/levelData_8.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -931,7 +840,6 @@
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/Jack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
@@ -947,8 +855,6 @@
         </state>
       </provider>
     </entry>
-=======
->>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
     <entry file="file://$PROJECT_DIR$/src/VisualAssets.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -987,19 +893,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Background/levelBackground_2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/res/VisualAssets/Background/levelBackground_0.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/res/VisualAssets/Background/levelBackground_1.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-=======
->>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
     <entry file="file://$PROJECT_DIR$/src/FiniteAnimation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -1019,72 +927,26 @@
         <state />
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_4.png">
-=======
-    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_3.png">
->>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_2.png">
-=======
-    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_1.png">
->>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_3.png">
-=======
-    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_0.png">
->>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/res/VisualAssets/Background/levelBackground_3.png">
-=======
-    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_4.png">
->>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Background/levelBackground_4.png">
-=======
-    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_5.png">
->>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Background/levelBackground_5.png">
-=======
-    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Background/levelBackground_6.png">
->>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_5.png">
-=======
-    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_7.png">
->>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_6.png">
-=======
     <entry file="file://$PROJECT_DIR$/res/VisualAssets/Background/levelBackground_4.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1095,73 +957,77 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Background/levelBackground_1.png">
+    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_5.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Background/levelBackground_2.png">
->>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_0.png">
-=======
-    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Background/levelBackground_3.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tim.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="17" column="50" lean-forward="false" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Jack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_6.png">
->>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/res/VisualAssets/Bitmap/levelBitmap_0.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Display.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="93" column="13" lean-forward="false" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
-=======
-    <entry file="file://$PROJECT_DIR$/res/levelData/levelData_6.txt">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
->>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/World.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="-950">
-          <caret line="201" column="21" lean-forward="false" selection-start-line="201" selection-start-column="21" selection-end-line="201" selection-end-column="21" />
-=======
-        <state relative-caret-position="90">
-          <caret line="96" column="71" lean-forward="false" selection-start-line="96" selection-start-column="71" selection-end-line="96" selection-end-column="71" />
->>>>>>> caa49bebe30a6ce9a3941b58dc588be0317a45a2
+        <state relative-caret-position="-4575">
+          <caret line="83" column="30" lean-forward="true" selection-start-line="83" selection-start-column="30" selection-end-line="83" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#22917#22918#0" expanded="true" />
+            <element signature="e#22955#22956#0" expanded="true" />
+            <element signature="e#23001#23002#0" expanded="true" />
+            <element signature="e#23066#23067#0" expanded="true" />
+            <element signature="e#23110#23111#0" expanded="true" />
+            <element signature="e#23158#23159#0" expanded="true" />
+            <element signature="e#23208#23209#0" expanded="true" />
+            <element signature="e#23268#23269#0" expanded="true" />
+            <element signature="e#23306#23307#0" expanded="true" />
+            <element signature="e#23370#23371#0" expanded="true" />
+            <element signature="e#23408#23409#0" expanded="true" />
+            <element signature="e#23472#23473#0" expanded="true" />
+            <element signature="e#23524#23525#0" expanded="true" />
+            <element signature="e#23585#23586#0" expanded="true" />
+            <element signature="e#23625#23626#0" expanded="true" />
+            <element signature="e#23690#23691#0" expanded="true" />
+            <element signature="e#23730#23731#0" expanded="true" />
+            <element signature="e#23795#23796#0" expanded="true" />
+            <element signature="e#23837#23838#0" expanded="true" />
+            <element signature="e#23885#23886#0" expanded="true" />
+            <element signature="e#23915#23916#0" expanded="true" />
+            <element signature="e#23967#23968#0" expanded="true" />
+            <element signature="e#23997#23998#0" expanded="true" />
+            <element signature="e#24049#24050#0" expanded="true" />
+            <element signature="e#24092#24093#0" expanded="true" />
+            <element signature="e#24141#24142#0" expanded="true" />
+            <element signature="e#24172#24173#0" expanded="true" />
+            <element signature="e#24225#24226#0" expanded="true" />
+            <element signature="e#24256#24257#0" expanded="true" />
+            <element signature="e#24309#24310#0" expanded="true" />
+            <element signature="e#24348#24349#0" expanded="true" />
+            <element signature="e#24380#24381#0" expanded="true" />
+            <marker date="1523408907661" expanded="false" signature="26127:26138" ph=" { " />
+            <marker date="1523408907661" expanded="false" signature="26167:26173" ph=" }" />
           </folding>
         </state>
       </provider>
