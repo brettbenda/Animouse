@@ -119,7 +119,11 @@ public class Display extends JPanel{
             bufferG2D.drawImage(world.getCutSceneFrame(), 0, 0, null);
         }
         // draw buffer onto display
-        g2d.drawImage(buffer, 0, 0, null);
+        if (world.isOver) {
+            System.exit(0);
+        } else {
+            g2d.drawImage(buffer, 0, 0, null);
+        }
 
         repaint();
     }
