@@ -3,6 +3,7 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.geom.Ellipse2D;
 import java.awt.image.BufferedImage;
 import java.nio.Buffer;
 import java.security.Key;
@@ -88,7 +89,6 @@ public class Display extends JPanel{
         if (world.isPlayable()) {
             //draw background offset by location of the active player
             bufferG2D.drawImage(world.getBackground(), 0 - (int) world.getActivePlayerX() + WIDTH / 2, 0 - (int) world.getActivePlayerY() + HEIGHT / 2, null);
-
             if(world.getGameState().jack.getState()==CharacterState.GRAPPLING && world.getGameState().currentPlayer()!= world.getGameState().tim) {
                 if (world.getGameState().jack.dir == Player.Direction.RIGHT) {
                     bufferG2D.drawLine(WIDTH / 2 + world.getGameState().jack.width, HEIGHT / 2 + 3*world.getGameState().jack.height/4, (int) world.grapplePoint.getX() - (int) world.getActivePlayerX() + WIDTH / 2, (int) world.grapplePoint.getY() - (int) world.getActivePlayerY() + HEIGHT / 2);

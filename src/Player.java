@@ -26,6 +26,10 @@ public abstract class Player {
         return this.position;
     }
 
+    public Point2D.Float getMidpoint(){
+        return new Point2D.Float(position.x+width/2,position.y);
+    }
+
     public void setPosition(Point2D.Float pos) {
         this.position = pos;
     }

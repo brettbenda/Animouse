@@ -215,9 +215,9 @@ public class World {
                         gameState.jack.setState(CharacterState.GRAPPLING);
                         System.out.println("Grapple to region " + regionIndex);
                         System.out.println("Grapple to location " + currentLevel.getHookablePoint(regionIndex).x + ", " + currentLevel.getHookablePoint(regionIndex).y);
-                    }else if(gameState.currentPlayer() == gameState.jack && distance<1000 && distance>0){
-                        gameState.jack.grappleTo(gameState.tim.getPosition());
-                        grapplePoint = gameState.tim.getPosition();
+                    }else if(gameState.currentPlayer() == gameState.jack && distance<400 && distance>0){
+                        gameState.jack.grappleTo(gameState.tim.getMidpoint());
+                        grapplePoint = gameState.tim.getMidpoint();
                         gameState.jack.setState(CharacterState.GRAPPLING);
                         System.out.println("Grapple to Tim");
                         System.out.println("Grapple to location " + gameState.tim.getPosition().x + ", " + gameState.tim.getPosition().y);
