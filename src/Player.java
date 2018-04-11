@@ -17,7 +17,6 @@ public abstract class Player {
     protected BufferedImage currentImage;
 
     protected CharacterState state;
-
     protected Animation currentAnim;
     protected Animation walkingAnim;
     protected Animation idleAnim;
@@ -49,6 +48,7 @@ public abstract class Player {
 
     public abstract void resetXVelocity();
 
+
     public BufferedImage getSprite() {
         if (this.dir == Direction.RIGHT) {
             return this.currentImage;
@@ -63,21 +63,7 @@ public abstract class Player {
         }
     }
 
-    public void setState(CharacterState state){
-        if (this.state != state) {
-            if (state == CharacterState.WALKING) {
-                currentAnim = walkingAnim;
-                currentAnim.reset();
-            } else if (state == CharacterState.IDLE) {
-                currentAnim = idleAnim;
-                currentAnim.reset();
-            } else if (state == CharacterState.JUMPING) {
-                currentAnim = jumpingAnim;
-                currentAnim.reset();
-            }
-        }
-        this.state = state;
-    }
+    public abstract void setState(CharacterState state);
 
     public CharacterState getState(){
         return this.state;
