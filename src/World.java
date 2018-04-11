@@ -70,13 +70,13 @@ public class World {
                     numOfFrames = 28;
                     break;
                 case 7:
-                    numOfFrames = 20;
+                    numOfFrames = 21;
                     break;
             }
             levels.add(new Level(i));
             cutscenes.add(new Cutscene(i, numOfFrames));
         }
-        numOfFrames = 20;
+        numOfFrames = 31;
         cutscenes.add(new Cutscene(8, numOfFrames));
     }
 
@@ -772,8 +772,8 @@ public class World {
         int xT = (int) gameState.tim.getMidpoint().x;
         int yT = (int) gameState.tim.getMidpoint().y;
 
-        int xJ = (int) gameState.tim.getMidpoint().x;
-        int yJ = (int) gameState.tim.getMidpoint().y;
+        int xJ = (int) gameState.jack.getMidpoint().x;
+        int yJ = (int) gameState.jack.getMidpoint().y;
 
         return ((gameState.getBitmap().getRGB(xT, yT) >>> 16) & 0x000000FF) == 30 &&
                 ((gameState.getBitmap().getRGB(xJ, yJ) >>> 16) & 0x000000FF) == 30;
