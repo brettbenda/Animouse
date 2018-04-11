@@ -49,7 +49,7 @@ public class World {
         for (int i = 0; i < 8; ++i){
             switch(i){
                 case 0:
-                    numOfFrames = 41;
+                    numOfFrames = 42;
                     break;
                 case 1:
                     numOfFrames = 7;
@@ -61,7 +61,7 @@ public class World {
                     numOfFrames = 26;
                     break;
                 case 4:
-                    numOfFrames = 41;
+                    numOfFrames = 33;
                     break;
                 case 5:
                     numOfFrames = 6;
