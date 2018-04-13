@@ -89,40 +89,40 @@ public class Display extends JPanel{
 
         if (world.isPlayable()) {
             //draw background offset by location of the active player
-            bufferG2D.drawImage(world.getBackground(), 0 - (int) world.getActivePlayerX() + WIDTH / 2, 0 - (int) world.getActivePlayerY() + HEIGHT / 2, null);
+            bufferG2D.drawImage(world.getBackground(), 0 - (int) world.getActivePlayerX() + WIDTH / 2, 0, null);
 
             //draw grapple reticle
             if(world.isTimInGrappleZone()){
                 Point2D.Float point = world.getGrapplePoint();
                 BufferedImage crosshair = world.getJack().crosshair;
-                bufferG2D.drawImage(crosshair, (int)point.x- (int) world.getActivePlayerX() + WIDTH / 2 - crosshair.getWidth()/2, (int)point.y- (int) world.getActivePlayerY() + HEIGHT / 2 - crosshair.getHeight()/2,null);
+                bufferG2D.drawImage(crosshair, (int)point.x- (int) world.getActivePlayerX() + WIDTH / 2 - crosshair.getWidth()/2, (int)point.y,null);
             }
 
             //draw tail if jack is grappling
             if(world.getGameState().jack.getState()==CharacterState.GRAPPLING && world.getGameState().currentPlayer()!= world.getGameState().tim) {
                 if (world.getGameState().jack.dir == Player.Direction.LEFT) {
-                    bufferG2D.drawLine(WIDTH / 2 + world.getGameState().jack.width, HEIGHT / 2 + 3*world.getGameState().jack.height/4, (int) world.grapplePoint.getX() - (int) world.getActivePlayerX() + WIDTH / 2, (int) world.grapplePoint.getY() - (int) world.getActivePlayerY() + HEIGHT / 2);
+                    bufferG2D.drawLine(WIDTH / 2 + world.getGameState().jack.width, (int)world.getJackY() + 3*world.getGameState().jack.height/4, (int) world.grapplePoint.getX() - (int) world.getActivePlayerX() + WIDTH / 2, (int) world.grapplePoint.getY());
                 }else{
-                    bufferG2D.drawLine(WIDTH / 2, HEIGHT / 2 + 3*world.getGameState().jack.height/4, (int) world.grapplePoint.getX() - (int) world.getActivePlayerX() + WIDTH / 2, (int) world.grapplePoint.getY() - (int) world.getActivePlayerY() + HEIGHT / 2);
+                    bufferG2D.drawLine(WIDTH / 2, (int)world.getJackY() + 3*world.getGameState().jack.height/4, (int) world.grapplePoint.getX() - (int) world.getActivePlayerX() + WIDTH / 2, (int) world.grapplePoint.getY());
                 }
             }
 
             // draw players
             if (world.getTim() == world.getActivePlayer()) {
                 if (world.renderTim())
-                    bufferG2D.drawImage(world.getTimImage(), WIDTH / 2, HEIGHT / 2, null);
+                    bufferG2D.drawImage(world.getTimImage(), WIDTH / 2, (int)world.getTimY(), null);
             } else {
                 if (world.renderTim())
-                    bufferG2D.drawImage(world.getTimImage(), (int) world.getInactivePlayerX() - (int) world.getActivePlayerX() + WIDTH / 2, (int) world.getInactivePlayerY() - (int) world.getActivePlayerY() + HEIGHT / 2, null);
+                    bufferG2D.drawImage(world.getTimImage(), (int) world.getInactivePlayerX() - (int) world.getActivePlayerX() + WIDTH / 2, (int) world.getInactivePlayerY(), null);
             }
 
 
             if (world.getJack() == world.getActivePlayer()) {
                 if (world.renderJack())
-                    bufferG2D.drawImage(world.getJackImage(), WIDTH / 2, HEIGHT / 2, null);
+                    bufferG2D.drawImage(world.getJackImage(), WIDTH / 2, (int)world.getJackY(), null);
             } else {
                 if (world.renderJack())
-                    bufferG2D.drawImage(world.getJackImage(), (int) world.getInactivePlayerX() - (int) world.getActivePlayerX() + WIDTH / 2, (int) world.getInactivePlayerY() - (int) world.getActivePlayerY() + HEIGHT / 2, null);
+                    bufferG2D.drawImage(world.getJackImage(), (int) world.getInactivePlayerX() - (int) world.getActivePlayerX() + WIDTH / 2, (int) world.getInactivePlayerY(), null);
             }
         }
         else{
