@@ -834,5 +834,7 @@ public class World {
         }
 
     }
+
+    public int getPlotPoint(){return plotPoint;}
 }
 
