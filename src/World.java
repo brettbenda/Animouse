@@ -774,7 +774,7 @@ public class World {
         double dX = gameState.tim.getPosition().getX()-gameState.jack.getPosition().getX();
         double dY = gameState.tim.getPosition().getY()-gameState.jack.getPosition().getY();
         double distance = Math.sqrt(Math.pow(dX,2)+Math.pow(dY,2));
-        if(gameState.currentPlayer() == gameState.jack && distance<400 && distance>50){
+        if(gameState.currentPlayer() == gameState.jack && distance<400 && distance>50 && renderTim()){
             return true;
         }else if (gameState.currentPlayer() == gameState.jack && getRegion(gameState.jack) == 50) {
             return true;
