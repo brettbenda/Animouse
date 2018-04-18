@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fab11b1c-6ff0-4ea7-96ce-b82e5e71a5ce" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/Animouse/GameState.class" afterPath="$PROJECT_DIR$/out/production/Animouse/GameState.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Animouse/World.class" afterPath="$PROJECT_DIR$/out/production/Animouse/World.class" />
-      <change beforePath="$PROJECT_DIR$/res/AudioAssets/walk.wav" afterPath="$PROJECT_DIR$/res/AudioAssets/walk.wav" />
-      <change beforePath="$PROJECT_DIR$/src/GameState.java" afterPath="$PROJECT_DIR$/src/GameState.java" />
-      <change beforePath="$PROJECT_DIR$/src/SoundEffect.java" afterPath="$PROJECT_DIR$/src/SoundEffect.java" />
-      <change beforePath="$PROJECT_DIR$/src/World.java" afterPath="$PROJECT_DIR$/src/World.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,7 +21,7 @@
       <file leaf-file-name="World.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/World.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1585">
+            <state relative-caret-position="-17">
               <caret line="134" column="47" lean-forward="false" selection-start-line="134" selection-start-column="36" selection-end-line="134" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -323,7 +317,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1521498852754</updated>
-      <workItem from="1524068179510" duration="1047000" />
+      <workItem from="1524068179510" duration="1163000" />
     </task>
     <task id="LOCAL-00001" summary="Nothing has changed in implementation. There are bugs that need to be fixed prior to implementing the motion of grappling, so all that was added was print statements.">
       <created>1521500332835</created>
@@ -371,7 +365,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1047000" />
+    <option name="totallyTimeSpent" value="1163000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -885,7 +879,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/World.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1585">
+        <state relative-caret-position="-17">
           <caret line="134" column="47" lean-forward="false" selection-start-line="134" selection-start-column="36" selection-end-line="134" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
