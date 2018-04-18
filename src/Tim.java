@@ -59,11 +59,11 @@ public class Tim extends Player {
         }
 
 
-        this.walkingAnim = new LoopingAnimation(TIM_WALKING_ANIM, 250);
+        this.walkingAnim = new LoopingAnimation(TIM_WALKING_ANIM, 100);
         this.jumpingAnim = new FiniteAnimation(TIM_JUMPING_ANIM, 250);
-        this.idleAnim = new LoopingAnimation(TIM_IDLE_ANIM, 250);
-        this.climbAnim = new LoopingAnimation(TIM_CLIMB_ANIM, 250);
-        this.carryAnim = new LoopingAnimation(TIM_CARRY_ANIM, 250);
+        this.idleAnim = new LoopingAnimation(TIM_IDLE_ANIM, 1000);
+        this.climbAnim = new LoopingAnimation(TIM_CLIMB_ANIM, 1000);
+        this.carryAnim = new LoopingAnimation(TIM_CARRY_ANIM, 1000);
         this.currentAnim = idleAnim;
         // --- TEST VALUES ---
     }

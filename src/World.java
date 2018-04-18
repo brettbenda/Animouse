@@ -37,7 +37,6 @@ public class World {
             levels.add(new Level(i));
         }
 
-        SoundEffect.init();
 
         // initialize game state
         this.gameState = new GameState(levels.get(0));
@@ -286,6 +285,7 @@ public class World {
                 case KeyEvent.VK_UP:
                     if (gameState.tim.getState() == CharacterState.CLIMBING)
                         currentPlayer.resetYVelocity();
+
                     break;
                 case KeyEvent.VK_DOWN:
                     currentPlayer.resetYVelocity();
@@ -294,11 +294,13 @@ public class World {
                     currentPlayer.resetXVelocity();
                     SoundEffect.TIM_WALKING.stop();
                     SoundEffect.JACK_WALKING.stop();
+                    currentPlayer.setState(CharacterState.IDLE);
                     break;
                 case KeyEvent.VK_RIGHT:
                     currentPlayer.resetXVelocity();
                     SoundEffect.TIM_WALKING.stop();
                     SoundEffect.JACK_WALKING.stop();
+                    currentPlayer.setState(CharacterState.IDLE);
                     break;
             }
         }
