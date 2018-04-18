@@ -23,9 +23,6 @@ public class Jack extends Player {
         this.crosshair = ImageLoader.loadImage("/VisualAssets/Jack/crosshair.png");
         this.width = currentImage.getWidth();
         this.height = currentImage.getHeight() - 5;
-
-        System.out.println(width + "" + height);
-
         this.state = CharacterState.IDLE;
         this.dir = Direction.RIGHT;
 
@@ -79,7 +76,6 @@ public class Jack extends Player {
 
     public void updatePosition(){
         if (isGrappling()){
-            System.out.println("isGrappling");
             if ((this.velocity.x < 0 && position.x + velocity.x <= hookPosition.x)
                     || (this.velocity.x > 0 && position.x + velocity.x >= hookPosition.x)
                     || (this.velocity.y < 0 && position.y + velocity.y <= hookPosition.y)
@@ -158,10 +154,6 @@ public class Jack extends Player {
         float dist = (float) Math.sqrt((pos.x - this.position.x)*(pos.x - this.position.x) + (pos.y - this.position.y)*(pos.y - this.position.y));
         this.velocity.x = grappleSpeed * (hookPosition.x - this.position.x) / (2*dist);
         this.velocity.y = grappleSpeed * (hookPosition.y - this.position.y) / (2*dist);
-        System.out.println("GRAPPLE TO " + pos.x + ", " + pos.y + " FROM " + this.position.x + ", " + this.position.y);
-        System.out.println("velocity x " + this.velocity.x);
-        System.out.println("velocity y " + this.velocity.y);
-
     }
 
     public float getNextX() {

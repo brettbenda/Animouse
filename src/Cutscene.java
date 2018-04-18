@@ -10,8 +10,7 @@ public class Cutscene {
     // constructor
     public Cutscene(int scene, int numOfFrames) {
 
-
-
+        SoundEffect.init();
         this.ended = false;
         this.scene = scene;
         this.numOfFrames = numOfFrames;
@@ -25,6 +24,9 @@ public class Cutscene {
 
     public void advance() {
         ++index;
+        if(scene == 8 && index == 28){
+            SoundEffect.BGMUSIC7.playLoop();
+        }
         if (index < numOfFrames)
             this.currentFrame = ImageLoader.loadImage("/VisualAssets/Cutscenes/scene_" + scene + "/frame_" + index + ".png");
         else

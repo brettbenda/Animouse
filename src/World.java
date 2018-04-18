@@ -126,7 +126,6 @@ public class World {
                         if (gameState.tim.getState() == CharacterState.CLIMBING) {
                             gameState.tim.velocity.x = -5;
                         } else {
-                            //System.out.println("Tim's y velocity " + gameState.tim.velocity.y);
                             gameState.tim.setState(CharacterState.WALKING);
                             gameState.tim.velocity.x = -7;
                         }
@@ -208,14 +207,11 @@ public class World {
                     double dX = gameState.tim.getPosition().getX()-gameState.jack.getPosition().getX();
                     double dY = gameState.tim.getPosition().getY()-gameState.jack.getPosition().getY();
                     double distance = Math.sqrt(Math.pow(dX,2)+Math.pow(dY,2));
-                    System.out.println("Distance from Jack to Tim" + distance);
                     if(gameState.currentPlayer() == gameState.jack && distance<400 && distance>50){
                         SoundEffect.GRAPPLE.playOnce();
                         gameState.jack.grappleTo(gameState.tim.getMidpoint());
                         grapplePoint = gameState.tim.getMidpoint();
                         gameState.jack.setState(CharacterState.GRAPPLING);
-                        System.out.println("Grapple to Tim");
-                        System.out.println("Grapple to location " + gameState.tim.getPosition().x + ", " + gameState.tim.getPosition().y);
                     }else if (gameState.currentPlayer() == gameState.jack && getRegion(gameState.jack) == 50) {
                         SoundEffect.GRAPPLE.playOnce();
                         int regionIndex = getHookIndex(gameState.jack);
@@ -223,50 +219,7 @@ public class World {
                         grapplePoint = currentLevel.getHookablePoint(regionIndex);
                         gameState.jack.grappleTo(currentLevel.getHookablePoint(regionIndex));
                         gameState.jack.setState(CharacterState.GRAPPLING);
-                        System.out.println("Grapple to region " + regionIndex);
-                        System.out.println("Grapple to location " + currentLevel.getHookablePoint(regionIndex).x + ", " + currentLevel.getHookablePoint(regionIndex).y);
                     }
-                    break;
-                case 49: // 1
-                    System.out.println("Loading Level 1...");
-                    gameState.loadLevel(levels.get(0));
-                    currentLevel = levels.get(0);
-                    break;
-                case 50: // 2
-                    System.out.println("Loading Level 2...");
-                    gameState.loadLevel(levels.get(1));
-                    currentLevel = levels.get(1);
-                    break;
-                case 51: // 3
-                    System.out.println("Loading Level 3...");
-                    gameState.loadLevel(levels.get(2));
-                    currentLevel = levels.get(2);
-
-                    break;
-                case 52: // 4
-                    System.out.println("Loading Level 4...");
-                    gameState.loadLevel(levels.get(3));
-                    currentLevel = levels.get(3);
-                    break;
-                case 53: // 5
-                    System.out.println("Loading Level 5...");
-                    gameState.loadLevel(levels.get(4));
-                    currentLevel = levels.get(4);
-                    break;
-                case 54: // 6
-                    System.out.println("Loading Level 6...");
-                    gameState.loadLevel(levels.get(5));
-                    currentLevel = levels.get(5);
-                    break;
-                case 55: // 7
-                    System.out.println("Loading Level 7...");
-                    gameState.loadLevel(levels.get(6));
-                    currentLevel = levels.get(6);
-                    break;
-                case 56: // 8
-                    System.out.println("Loading Level 8...");
-                    gameState.loadLevel(levels.get(7));
-                    currentLevel = levels.get(7);
                     break;
             }
         }
@@ -331,14 +284,11 @@ public class World {
         int g = (color >>> 8) & 0x000000FF;
         int b = color & 0x000000FF;
 
-        //System.out.println(r + " " + b + " " + g);
 
         //BELOW PRINTS OUT IMAGE COORDS, USEFUL FOR HOOK POINTS
-        System.out.println((xx+getActivePlayerX()-1920/2) + " " + (yy+getActivePlayerY()-1080/2));
 
         // check the region at the mouse position
         if ( (r == 10) && (g == 0) && (b == 0) ) {
-            System.out.println("inside region");
         }
     }
 
@@ -388,7 +338,6 @@ public class World {
             if (currentLevel.id == 7 && gameState.tim.position.y > 2500) {
                 gameState.loadLevel(levels.get(7));
                 currentLevel = levels.get(7);
-                System.out.println("restart");
             }
 
 
@@ -410,7 +359,6 @@ public class World {
             }
 
             if (getRegion(gameState.tim) == 30 && getRegion(gameState.jack) == 30 || isInsideEventRegion()) {
-                System.out.println("🎈" + "End of level!111!!!!1!!!1!11");
                 gameState.tim.resetXVelocity();
                 gameState.tim.resetYVelocity();
                 gameState.jack.resetXVelocity();
