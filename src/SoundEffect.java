@@ -8,6 +8,7 @@ public enum SoundEffect {
     JUMPING("./res/AudioAssets/jump.wav"),
     CLICK("./res/AudioAssets/jump.wav"),
     RAIN("./res/AudioAssets/jump.wav"),
+    GRAPPLE("./res/AudioAssets/snap.wav"),
     OUTSIDEAMBIENT("./res/AudioAssets/jump.wav"),
     BGMUSIC0("./res/AudioAssets/bathroom.wav"),
     BGMUSIC1("./res/AudioAssets/office1.wav"),
@@ -40,6 +41,10 @@ public enum SoundEffect {
         if (clip.isRunning()) {
             clip.stop();
         }
+
+        FloatControl gainControl =
+                (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
+        gainControl.setValue(-20.0f);
 
         clip.setFramePosition(0);
         clip.start();
