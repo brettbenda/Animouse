@@ -355,7 +355,7 @@ public class World {
 
                 if (gameState.tim.getState() != CharacterState.CLIMBING && !isOnGround(gameState.tim)) {
                     if (currentLevel.playTim)
-                        gameState.tim.incrementYVelocity(1);
+                        gameState.tim.incrementYVelocity(1.01f);
                 }
 
             } else if (!isCollidingY(gameState.tim)) {
@@ -401,7 +401,7 @@ public class World {
                 gameState.jack.updatePosition();
                 if (!isOnGround(gameState.jack)) {
                     if (currentLevel.playJack)
-                        gameState.jack.incrementYVelocity(1);
+                        gameState.jack.incrementYVelocity(1.01f);
                 }
             } else if (topCollision(gameState.jack) || bottomCollision(gameState.jack)) {
                 if (gameState.jack.velocity.x == 0)
