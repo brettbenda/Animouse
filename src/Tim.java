@@ -33,27 +33,27 @@ public class Tim extends Player {
         BufferedImage TIM_CARRY_ANIM[];
 
         // Jumping Animation
-        TIM_JUMPING_ANIM = new BufferedImage[5];
+        TIM_JUMPING_ANIM = new BufferedImage[8];
         for (int i = 0; i < TIM_JUMPING_ANIM.length; ++i) {
-            TIM_JUMPING_ANIM[i] = ImageLoader.loadImage("/VisualAssets/Tim/tim.png");
+            TIM_JUMPING_ANIM[i] = ImageLoader.loadImage("/VisualAssets/Tim/tim_walk_" + i + ".png");
         }
         // Walking Animation
-        TIM_WALKING_ANIM = new BufferedImage[5];
+        TIM_WALKING_ANIM = new BufferedImage[8];
         for (int i = 0; i < TIM_WALKING_ANIM.length; ++i) {
-            TIM_WALKING_ANIM[i] = ImageLoader.loadImage("/VisualAssets/Tim/tim.png");
+            TIM_WALKING_ANIM[i] = ImageLoader.loadImage("/VisualAssets/Tim/tim_walk_" + i + ".png");
         }
         // Idle Animation
-        TIM_IDLE_ANIM = new BufferedImage[5];
+        TIM_IDLE_ANIM = new BufferedImage[1];
         for (int i = 0; i < TIM_IDLE_ANIM.length; ++i) {
-            TIM_IDLE_ANIM[i] = ImageLoader.loadImage("/VisualAssets/Tim/tim.png");
+            TIM_IDLE_ANIM[i] = ImageLoader.loadImage("/VisualAssets/Tim/tim_walk_0.png");
         }
         // CLIMB Animation
-        TIM_CLIMB_ANIM = new BufferedImage[5];
+        TIM_CLIMB_ANIM = new BufferedImage[1];
         for (int i = 0; i < TIM_CLIMB_ANIM.length; ++i) {
             TIM_CLIMB_ANIM[i] = ImageLoader.loadImage("/VisualAssets/Tim/tim_climbing.png");
         }
         // Idle Animation
-        TIM_CARRY_ANIM = new BufferedImage[5];
+        TIM_CARRY_ANIM = new BufferedImage[1];
         for (int i = 0; i < TIM_CARRY_ANIM.length; ++i) {
             TIM_CARRY_ANIM[i] = ImageLoader.loadImage("/VisualAssets/Tim/tim_carrying.png");
         }
