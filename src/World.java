@@ -41,8 +41,6 @@ public class World {
 
         // initialize game state
         this.gameState = new GameState(levels.get(0));
-
-
     }
 
     private void loadPlot(){
