@@ -49,10 +49,11 @@ public enum SoundEffect {
         if (clip.isRunning()) {
             clip.stop();
         }
-    System.out.println("HELLLLOOO");
-//        FloatControl gainControl =
-//                (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
-//        gainControl.setValue(-20.0f);
+
+        FloatControl gainControl =
+                (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
+        gainControl.setValue(-30.0f);
+
         clip.setFramePosition(0);
         clip.loop(Clip.LOOP_CONTINUOUSLY);
 

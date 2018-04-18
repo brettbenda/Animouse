@@ -22,7 +22,6 @@ public class GameState {
         this.tim = new Tim(level.posTim.x, level.posTim.y);
         this.jack = new Jack(level.posJack.x,level.posJack.y);
 
-        SoundEffect.init();
 
         // --- TEST VALUES ---
     }

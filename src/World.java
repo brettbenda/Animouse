@@ -37,6 +37,8 @@ public class World {
             levels.add(new Level(i));
         }
 
+        SoundEffect.init();
+
         // initialize game state
         this.gameState = new GameState(levels.get(0));
 
@@ -411,7 +413,7 @@ public class World {
 
             if (getRegion(gameState.tim) == 30 && getRegion(gameState.jack) == 30 || isInsideEventRegion()) {
                 System.out.println("🎈" + "End of level!111!!!!1!!!1!11");
-                stopBGMusic();
+                stopSound();
                 gameState.tim.resetXVelocity();
                 gameState.tim.resetYVelocity();
                 gameState.jack.resetXVelocity();
@@ -797,7 +799,7 @@ public class World {
 
 
 
-    private void stopBGMusic() {
+    private void stopSound() {
         SoundEffect.BGMUSIC0.stop();
         SoundEffect.BGMUSIC1.stop();
         SoundEffect.BGMUSIC2.stop();
@@ -806,6 +808,7 @@ public class World {
         SoundEffect.BGMUSIC5.stop();
         SoundEffect.BGMUSIC6.stop();
         SoundEffect.BGMUSIC7.stop();
+        SoundEffect.TIM_WALKING.stop();
     }
 
     public int getPlotPoint(){return plotPoint;}
