@@ -36,6 +36,7 @@ public class World {
         for(int i = 0; i < 8; i++){
             levels.add(new Level(i));
         }
+        SoundEffect.init();
 
 
         // initialize game state
@@ -129,7 +130,6 @@ public class World {
                             gameState.tim.setState(CharacterState.WALKING);
                             gameState.tim.velocity.x = -7;
                         }
-                        SoundEffect.TIM_WALKING.playLoop();
                         gameState.tim.dir = Player.Direction.LEFT;
                     } else {
                         if (gameState.jack.isHooked()) {
@@ -141,7 +141,6 @@ public class World {
                             gameState.jack.decrementXVelocity(0.5f);
                             gameState.jack.setState(CharacterState.WALKING);
                         }
-                        SoundEffect.JACK_WALKING.playLoop();
                         gameState.jack.dir = Player.Direction.LEFT;
                     }
                     break;
@@ -154,7 +153,6 @@ public class World {
                             gameState.tim.velocity.x = 7;
                             gameState.tim.setState(CharacterState.WALKING);
                         }
-                        SoundEffect.TIM_WALKING.playLoop();
                         gameState.tim.dir = Player.Direction.RIGHT;
                     } else {
                         if (gameState.jack.isHooked()) {
@@ -166,7 +164,6 @@ public class World {
                             gameState.jack.incrementXVelocity(0.5f);
                             gameState.jack.setState(CharacterState.WALKING);
                         }
-                        SoundEffect.JACK_WALKING.playLoop();
                         gameState.jack.dir = Player.Direction.RIGHT;
                     }
                     break;
@@ -285,7 +282,6 @@ public class World {
                 case KeyEvent.VK_UP:
                     if (gameState.tim.getState() == CharacterState.CLIMBING)
                         currentPlayer.resetYVelocity();
-
                     break;
                 case KeyEvent.VK_DOWN:
                     currentPlayer.resetYVelocity();
@@ -415,7 +411,6 @@ public class World {
 
             if (getRegion(gameState.tim) == 30 && getRegion(gameState.jack) == 30 || isInsideEventRegion()) {
                 System.out.println("🎈" + "End of level!111!!!!1!!!1!11");
-                stopSound();
                 gameState.tim.resetXVelocity();
                 gameState.tim.resetYVelocity();
                 gameState.jack.resetXVelocity();
@@ -423,6 +418,8 @@ public class World {
                 if (isPlayable)
                     ++plotPoint;
                 isPlayable = !isPlayable;
+                stopSound();
+
             }
 
             //update inactive player
@@ -810,7 +807,6 @@ public class World {
         SoundEffect.BGMUSIC5.stop();
         SoundEffect.BGMUSIC6.stop();
         SoundEffect.BGMUSIC7.stop();
-        SoundEffect.TIM_WALKING.stop();
     }
 
     public int getPlotPoint(){return plotPoint;}
