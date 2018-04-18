@@ -294,13 +294,11 @@ public class World {
                     currentPlayer.resetXVelocity();
                     SoundEffect.TIM_WALKING.stop();
                     SoundEffect.JACK_WALKING.stop();
-                    currentPlayer.setState(CharacterState.IDLE);
                     break;
                 case KeyEvent.VK_RIGHT:
                     currentPlayer.resetXVelocity();
                     SoundEffect.TIM_WALKING.stop();
                     SoundEffect.JACK_WALKING.stop();
-                    currentPlayer.setState(CharacterState.IDLE);
                     break;
             }
         }
