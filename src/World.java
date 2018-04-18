@@ -94,7 +94,7 @@ public class World {
                             int xx = (int) gameState.tim.position.x;
                             int yy = (int) gameState.tim.position.y + gameState.tim.height;
 
-                            if (!getCollisionStatus(gameState.tim) && areTimAndJackIntersecting() && gameState.tim.velocity.y > 0) {
+                            if (Math.abs(gameState.tim.position.x - gameState.jack.position.x)<gameState.tim.width && Math.abs(gameState.jack.position.y - gameState.tim.position.y) < 100 && gameState.tim.velocity.y > 0) {
                                 gameState.tim.velocity.y = -40;
                                 SoundEffect.JUMPING.playOnce();
                             } else if (getCollisionStatus(gameState.tim) && gameState.tim.velocity.y==0) {
