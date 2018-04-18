@@ -48,28 +48,28 @@ public class World {
         for (int i = 0; i < 8; ++i){
             switch(i){
                 case 0:
-                    numOfFrames = 42;
+                    numOfFrames = 43;
                     break;
                 case 1:
-                    numOfFrames = 7;
+                    numOfFrames = 8;
                     break;
                 case 2:
                     numOfFrames = 20;
                     break;
                 case 3:
-                    numOfFrames = 26;
+                    numOfFrames = 27;
                     break;
                 case 4:
                     numOfFrames = 35;
                     break;
                 case 5:
-                    numOfFrames = 6;
+                    numOfFrames = 7;
                     break;
                 case 6:
-                    numOfFrames = 28;
+                    numOfFrames = 29;
                     break;
                 case 7:
-                    numOfFrames = 21;
+                    numOfFrames = 22;
                     break;
             }
             levels.add(new Level(i));
@@ -775,7 +775,7 @@ public class World {
         double dX = gameState.tim.getPosition().getX()-gameState.jack.getPosition().getX();
         double dY = gameState.tim.getPosition().getY()-gameState.jack.getPosition().getY();
         double distance = Math.sqrt(Math.pow(dX,2)+Math.pow(dY,2));
-        if(gameState.currentPlayer() == gameState.jack && distance<400 && distance>50){
+        if(gameState.currentPlayer() == gameState.jack && distance<400 && distance>50 && renderTim()){
             return true;
         }else if (gameState.currentPlayer() == gameState.jack && getRegion(gameState.jack) == 50) {
             return true;
