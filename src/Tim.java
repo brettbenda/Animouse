@@ -48,9 +48,9 @@ public class Tim extends Player {
             TIM_IDLE_ANIM[i] = ImageLoader.loadImage("/VisualAssets/Tim/tim_walk_0.png");
         }
         // CLIMB Animation
-        TIM_CLIMB_ANIM = new BufferedImage[1];
+        TIM_CLIMB_ANIM = new BufferedImage[4];
         for (int i = 0; i < TIM_CLIMB_ANIM.length; ++i) {
-            TIM_CLIMB_ANIM[i] = ImageLoader.loadImage("/VisualAssets/Tim/tim_climbing.png");
+            TIM_CLIMB_ANIM[i] = ImageLoader.loadImage("/VisualAssets/Tim/tim_climb_" + i + ".png");
         }
         // Idle Animation
         TIM_CARRY_ANIM = new BufferedImage[1];
@@ -62,7 +62,7 @@ public class Tim extends Player {
         this.walkingAnim = new LoopingAnimation(TIM_WALKING_ANIM, 100);
         this.jumpingAnim = new FiniteAnimation(TIM_JUMPING_ANIM, 250);
         this.idleAnim = new LoopingAnimation(TIM_IDLE_ANIM, 1000);
-        this.climbAnim = new LoopingAnimation(TIM_CLIMB_ANIM, 1000);
+        this.climbAnim = new LoopingAnimation(TIM_CLIMB_ANIM, 250);
         this.carryAnim = new LoopingAnimation(TIM_CARRY_ANIM, 1000);
         this.currentAnim = idleAnim;
         // --- TEST VALUES ---
