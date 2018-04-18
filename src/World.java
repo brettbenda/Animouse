@@ -40,7 +40,7 @@ public class World {
         // initialize game state
         this.gameState = new GameState(levels.get(0));
 
-        SoundEffect.init();
+
     }
 
     private void loadPlot(){
@@ -344,6 +344,7 @@ public class World {
 
     public void tick(){
         if (isPlayable) {
+
             Player currentPlayer = gameState.currentPlayer();
             Player inactivePlayer = gameState.inactivePlayer();
 
@@ -410,7 +411,7 @@ public class World {
 
             if (getRegion(gameState.tim) == 30 && getRegion(gameState.jack) == 30 || isInsideEventRegion()) {
                 System.out.println("🎈" + "End of level!111!!!!1!!!1!11");
-
+                stopBGMusic();
                 gameState.tim.resetXVelocity();
                 gameState.tim.resetYVelocity();
                 gameState.jack.resetXVelocity();
@@ -794,45 +795,17 @@ public class World {
         return null;
     }
 
-    private void loadBGMusic() {
-        if (currentLevel.id == 0) {
-            SoundEffect.BGMUSIC0.playLoop();
-        } else if (currentLevel.id == 1) {
-            SoundEffect.BGMUSIC1.playLoop();
-        } else if (currentLevel.id == 2) {
-            SoundEffect.BGMUSIC2.playLoop();
-        } else if (currentLevel.id == 3) {
-            SoundEffect.BGMUSIC3.playLoop();
-        } else if (currentLevel.id == 4) {
-            SoundEffect.BGMUSIC4.playLoop();
-        } else if (currentLevel.id == 5) {
-            SoundEffect.BGMUSIC5.playLoop();
-        } else if (currentLevel.id == 6) {
-            SoundEffect.BGMUSIC6.playLoop();
-        } else {
-            SoundEffect.BGMUSIC7.playLoop();
-        }
-    }
+
 
     private void stopBGMusic() {
-        if (currentLevel.id == 0) {
-            SoundEffect.BGMUSIC0.stop();
-        } else if (currentLevel.id == 1) {
-            SoundEffect.BGMUSIC1.stop();
-        } else if (currentLevel.id == 2) {
-            SoundEffect.BGMUSIC2.stop();
-        } else if (currentLevel.id == 3) {
-            SoundEffect.BGMUSIC3.stop();
-        } else if (currentLevel.id == 4) {
-            SoundEffect.BGMUSIC4.stop();
-        } else if (currentLevel.id == 5) {
-            SoundEffect.BGMUSIC5.stop();
-        } else if (currentLevel.id == 6) {
-            SoundEffect.BGMUSIC6.stop();
-        } else {
-            SoundEffect.BGMUSIC7.stop();
-        }
-
+        SoundEffect.BGMUSIC0.stop();
+        SoundEffect.BGMUSIC1.stop();
+        SoundEffect.BGMUSIC2.stop();
+        SoundEffect.BGMUSIC3.stop();
+        SoundEffect.BGMUSIC4.stop();
+        SoundEffect.BGMUSIC5.stop();
+        SoundEffect.BGMUSIC6.stop();
+        SoundEffect.BGMUSIC7.stop();
     }
 
     public int getPlotPoint(){return plotPoint;}

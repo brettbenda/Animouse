@@ -22,6 +22,8 @@ public class GameState {
         this.tim = new Tim(level.posTim.x, level.posTim.y);
         this.jack = new Jack(level.posJack.x,level.posJack.y);
 
+        SoundEffect.init();
+
         // --- TEST VALUES ---
     }
 
@@ -42,6 +44,25 @@ public class GameState {
         if (level.id == 7) {
             tim.setCarrying();
         }
+
+        if (level.id == 0) {
+            SoundEffect.BGMUSIC0.playLoop();
+        } else if (level.id == 1) {
+            SoundEffect.BGMUSIC1.playLoop();
+        } else if (level.id == 2) {
+            SoundEffect.BGMUSIC2.playLoop();
+        } else if (level.id == 3) {
+            SoundEffect.BGMUSIC3.playLoop();
+        } else if (level.id == 4) {
+            SoundEffect.BGMUSIC4.playLoop();
+        } else if (level.id == 5) {
+            SoundEffect.BGMUSIC5.playLoop();
+        } else if (level.id == 6) {
+            SoundEffect.BGMUSIC6.playLoop();
+        } else {
+            SoundEffect.BGMUSIC7.playLoop();
+        }
+
     }
 
     public BufferedImage getBackground() {
@@ -72,4 +93,5 @@ public class GameState {
         else
             selectedPlayer = 0;
     }
+
 }

@@ -9,6 +9,9 @@ public class Cutscene {
 
     // constructor
     public Cutscene(int scene, int numOfFrames) {
+
+
+
         this.ended = false;
         this.scene = scene;
         this.numOfFrames = numOfFrames;

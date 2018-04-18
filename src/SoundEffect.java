@@ -9,14 +9,14 @@ public enum SoundEffect {
     CLICK("./res/AudioAssets/jump.wav"),
     RAIN("./res/AudioAssets/jump.wav"),
     OUTSIDEAMBIENT("./res/AudioAssets/jump.wav"),
-    BGMUSIC0("./res/AudioAssets/music.wav"),
-    BGMUSIC1("./res/AudioAssets/music.wav"),
-    BGMUSIC2("./res/AudioAssets/music.wav"),
-    BGMUSIC3("./res/AudioAssets/music.wav"),
-    BGMUSIC4("./res/AudioAssets/music.wav"),
-    BGMUSIC5("./res/AudioAssets/music.wav"),
-    BGMUSIC6("./res/AudioAssets/music.wav"),
-    BGMUSIC7("./res/AudioAssets/music.wav");
+    BGMUSIC0("./res/AudioAssets/bathroom.wav"),
+    BGMUSIC1("./res/AudioAssets/office1.wav"),
+    BGMUSIC2("./res/AudioAssets/bedroom1.wav"),
+    BGMUSIC3("./res/AudioAssets/kitchen.wav"),
+    BGMUSIC4("./res/AudioAssets/office2.wav"),
+    BGMUSIC5("./res/AudioAssets/bedroom2.wav"),
+    BGMUSIC6("./res/AudioAssets/livingroom.wav"),
+    BGMUSIC7("./res/AudioAssets/outside.wav");
 
     private Clip clip;
 
@@ -26,6 +26,7 @@ public enum SoundEffect {
             AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(soundFile);
             clip = AudioSystem.getClip();
             clip.open(audioInputStream);
+
         } catch (UnsupportedAudioFileException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -48,9 +49,13 @@ public enum SoundEffect {
         if (clip.isRunning()) {
             clip.stop();
         }
-
+    System.out.println("HELLLLOOO");
+//        FloatControl gainControl =
+//                (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
+//        gainControl.setValue(-20.0f);
         clip.setFramePosition(0);
         clip.loop(Clip.LOOP_CONTINUOUSLY);
+
     }
 
     public void stop() {
