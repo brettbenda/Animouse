@@ -44,7 +44,7 @@ public enum SoundEffect {
 
         FloatControl gainControl =
                 (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
-        gainControl.setValue(-20.0f);
+        gainControl.setValue(-5.0f);
 
         clip.setFramePosition(0);
         clip.start();
@@ -57,7 +57,7 @@ public enum SoundEffect {
 
         FloatControl gainControl =
                 (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
-        gainControl.setValue(-30.0f);
+        gainControl.setValue(-15.0f);
 
         clip.setFramePosition(0);
         clip.loop(Clip.LOOP_CONTINUOUSLY);
